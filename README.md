@@ -39,9 +39,9 @@ The application utilizes a **"Lazy / Hybrid" Watchlist Architecture** where user
 ### 1. Database Setup
 
 1. Start your local PostgreSQL server.
-2. Create a new database named `antigravity`:
+2. Create a new database named `GameSurge`:
    ```sql
-   CREATE DATABASE antigravity;
+   CREATE DATABASE GameSurge;
    ```
 3. The backend server automatically runs schema migrations and seeds catalog data on startup from [schema.sql](backend/schema.sql).
 
