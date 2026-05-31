@@ -1,0 +1,47 @@
+{
+  "files": {
+    "code": [
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\analytics.py",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\cheapshark.py",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\check_db.py",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\main.py",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\schema.sql",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\seed_missing.py",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\steam_api.py",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\test_api.py",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\eslint.config.js",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\vite.config.js",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\App.jsx",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\config.js",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\main.jsx",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\BuyingSentiment.jsx",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\CommandPalette.jsx",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\Dashboard.jsx",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\GameCard.jsx",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\GameDetails.jsx",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\PriceChart.jsx",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\SkeletonCard.jsx",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\Storefront.jsx",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\SurgeLeaderboard.jsx"
+    ],
+    "document": [
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\index.html",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\README.md"
+    ],
+    "paper": [],
+    "image": [
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\public\\favicon.svg",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\public\\icons.svg",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\assets\\hero.png",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\assets\\react.svg",
+      "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\assets\\vite.svg"
+    ],
+    "video": []
+  },
+  "total_files": 29,
+  "total_words": 12681,
+  "needs_graph": false,
+  "warning": "Corpus is ~12,681 words - fits in a single context window. You may not need a graph.",
+  "skipped_sensitive": [],
+  "graphifyignore_patterns": 0
+}

@@ -1,0 +1,154 @@
+{
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\run_ast.py": {
+    "mtime": 1778590252.8018966,
+    "hash": "a0409caf2a68c56e570ba9bba9d73020"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\run_build.py": {
+    "mtime": 1778590308.649876,
+    "hash": "40446d3dae0cb7dbac11ae4961664314"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\analytics.py": {
+    "mtime": 1777391716.4088507,
+    "hash": "2675079fb41de7fb5b3650523e8b861d"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\backfill_metadata.py": {
+    "mtime": 1780148311.0313728,
+    "hash": "278915fdd7640068c055bed52727472b"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\cheapshark.py": {
+    "mtime": 1780144584.9894834,
+    "hash": "9c297241b410c19975b1066d505cb111"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\check_db.py": {
+    "mtime": 1778488145.8946433,
+    "hash": "ba93fa693dc6c85fee6afe0ff7ed343e"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\main.py": {
+    "mtime": 1780209349.6514578,
+    "hash": "6a63228d6a41c7df7722bf631408cff3"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\schema.sql": {
+    "mtime": 1780205651.280149,
+    "hash": "37345d5b6932ba62a2369bafe5a05cd3"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\seed_missing.py": {
+    "mtime": 1778488214.2188692,
+    "hash": "673cbfe7057fe986b5e36e16f7dda97b"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\steam_api.py": {
+    "mtime": 1778484683.8056302,
+    "hash": "913475cfcdd01ff3abb3c035815aa921"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\test_api.py": {
+    "mtime": 1780149280.4219513,
+    "hash": "bbeb5a0115803d485b1130d62599ba80"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\eslint.config.js": {
+    "mtime": 1777391778.9479082,
+    "hash": "3aa4b57d7f08181d86bde52a4dcb7f22"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\vite.config.js": {
+    "mtime": 1777393295.9763374,
+    "hash": "5b641ab5f85eff4b0b9acec3417ca9b5"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\App.jsx": {
+    "mtime": 1780208869.1294703,
+    "hash": "114e26eaf01950f8051d97445a83e628"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\config.js": {
+    "mtime": 1779353534.058863,
+    "hash": "4a8d8603b4a10c984a4682413295dde7"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\main.jsx": {
+    "mtime": 1777391779.198907,
+    "hash": "e13723e2574429d9a6d849727e3ff695"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\AuthCallback.jsx": {
+    "mtime": 1780208854.5862567,
+    "hash": "e09bf033b428dffa1d063d9c08a95c2f"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\BuyingSentiment.jsx": {
+    "mtime": 1780150509.1434827,
+    "hash": "66402b28a4d573e1a940aeaabea2009a"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\CommandPalette.jsx": {
+    "mtime": 1780151457.4927015,
+    "hash": "c8ace77256c8c910c88751aa08f02664"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\Dashboard.jsx": {
+    "mtime": 1779354626.0195544,
+    "hash": "dc3c408f35fe5b60d8a368eaf97b1c2c"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\GameCard.jsx": {
+    "mtime": 1780151385.1996028,
+    "hash": "7960391dd6e897ce4637cf739d3f79c4"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\GameDetails.jsx": {
+    "mtime": 1780207679.3293796,
+    "hash": "f51cb0f4e4c22fbc621070217ad093af"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\LoginModal.jsx": {
+    "mtime": 1780208884.4611835,
+    "hash": "b96502d67bba1a81b7a7009472ba14c0"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\PriceChart.jsx": {
+    "mtime": 1779357002.309647,
+    "hash": "a08f935d41b1ed90eac69b3fc3512d02"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\SkeletonCard.jsx": {
+    "mtime": 1778572149.3281803,
+    "hash": "417f3cff8732ad85cee06b1479e33d8c"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\Storefront.jsx": {
+    "mtime": 1780206244.7774854,
+    "hash": "091c02668a7ff7cf8809334c0fa82644"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\SurgeLeaderboard.jsx": {
+    "mtime": 1779357027.5459635,
+    "hash": "d17ad4673237b3547d91b6b96948576e"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\Watchlist.jsx": {
+    "mtime": 1780207527.9038064,
+    "hash": "9c17a17aaf3b56d233e559c5ec8a575d"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\contexts\\CurrencyContext.jsx": {
+    "mtime": 1779356666.6328936,
+    "hash": "b51f110cd21c644aaa35adea63835516"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\contexts\\WatchlistContext.jsx": {
+    "mtime": 1780208844.3477137,
+    "hash": "9b884c7f64ca972e08df38bae0fd7b32"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\README.md": {
+    "mtime": 1780209375.579184,
+    "hash": "04022cc426cf2fc8cb6cdcbee8c498c3"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\index.html": {
+    "mtime": 1777391818.3799965,
+    "hash": "89150e536c4a99f73625f46f41f0f437"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\README.md": {
+    "mtime": 1779354661.4024744,
+    "hash": "94905c239598d52f496c78ab26e77607"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\public\\favicon.svg": {
+    "mtime": 1777391779.429677,
+    "hash": "7e840862161341271697daa99a40d76b"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\public\\icons.svg": {
+    "mtime": 1777391779.5323527,
+    "hash": "3b4fcfcf393eca4d264dca4a4663bc37"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\assets\\hero.png": {
+    "mtime": 1777391779.3141685,
+    "hash": "aead493361b27e7510691c5d7072dfc1"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\assets\\react.svg": {
+    "mtime": 1777391779.6629546,
+    "hash": "f0402b67b6ce880f65666bb49e841696"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\assets\\vite.svg": {
+    "mtime": 1777391779.7686613,
+    "hash": "9960a24288958394ac50e57ff638b036"
+  }
+}

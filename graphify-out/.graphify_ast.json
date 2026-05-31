@@ -1,0 +1,3049 @@
+{
+  "nodes": [
+    {
+      "id": "backend_analytics_py",
+      "label": "analytics.py",
+      "file_type": "code",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_analytics_calculate_price_stability",
+      "label": "calculate_price_stability()",
+      "file_type": "code",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L5"
+    },
+    {
+      "id": "backend_analytics_calculate_weighted_moving_average",
+      "label": "calculate_weighted_moving_average()",
+      "file_type": "code",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L15"
+    },
+    {
+      "id": "backend_analytics_detect_price_surge",
+      "label": "detect_price_surge()",
+      "file_type": "code",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L25"
+    },
+    {
+      "id": "backend_analytics_calculate_value_score",
+      "label": "calculate_value_score()",
+      "file_type": "code",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L57"
+    },
+    {
+      "id": "backend_analytics_rationale_6",
+      "label": "Calculates the standard deviation of prices for a specific game      to determin",
+      "file_type": "rationale",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L6"
+    },
+    {
+      "id": "backend_analytics_rationale_16",
+      "label": "Calculates the weighted moving average given a list of prices and their correspo",
+      "file_type": "rationale",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L16"
+    },
+    {
+      "id": "backend_analytics_rationale_26",
+      "label": "Volatility Detection: Calculates a Surge Index.     A \"Price Surge\" is flagged w",
+      "file_type": "rationale",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L26"
+    },
+    {
+      "id": "backend_analytics_rationale_58",
+      "label": "Economic Filtering: Calculates Value Score (Current Price vs. Historical Low).",
+      "file_type": "rationale",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L58"
+    },
+    {
+      "id": "backend_cheapshark_py",
+      "label": "cheapshark.py",
+      "file_type": "code",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_cheapshark_min_interval_sec",
+      "label": "_min_interval_sec()",
+      "file_type": "code",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L29"
+    },
+    {
+      "id": "backend_cheapshark_max_retries",
+      "label": "_max_retries()",
+      "file_type": "code",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L33"
+    },
+    {
+      "id": "backend_cheapshark_cheapshark_get",
+      "label": "_cheapshark_get()",
+      "file_type": "code",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L37"
+    },
+    {
+      "id": "backend_cheapshark_fetch_stores",
+      "label": "fetch_stores()",
+      "file_type": "code",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L87"
+    },
+    {
+      "id": "backend_cheapshark_get_store_name",
+      "label": "get_store_name()",
+      "file_type": "code",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L106"
+    },
+    {
+      "id": "backend_cheapshark_get_store_icon_url",
+      "label": "get_store_icon_url()",
+      "file_type": "code",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L111"
+    },
+    {
+      "id": "backend_cheapshark_is_store_active",
+      "label": "is_store_active()",
+      "file_type": "code",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L118"
+    },
+    {
+      "id": "backend_cheapshark_search_game",
+      "label": "search_game()",
+      "file_type": "code",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L123"
+    },
+    {
+      "id": "backend_cheapshark_get_game_deals",
+      "label": "get_game_deals()",
+      "file_type": "code",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L136"
+    },
+    {
+      "id": "backend_cheapshark_get_deal_details",
+      "label": "get_deal_details()",
+      "file_type": "code",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L153"
+    },
+    {
+      "id": "backend_cheapshark_get_deal_redirect_url",
+      "label": "get_deal_redirect_url()",
+      "file_type": "code",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L159"
+    },
+    {
+      "id": "backend_cheapshark_search_and_get_deals",
+      "label": "search_and_get_deals()",
+      "file_type": "code",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L164"
+    },
+    {
+      "id": "backend_cheapshark_discover_game_titles",
+      "label": "discover_game_titles()",
+      "file_type": "code",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L180"
+    },
+    {
+      "id": "backend_cheapshark_rationale_1",
+      "label": "CheapShark API Integration Module Free API \u2014 no API key required. Requires custo",
+      "file_type": "rationale",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_cheapshark_rationale_38",
+      "label": "Single CheapShark GET with process-wide pacing and bounded retries on 429.     A",
+      "file_type": "rationale",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L38"
+    },
+    {
+      "id": "backend_cheapshark_rationale_88",
+      "label": "Fetch the store ID \u2192 store name mapping from CheapShark.     Cached in memory af",
+      "file_type": "rationale",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L88"
+    },
+    {
+      "id": "backend_cheapshark_rationale_107",
+      "label": "Get store name from cached mapping.",
+      "file_type": "rationale",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L107"
+    },
+    {
+      "id": "backend_cheapshark_rationale_112",
+      "label": "Get the store icon URL from CheapShark CDN.",
+      "file_type": "rationale",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L112"
+    },
+    {
+      "id": "backend_cheapshark_rationale_119",
+      "label": "Check if a store is currently active on CheapShark.",
+      "file_type": "rationale",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L119"
+    },
+    {
+      "id": "backend_cheapshark_rationale_124",
+      "label": "Search for a game by title on CheapShark.     Returns: {\"gameID\": \"202350\", \"ste",
+      "file_type": "rationale",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L124"
+    },
+    {
+      "id": "backend_cheapshark_rationale_137",
+      "label": "Get all active deals for a game by its CheapShark game ID.     Returns:     {",
+      "file_type": "rationale",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L137"
+    },
+    {
+      "id": "backend_cheapshark_rationale_154",
+      "label": "Get details for a specific deal (includes redirect URL to store).",
+      "file_type": "rationale",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L154"
+    },
+    {
+      "id": "backend_cheapshark_rationale_160",
+      "label": "Get the redirect URL that takes the user to the store page for a deal.",
+      "file_type": "rationale",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L160"
+    },
+    {
+      "id": "backend_cheapshark_rationale_165",
+      "label": "Convenience: search for a game by title and return its deals.     Combines searc",
+      "file_type": "rationale",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L165"
+    },
+    {
+      "id": "backend_cheapshark_rationale_181",
+      "label": "Discover many game titles from CheapShark's public deals feed.     Returns uniqu",
+      "file_type": "rationale",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L181"
+    },
+    {
+      "id": "backend_check_db_py",
+      "label": "check_db.py",
+      "file_type": "code",
+      "source_file": "backend\\check_db.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_check_db_check",
+      "label": "check()",
+      "file_type": "code",
+      "source_file": "backend\\check_db.py",
+      "source_location": "L5"
+    },
+    {
+      "id": "backend_check_db_rationale_1",
+      "label": "Quick DB check script.",
+      "file_type": "rationale",
+      "source_file": "backend\\check_db.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_main_py",
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_main_startup",
+      "label": "startup()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L58"
+    },
+    {
+      "id": "backend_main_shutdown",
+      "label": "shutdown()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L111"
+    },
+    {
+      "id": "backend_main_seed_games_from_api",
+      "label": "seed_games_from_api()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L119"
+    },
+    {
+      "id": "backend_main_seed_one_game",
+      "label": "seed_one_game()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L132"
+    },
+    {
+      "id": "backend_main_ensure_minimum_games",
+      "label": "ensure_minimum_games()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L218"
+    },
+    {
+      "id": "backend_main_is_price_cache_expired",
+      "label": "_is_price_cache_expired()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L245"
+    },
+    {
+      "id": "backend_main_refresh_game_prices",
+      "label": "refresh_game_prices()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L253"
+    },
+    {
+      "id": "backend_main_get_latest_prices",
+      "label": "get_latest_prices()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L326"
+    },
+    {
+      "id": "backend_main_get_price_history",
+      "label": "get_price_history()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L339"
+    },
+    {
+      "id": "backend_main_compute_buying_sentiment",
+      "label": "compute_buying_sentiment()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L352"
+    },
+    {
+      "id": "backend_main_compute_recommendation_score",
+      "label": "compute_recommendation_score()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L361"
+    },
+    {
+      "id": "backend_main_build_game_response",
+      "label": "build_game_response()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L368"
+    },
+    {
+      "id": "backend_main_get_market_status",
+      "label": "get_market_status()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L460"
+    },
+    {
+      "id": "backend_main_get_game_details",
+      "label": "get_game_details()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L491"
+    },
+    {
+      "id": "backend_main_force_refresh",
+      "label": "force_refresh()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L510"
+    },
+    {
+      "id": "backend_main_seed_more",
+      "label": "seed_more()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L519"
+    },
+    {
+      "id": "backend_main_health_check",
+      "label": "health_check()",
+      "file_type": "code",
+      "source_file": "backend\\main.py",
+      "source_location": "L537"
+    },
+    {
+      "id": "backend_main_rationale_120",
+      "label": "Search for each tracked game on CheapShark, fetch metadata from Steam,     and p",
+      "file_type": "rationale",
+      "source_file": "backend\\main.py",
+      "source_location": "L120"
+    },
+    {
+      "id": "backend_main_rationale_133",
+      "label": "Seed one game by title. Returns True if inserted, else False.",
+      "file_type": "rationale",
+      "source_file": "backend\\main.py",
+      "source_location": "L133"
+    },
+    {
+      "id": "backend_main_rationale_219",
+      "label": "Expand DB catalog until at least target_count games exist.",
+      "file_type": "rationale",
+      "source_file": "backend\\main.py",
+      "source_location": "L219"
+    },
+    {
+      "id": "backend_main_rationale_254",
+      "label": "Fetch fresh prices from CheapShark for a single game.     Only calls the API if",
+      "file_type": "rationale",
+      "source_file": "backend\\main.py",
+      "source_location": "L254"
+    },
+    {
+      "id": "backend_main_rationale_327",
+      "label": "Get the most recent price for each platform from the database.",
+      "file_type": "rationale",
+      "source_file": "backend\\main.py",
+      "source_location": "L327"
+    },
+    {
+      "id": "backend_main_rationale_340",
+      "label": "Fetch price history for a specific platform from the DB.",
+      "file_type": "rationale",
+      "source_file": "backend\\main.py",
+      "source_location": "L340"
+    },
+    {
+      "id": "backend_main_rationale_369",
+      "label": "Build the API response for a single game with real price data.",
+      "file_type": "rationale",
+      "source_file": "backend\\main.py",
+      "source_location": "L369"
+    },
+    {
+      "id": "backend_main_rationale_461",
+      "label": "Aggregates live data from PostgreSQL + external APIs for all games.",
+      "file_type": "rationale",
+      "source_file": "backend\\main.py",
+      "source_location": "L461"
+    },
+    {
+      "id": "backend_main_rationale_492",
+      "label": "Returns details for a single game by ID with real price data.",
+      "file_type": "rationale",
+      "source_file": "backend\\main.py",
+      "source_location": "L492"
+    },
+    {
+      "id": "backend_main_rationale_511",
+      "label": "Force refresh all game prices from external APIs.",
+      "file_type": "rationale",
+      "source_file": "backend\\main.py",
+      "source_location": "L511"
+    },
+    {
+      "id": "backend_main_rationale_520",
+      "label": "Manually add more games to the catalog.",
+      "file_type": "rationale",
+      "source_file": "backend\\main.py",
+      "source_location": "L520"
+    },
+    {
+      "id": "backend_seed_missing_py",
+      "label": "seed_missing.py",
+      "file_type": "code",
+      "source_file": "backend\\seed_missing.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_seed_missing_seed",
+      "label": "seed()",
+      "file_type": "code",
+      "source_file": "backend\\seed_missing.py",
+      "source_location": "L22"
+    },
+    {
+      "id": "backend_seed_missing_rationale_1",
+      "label": "Seed the missing games into the database.",
+      "file_type": "rationale",
+      "source_file": "backend\\seed_missing.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_steam_api_py",
+      "label": "steam_api.py",
+      "file_type": "code",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_steam_api_get_app_details",
+      "label": "get_app_details()",
+      "file_type": "code",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L18"
+    },
+    {
+      "id": "backend_steam_api_parse_steam_data",
+      "label": "_parse_steam_data()",
+      "file_type": "code",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L63"
+    },
+    {
+      "id": "backend_steam_api_parse_system_requirements",
+      "label": "_parse_system_requirements()",
+      "file_type": "code",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L123"
+    },
+    {
+      "id": "backend_steam_api_extract_req_fields",
+      "label": "_extract_req_fields()",
+      "file_type": "code",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L136"
+    },
+    {
+      "id": "backend_steam_api_get_multiple_app_details",
+      "label": "get_multiple_app_details()",
+      "file_type": "code",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L170"
+    },
+    {
+      "id": "backend_steam_api_rationale_1",
+      "label": "Steam Store API Integration Module Undocumented but widely-used public API \u2014 no",
+      "file_type": "rationale",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_steam_api_rationale_19",
+      "label": "Fetch game details from the Steam Store API.      Args:         steam_app_id: Th",
+      "file_type": "rationale",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L19"
+    },
+    {
+      "id": "backend_steam_api_rationale_64",
+      "label": "Parse raw Steam API response into our app's format.",
+      "file_type": "rationale",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L64"
+    },
+    {
+      "id": "backend_steam_api_rationale_124",
+      "label": "Parse system requirements from Steam API response.",
+      "file_type": "rationale",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L124"
+    },
+    {
+      "id": "backend_steam_api_rationale_137",
+      "label": "Extract system requirement fields from Steam's HTML format.     Steam returns re",
+      "file_type": "rationale",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L137"
+    },
+    {
+      "id": "backend_steam_api_rationale_175",
+      "label": "Fetch details for multiple Steam apps with rate limiting.     Returns a dict map",
+      "file_type": "rationale",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L175"
+    },
+    {
+      "id": "backend_test_api_py",
+      "label": "test_api.py",
+      "file_type": "code",
+      "source_file": "backend\\test_api.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_test_api_test",
+      "label": "test()",
+      "file_type": "code",
+      "source_file": "backend\\test_api.py",
+      "source_location": "L6"
+    },
+    {
+      "id": "backend_test_api_rationale_1",
+      "label": "Quick test to debug the API response.",
+      "file_type": "rationale",
+      "source_file": "backend\\test_api.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "frontend_eslint_config_js",
+      "label": "eslint.config.js",
+      "file_type": "code",
+      "source_file": "frontend\\eslint.config.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "frontend_vite_config_js",
+      "label": "vite.config.js",
+      "file_type": "code",
+      "source_file": "frontend\\vite.config.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "frontend_src_app_jsx",
+      "label": "App.jsx",
+      "file_type": "code",
+      "source_file": "frontend\\src\\App.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_app",
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\App.jsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "frontend_src_config_js",
+      "label": "config.js",
+      "file_type": "code",
+      "source_file": "frontend\\src\\config.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_config_trimtrailingslash",
+      "label": "trimTrailingSlash()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\config.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_config_api_base_url",
+      "label": "API_BASE_URL",
+      "file_type": "code",
+      "source_file": "frontend\\src\\config.js",
+      "source_location": "L3"
+    },
+    {
+      "id": "frontend_src_main_jsx",
+      "label": "main.jsx",
+      "file_type": "code",
+      "source_file": "frontend\\src\\main.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "frontend_src_components_buyingsentiment_jsx",
+      "label": "BuyingSentiment.jsx",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\BuyingSentiment.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_buyingsentiment_sentiment_config",
+      "label": "SENTIMENT_CONFIG",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\BuyingSentiment.jsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "components_buyingsentiment_buyingsentiment",
+      "label": "BuyingSentiment()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\BuyingSentiment.jsx",
+      "source_location": "L36"
+    },
+    {
+      "id": "frontend_src_components_commandpalette_jsx",
+      "label": "CommandPalette.jsx",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\CommandPalette.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_commandpalette_minisparkline",
+      "label": "MiniSparkline()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\CommandPalette.jsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "components_commandpalette_commandpalette",
+      "label": "CommandPalette()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\CommandPalette.jsx",
+      "source_location": "L20"
+    },
+    {
+      "id": "frontend_src_components_dashboard_jsx",
+      "label": "Dashboard.jsx",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\Dashboard.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_dashboard_dashboard",
+      "label": "Dashboard()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\Dashboard.jsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "frontend_src_components_gamecard_jsx",
+      "label": "GameCard.jsx",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\GameCard.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_gamecard_gamecard",
+      "label": "GameCard()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\GameCard.jsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "frontend_src_components_gamedetails_jsx",
+      "label": "GameDetails.jsx",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_gamedetails_charttooltip",
+      "label": "ChartTooltip()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L17"
+    },
+    {
+      "id": "components_gamedetails_known_colors",
+      "label": "KNOWN_COLORS",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L36"
+    },
+    {
+      "id": "components_gamedetails_fallback_palette",
+      "label": "FALLBACK_PALETTE",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L51"
+    },
+    {
+      "id": "components_gamedetails_getstorecolor",
+      "label": "getStoreColor()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L52"
+    },
+    {
+      "id": "components_gamedetails_gamedetails",
+      "label": "GameDetails()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L58"
+    },
+    {
+      "id": "frontend_src_components_pricechart_jsx",
+      "label": "PriceChart.jsx",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\PriceChart.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_pricechart_customtooltip",
+      "label": "CustomTooltip()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\PriceChart.jsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "components_pricechart_pricechart",
+      "label": "PriceChart()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\PriceChart.jsx",
+      "source_location": "L24"
+    },
+    {
+      "id": "frontend_src_components_skeletoncard_jsx",
+      "label": "SkeletonCard.jsx",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\SkeletonCard.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_skeletoncard_pulse",
+      "label": "Pulse()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\SkeletonCard.jsx",
+      "source_location": "L2"
+    },
+    {
+      "id": "components_skeletoncard_skeletoncard",
+      "label": "SkeletonCard()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\SkeletonCard.jsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "components_skeletoncard_skeletonhero",
+      "label": "SkeletonHero()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\SkeletonCard.jsx",
+      "source_location": "L18"
+    },
+    {
+      "id": "components_skeletoncard_skeletonchart",
+      "label": "SkeletonChart()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\SkeletonCard.jsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "components_skeletoncard_skeletonsurgerow",
+      "label": "SkeletonSurgeRow()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\SkeletonCard.jsx",
+      "source_location": "L30"
+    },
+    {
+      "id": "components_skeletoncard_skeletonplatformcard",
+      "label": "SkeletonPlatformCard()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\SkeletonCard.jsx",
+      "source_location": "L46"
+    },
+    {
+      "id": "components_skeletoncard_skeletongamedetails",
+      "label": "SkeletonGameDetails()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\SkeletonCard.jsx",
+      "source_location": "L51"
+    },
+    {
+      "id": "frontend_src_components_storefront_jsx",
+      "label": "Storefront.jsx",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\Storefront.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_storefront_storefront",
+      "label": "Storefront()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\Storefront.jsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "frontend_src_components_surgeleaderboard_jsx",
+      "label": "SurgeLeaderboard.jsx",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\SurgeLeaderboard.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_surgeleaderboard_surgeleaderboard",
+      "label": "SurgeLeaderboard()",
+      "file_type": "code",
+      "source_file": "frontend\\src\\components\\SurgeLeaderboard.jsx",
+      "source_location": "L3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "backend_analytics_py",
+      "target": "numpy",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_analytics_py",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_analytics_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_analytics_py",
+      "target": "backend_analytics_calculate_price_stability",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_analytics_py",
+      "target": "backend_analytics_calculate_weighted_moving_average",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_analytics_py",
+      "target": "backend_analytics_detect_price_surge",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_analytics_py",
+      "target": "backend_analytics_calculate_value_score",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_analytics_detect_price_surge",
+      "target": "backend_analytics_calculate_weighted_moving_average",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_analytics_rationale_6",
+      "target": "backend_analytics_calculate_price_stability",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_analytics_rationale_16",
+      "target": "backend_analytics_calculate_weighted_moving_average",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_analytics_rationale_26",
+      "target": "backend_analytics_detect_price_surge",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_analytics_rationale_58",
+      "target": "backend_analytics_calculate_value_score",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\analytics.py",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "time",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "httpx",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "asyncio",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "backend_cheapshark_min_interval_sec",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "backend_cheapshark_max_retries",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "backend_cheapshark_cheapshark_get",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "backend_cheapshark_fetch_stores",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "backend_cheapshark_get_store_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "backend_cheapshark_get_store_icon_url",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "backend_cheapshark_is_store_active",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "backend_cheapshark_search_game",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "backend_cheapshark_get_game_deals",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "backend_cheapshark_get_deal_details",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L153",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "backend_cheapshark_get_deal_redirect_url",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L159",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "backend_cheapshark_search_and_get_deals",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L164",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_py",
+      "target": "backend_cheapshark_discover_game_titles",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L180",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_cheapshark_get",
+      "target": "backend_cheapshark_max_retries",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_cheapshark_get",
+      "target": "backend_cheapshark_min_interval_sec",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_fetch_stores",
+      "target": "backend_cheapshark_cheapshark_get",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_search_game",
+      "target": "backend_cheapshark_cheapshark_get",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_get_game_deals",
+      "target": "backend_cheapshark_cheapshark_get",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L149",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_get_deal_details",
+      "target": "backend_cheapshark_cheapshark_get",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L155",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_search_and_get_deals",
+      "target": "backend_cheapshark_search_game",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_search_and_get_deals",
+      "target": "backend_cheapshark_get_game_deals",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L174",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_discover_game_titles",
+      "target": "backend_cheapshark_cheapshark_get",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L193",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_rationale_1",
+      "target": "backend_cheapshark_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_rationale_38",
+      "target": "backend_cheapshark_cheapshark_get",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_rationale_88",
+      "target": "backend_cheapshark_fetch_stores",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_rationale_107",
+      "target": "backend_cheapshark_get_store_name",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_rationale_112",
+      "target": "backend_cheapshark_get_store_icon_url",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_rationale_119",
+      "target": "backend_cheapshark_is_store_active",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_rationale_124",
+      "target": "backend_cheapshark_search_game",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_rationale_137",
+      "target": "backend_cheapshark_get_game_deals",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_rationale_154",
+      "target": "backend_cheapshark_get_deal_details",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L154",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_rationale_160",
+      "target": "backend_cheapshark_get_deal_redirect_url",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_rationale_165",
+      "target": "backend_cheapshark_search_and_get_deals",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L165",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_cheapshark_rationale_181",
+      "target": "backend_cheapshark_discover_game_titles",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\cheapshark.py",
+      "source_location": "L181",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_check_db_py",
+      "target": "asyncio",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\check_db.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_check_db_py",
+      "target": "asyncpg",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\check_db.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_check_db_py",
+      "target": "backend_check_db_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\check_db.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_check_db_rationale_1",
+      "target": "backend_check_db_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\check_db.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "asyncio",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "asyncpg",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "dotenv",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "fastapi",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "fastapi_middleware_cors",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "analytics",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "cheapshark",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "steam_api",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_startup",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_shutdown",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_seed_games_from_api",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_seed_one_game",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L132",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_ensure_minimum_games",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L218",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_is_price_cache_expired",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L245",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_refresh_game_prices",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L253",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_get_latest_prices",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L326",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_get_price_history",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L339",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_compute_buying_sentiment",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L352",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_compute_recommendation_score",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L361",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_build_game_response",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L368",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_get_market_status",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L460",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_get_game_details",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L491",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_force_refresh",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L510",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_seed_more",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L519",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_py",
+      "target": "backend_main_health_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L537",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_startup",
+      "target": "backend_main_seed_games_from_api",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_startup",
+      "target": "backend_main_ensure_minimum_games",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_seed_games_from_api",
+      "target": "backend_main_seed_one_game",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_seed_games_from_api",
+      "target": "backend_main_ensure_minimum_games",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_ensure_minimum_games",
+      "target": "backend_main_seed_one_game",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L235",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_refresh_game_prices",
+      "target": "backend_main_is_price_cache_expired",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L263",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_refresh_game_prices",
+      "target": "backend_main_get_latest_prices",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L323",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_build_game_response",
+      "target": "backend_main_get_price_history",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L384",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_build_game_response",
+      "target": "backend_main_compute_recommendation_score",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L391",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_build_game_response",
+      "target": "backend_main_compute_buying_sentiment",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L430",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_get_market_status",
+      "target": "backend_main_is_price_cache_expired",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L469",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_get_market_status",
+      "target": "backend_main_refresh_game_prices",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L482",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_get_market_status",
+      "target": "backend_main_build_game_response",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L484",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_get_game_details",
+      "target": "backend_main_refresh_game_prices",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L501",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_get_game_details",
+      "target": "backend_main_build_game_response",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L505",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_seed_more",
+      "target": "backend_main_ensure_minimum_games",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L526",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_rationale_120",
+      "target": "backend_main_seed_games_from_api",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_rationale_133",
+      "target": "backend_main_seed_one_game",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_rationale_219",
+      "target": "backend_main_ensure_minimum_games",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L219",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_rationale_254",
+      "target": "backend_main_refresh_game_prices",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L254",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_rationale_327",
+      "target": "backend_main_get_latest_prices",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L327",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_rationale_340",
+      "target": "backend_main_get_price_history",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L340",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_rationale_369",
+      "target": "backend_main_build_game_response",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L369",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_rationale_461",
+      "target": "backend_main_get_market_status",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L461",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_rationale_492",
+      "target": "backend_main_get_game_details",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L492",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_rationale_511",
+      "target": "backend_main_force_refresh",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L511",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_rationale_520",
+      "target": "backend_main_seed_more",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\main.py",
+      "source_location": "L520",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_seed_missing_py",
+      "target": "asyncio",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\seed_missing.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_seed_missing_py",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\seed_missing.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_seed_missing_py",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\seed_missing.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_seed_missing_py",
+      "target": "asyncpg",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\seed_missing.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_seed_missing_py",
+      "target": "cheapshark",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\seed_missing.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_seed_missing_py",
+      "target": "steam_api",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\seed_missing.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_seed_missing_py",
+      "target": "backend_seed_missing_seed",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\seed_missing.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_seed_missing_rationale_1",
+      "target": "backend_seed_missing_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\seed_missing.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_py",
+      "target": "httpx",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_py",
+      "target": "asyncio",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_py",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_py",
+      "target": "backend_steam_api_get_app_details",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_py",
+      "target": "backend_steam_api_parse_steam_data",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_py",
+      "target": "backend_steam_api_parse_system_requirements",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_py",
+      "target": "backend_steam_api_extract_req_fields",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_py",
+      "target": "backend_steam_api_get_multiple_app_details",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L170",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_get_app_details",
+      "target": "backend_steam_api_parse_steam_data",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_parse_steam_data",
+      "target": "backend_steam_api_parse_system_requirements",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_parse_system_requirements",
+      "target": "backend_steam_api_extract_req_fields",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_get_multiple_app_details",
+      "target": "backend_steam_api_get_app_details",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L181",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_rationale_1",
+      "target": "backend_steam_api_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_rationale_19",
+      "target": "backend_steam_api_get_app_details",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_rationale_64",
+      "target": "backend_steam_api_parse_steam_data",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_rationale_124",
+      "target": "backend_steam_api_parse_system_requirements",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_rationale_137",
+      "target": "backend_steam_api_extract_req_fields",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_steam_api_rationale_175",
+      "target": "backend_steam_api_get_multiple_app_details",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\steam_api.py",
+      "source_location": "L175",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_test_api_py",
+      "target": "asyncio",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\test_api.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_test_api_py",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\test_api.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_test_api_py",
+      "target": "traceback",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\test_api.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_test_api_py",
+      "target": "backend_test_api_test",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\test_api.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_test_api_rationale_1",
+      "target": "backend_test_api_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend\\test_api.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_eslint_config_js",
+      "target": "js",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\eslint.config.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_eslint_config_js",
+      "target": "globals",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\eslint.config.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_eslint_config_js",
+      "target": "eslint_plugin_react_hooks",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\eslint.config.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_eslint_config_js",
+      "target": "eslint_plugin_react_refresh",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\eslint.config.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_eslint_config_js",
+      "target": "config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\eslint.config.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_vite_config_js",
+      "target": "vite",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\vite.config.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_vite_config_js",
+      "target": "plugin_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\vite.config.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_vite_config_js",
+      "target": "vite",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\vite.config.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_app_jsx",
+      "target": "react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\App.jsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_app_jsx",
+      "target": "react_router_dom",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\App.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_app_jsx",
+      "target": "frontend_src_components_storefront_jsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\App.jsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_app_jsx",
+      "target": "frontend_src_components_gamedetails_jsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\App.jsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_app_jsx",
+      "target": "frontend_src_components_commandpalette_jsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\App.jsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_app_jsx",
+      "target": "frontend_src_config_js",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\App.jsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_app_jsx",
+      "target": "src_config_api_base_url",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\App.jsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_app_jsx",
+      "target": "src_app_app",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\App.jsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_config_js",
+      "target": "src_config_trimtrailingslash",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\config.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_config_js",
+      "target": "src_config_api_base_url",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\config.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_main_jsx",
+      "target": "react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\main.jsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_main_jsx",
+      "target": "client",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\main.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_main_jsx",
+      "target": "c_users_verno_onedrive_documents_antilearn_frontend_src_index_css",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\main.jsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_main_jsx",
+      "target": "frontend_src_app_jsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\main.jsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_buyingsentiment_jsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\BuyingSentiment.jsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_buyingsentiment_jsx",
+      "target": "components_buyingsentiment_sentiment_config",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\BuyingSentiment.jsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_buyingsentiment_jsx",
+      "target": "components_buyingsentiment_buyingsentiment",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\BuyingSentiment.jsx",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_commandpalette_jsx",
+      "target": "react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\CommandPalette.jsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_commandpalette_jsx",
+      "target": "react_router_dom",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\CommandPalette.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_commandpalette_jsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\CommandPalette.jsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_commandpalette_jsx",
+      "target": "components_commandpalette_minisparkline",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\CommandPalette.jsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_commandpalette_jsx",
+      "target": "components_commandpalette_commandpalette",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\CommandPalette.jsx",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_dashboard_jsx",
+      "target": "react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\Dashboard.jsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_dashboard_jsx",
+      "target": "frontend_src_components_surgeleaderboard_jsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\Dashboard.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_dashboard_jsx",
+      "target": "frontend_src_components_pricechart_jsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\Dashboard.jsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_dashboard_jsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\Dashboard.jsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_dashboard_jsx",
+      "target": "frontend_src_config_js",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\Dashboard.jsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_dashboard_jsx",
+      "target": "src_config_api_base_url",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\Dashboard.jsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_dashboard_jsx",
+      "target": "components_dashboard_dashboard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\Dashboard.jsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamecard_jsx",
+      "target": "react_router_dom",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameCard.jsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamecard_jsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameCard.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamecard_jsx",
+      "target": "components_gamecard_gamecard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameCard.jsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamedetails_jsx",
+      "target": "react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamedetails_jsx",
+      "target": "react_router_dom",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamedetails_jsx",
+      "target": "recharts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamedetails_jsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamedetails_jsx",
+      "target": "frontend_src_components_buyingsentiment_jsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamedetails_jsx",
+      "target": "frontend_src_components_skeletoncard_jsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamedetails_jsx",
+      "target": "components_skeletoncard_skeletongamedetails",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamedetails_jsx",
+      "target": "frontend_src_config_js",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamedetails_jsx",
+      "target": "src_config_api_base_url",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamedetails_jsx",
+      "target": "components_gamedetails_charttooltip",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamedetails_jsx",
+      "target": "components_gamedetails_known_colors",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamedetails_jsx",
+      "target": "components_gamedetails_fallback_palette",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamedetails_jsx",
+      "target": "components_gamedetails_getstorecolor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_gamedetails_jsx",
+      "target": "components_gamedetails_gamedetails",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\GameDetails.jsx",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_pricechart_jsx",
+      "target": "react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\PriceChart.jsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_pricechart_jsx",
+      "target": "recharts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\PriceChart.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_pricechart_jsx",
+      "target": "components_pricechart_customtooltip",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\PriceChart.jsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_pricechart_jsx",
+      "target": "components_pricechart_pricechart",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\PriceChart.jsx",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_skeletoncard_jsx",
+      "target": "components_skeletoncard_pulse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\SkeletonCard.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_skeletoncard_jsx",
+      "target": "components_skeletoncard_skeletoncard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\SkeletonCard.jsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_skeletoncard_jsx",
+      "target": "components_skeletoncard_skeletonhero",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\SkeletonCard.jsx",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_skeletoncard_jsx",
+      "target": "components_skeletoncard_skeletonchart",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\SkeletonCard.jsx",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_skeletoncard_jsx",
+      "target": "components_skeletoncard_skeletonsurgerow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\SkeletonCard.jsx",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_skeletoncard_jsx",
+      "target": "components_skeletoncard_skeletonplatformcard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\SkeletonCard.jsx",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_skeletoncard_jsx",
+      "target": "components_skeletoncard_skeletongamedetails",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\SkeletonCard.jsx",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_storefront_jsx",
+      "target": "react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\Storefront.jsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_storefront_jsx",
+      "target": "react_router_dom",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\Storefront.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_storefront_jsx",
+      "target": "frontend_src_components_gamecard_jsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\Storefront.jsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_storefront_jsx",
+      "target": "frontend_src_components_skeletoncard_jsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\Storefront.jsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_storefront_jsx",
+      "target": "components_skeletoncard_skeletoncard",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\Storefront.jsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_storefront_jsx",
+      "target": "components_skeletoncard_skeletonhero",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\Storefront.jsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_storefront_jsx",
+      "target": "components_skeletoncard_skeletonsurgerow",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\Storefront.jsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_storefront_jsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\Storefront.jsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_storefront_jsx",
+      "target": "components_storefront_storefront",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\Storefront.jsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_surgeleaderboard_jsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\SurgeLeaderboard.jsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_surgeleaderboard_jsx",
+      "target": "components_surgeleaderboard_surgeleaderboard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend\\src\\components\\SurgeLeaderboard.jsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_build_game_response",
+      "target": "backend_analytics_detect_price_surge",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend\\main.py",
+      "source_location": "L388",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_build_game_response",
+      "target": "backend_analytics_calculate_price_stability",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend\\main.py",
+      "source_location": "L389",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_main_build_game_response",
+      "target": "backend_analytics_calculate_value_score",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend\\main.py",
+      "source_location": "L390",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_test_api_test",
+      "target": "backend_main_startup",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend\\test_api.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_test_api_test",
+      "target": "backend_main_get_latest_prices",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend\\test_api.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_test_api_test",
+      "target": "backend_main_build_game_response",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend\\test_api.py",
+      "source_location": "L25",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

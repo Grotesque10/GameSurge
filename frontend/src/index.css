@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-store-bg: #121212;
+  --color-store-card: #1a1a1a;
+  --color-store-card-hover: #252525;
+  --color-store-surface: #202020;
+  --color-store-border: #2a2a2a;
+  --color-store-text: #f5f5f5;
+  --color-store-text-muted: #888888;
+  --color-store-accent: #0078f2;
+  --color-store-accent-hover: #0066cc;
+  --color-store-green: #00d26a;
+  --color-store-red: #ff4444;
+  --color-store-gold: #f5a623;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #121212;
+  color: #f5f5f5;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Utility: centered container with equal side margins */
+.container-main {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.container-wide {
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 768px) {
+  .container-main {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .container-wide {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Marquee Ticker Animation */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 40s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}

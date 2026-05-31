@@ -1,0 +1,309 @@
+{
+  "communities": {
+    "0": [
+      "backend_cheapshark_cheapshark_get",
+      "backend_cheapshark_discover_game_titles",
+      "backend_cheapshark_fetch_stores",
+      "backend_cheapshark_get_deal_details",
+      "backend_cheapshark_get_deal_redirect_url",
+      "backend_cheapshark_get_game_deals",
+      "backend_cheapshark_get_store_icon_url",
+      "backend_cheapshark_get_store_name",
+      "backend_cheapshark_is_store_active",
+      "backend_cheapshark_max_retries",
+      "backend_cheapshark_min_interval_sec",
+      "backend_cheapshark_py",
+      "backend_cheapshark_rationale_1",
+      "backend_cheapshark_rationale_107",
+      "backend_cheapshark_rationale_112",
+      "backend_cheapshark_rationale_119",
+      "backend_cheapshark_rationale_124",
+      "backend_cheapshark_rationale_137",
+      "backend_cheapshark_rationale_154",
+      "backend_cheapshark_rationale_160",
+      "backend_cheapshark_rationale_165",
+      "backend_cheapshark_rationale_181",
+      "backend_cheapshark_rationale_38",
+      "backend_cheapshark_rationale_88",
+      "backend_cheapshark_search_and_get_deals",
+      "backend_cheapshark_search_game"
+    ],
+    "1": [
+      "components_buyingsentiment_buyingsentiment",
+      "components_buyingsentiment_sentiment_config",
+      "components_commandpalette_commandpalette",
+      "components_commandpalette_minisparkline",
+      "components_dashboard_dashboard",
+      "components_gamedetails_charttooltip",
+      "components_gamedetails_fallback_palette",
+      "components_gamedetails_gamedetails",
+      "components_gamedetails_getstorecolor",
+      "components_gamedetails_known_colors",
+      "components_pricechart_customtooltip",
+      "components_pricechart_pricechart",
+      "components_surgeleaderboard_surgeleaderboard",
+      "frontend_src_app_jsx",
+      "frontend_src_components_buyingsentiment_jsx",
+      "frontend_src_components_commandpalette_jsx",
+      "frontend_src_components_dashboard_jsx",
+      "frontend_src_components_gamedetails_jsx",
+      "frontend_src_components_pricechart_jsx",
+      "frontend_src_components_surgeleaderboard_jsx",
+      "frontend_src_config_js",
+      "frontend_src_main_jsx",
+      "src_app_app",
+      "src_config_api_base_url",
+      "src_config_trimtrailingslash"
+    ],
+    "2": [
+      "backend_main_build_game_response",
+      "backend_main_compute_buying_sentiment",
+      "backend_main_compute_recommendation_score",
+      "backend_main_force_refresh",
+      "backend_main_get_game_details",
+      "backend_main_get_latest_prices",
+      "backend_main_get_market_status",
+      "backend_main_get_price_history",
+      "backend_main_health_check",
+      "backend_main_is_price_cache_expired",
+      "backend_main_py",
+      "backend_main_rationale_254",
+      "backend_main_rationale_327",
+      "backend_main_rationale_340",
+      "backend_main_rationale_369",
+      "backend_main_rationale_461",
+      "backend_main_rationale_492",
+      "backend_main_rationale_511",
+      "backend_main_refresh_game_prices",
+      "backend_main_shutdown",
+      "backend_test_api_py",
+      "backend_test_api_rationale_1",
+      "backend_test_api_test"
+    ],
+    "3": [
+      "backend_steam_api_extract_req_fields",
+      "backend_steam_api_get_app_details",
+      "backend_steam_api_get_multiple_app_details",
+      "backend_steam_api_parse_steam_data",
+      "backend_steam_api_parse_system_requirements",
+      "backend_steam_api_py",
+      "backend_steam_api_rationale_1",
+      "backend_steam_api_rationale_124",
+      "backend_steam_api_rationale_137",
+      "backend_steam_api_rationale_175",
+      "backend_steam_api_rationale_19",
+      "backend_steam_api_rationale_64"
+    ],
+    "4": [
+      "components_gamecard_gamecard",
+      "components_skeletoncard_pulse",
+      "components_skeletoncard_skeletoncard",
+      "components_skeletoncard_skeletonchart",
+      "components_skeletoncard_skeletongamedetails",
+      "components_skeletoncard_skeletonhero",
+      "components_skeletoncard_skeletonplatformcard",
+      "components_skeletoncard_skeletonsurgerow",
+      "components_storefront_storefront",
+      "frontend_src_components_gamecard_jsx",
+      "frontend_src_components_skeletoncard_jsx",
+      "frontend_src_components_storefront_jsx"
+    ],
+    "5": [
+      "backend_analytics_calculate_price_stability",
+      "backend_analytics_calculate_value_score",
+      "backend_analytics_calculate_weighted_moving_average",
+      "backend_analytics_detect_price_surge",
+      "backend_analytics_py",
+      "backend_analytics_rationale_16",
+      "backend_analytics_rationale_26",
+      "backend_analytics_rationale_58",
+      "backend_analytics_rationale_6"
+    ],
+    "6": [
+      "backend_main_ensure_minimum_games",
+      "backend_main_rationale_120",
+      "backend_main_rationale_133",
+      "backend_main_rationale_219",
+      "backend_main_rationale_520",
+      "backend_main_seed_games_from_api",
+      "backend_main_seed_more",
+      "backend_main_seed_one_game",
+      "backend_main_startup"
+    ],
+    "7": [
+      "backend_check_db_check",
+      "backend_check_db_py",
+      "backend_check_db_rationale_1"
+    ],
+    "8": [
+      "backend_seed_missing_py",
+      "backend_seed_missing_rationale_1",
+      "backend_seed_missing_seed"
+    ],
+    "9": [
+      "frontend_eslint_config_js"
+    ],
+    "10": [
+      "frontend_vite_config_js"
+    ]
+  },
+  "cohesion": {
+    "0": 0.1,
+    "1": 0.09,
+    "2": 0.13,
+    "3": 0.23,
+    "4": 0.21,
+    "5": 0.25,
+    "6": 0.28,
+    "7": 0.67,
+    "8": 0.67,
+    "9": 1.0,
+    "10": 1.0
+  },
+  "gods": [
+    {
+      "id": "backend_main_build_game_response",
+      "label": "build_game_response()",
+      "degree": 11
+    },
+    {
+      "id": "backend_cheapshark_cheapshark_get",
+      "label": "_cheapshark_get()",
+      "degree": 9
+    },
+    {
+      "id": "backend_main_ensure_minimum_games",
+      "label": "ensure_minimum_games()",
+      "degree": 6
+    },
+    {
+      "id": "backend_main_refresh_game_prices",
+      "label": "refresh_game_prices()",
+      "degree": 6
+    },
+    {
+      "id": "backend_main_seed_games_from_api",
+      "label": "seed_games_from_api()",
+      "degree": 5
+    },
+    {
+      "id": "backend_main_get_market_status",
+      "label": "get_market_status()",
+      "degree": 5
+    },
+    {
+      "id": "backend_analytics_detect_price_surge",
+      "label": "detect_price_surge()",
+      "degree": 4
+    },
+    {
+      "id": "backend_cheapshark_search_game",
+      "label": "search_game()",
+      "degree": 4
+    },
+    {
+      "id": "backend_cheapshark_get_game_deals",
+      "label": "get_game_deals()",
+      "degree": 4
+    },
+    {
+      "id": "backend_cheapshark_search_and_get_deals",
+      "label": "search_and_get_deals()",
+      "degree": 4
+    }
+  ],
+  "surprises": [
+    {
+      "source": "build_game_response()",
+      "target": "calculate_price_stability()",
+      "source_files": [
+        "backend/main.py",
+        "backend/analytics.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "build_game_response()",
+      "target": "detect_price_surge()",
+      "source_files": [
+        "backend/main.py",
+        "backend/analytics.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "build_game_response()",
+      "target": "calculate_value_score()",
+      "source_files": [
+        "backend/main.py",
+        "backend/analytics.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "test()",
+      "target": "startup()",
+      "source_files": [
+        "backend/test_api.py",
+        "backend/main.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "test()",
+      "target": "get_latest_prices()",
+      "source_files": [
+        "backend/test_api.py",
+        "backend/main.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `build_game_response()` connect `Community 2` to `Community 5`?",
+      "why": "High betweenness centrality (0.048) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `detect_price_surge()` connect `Community 5` to `Community 2`?",
+      "why": "High betweenness centrality (0.015) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 4 inferred relationships involving `build_game_response()` (e.g. with `detect_price_surge()` and `calculate_price_stability()`) actually correct?",
+      "why": "`build_game_response()` has 4 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Calculates the standard deviation of prices for a specific game      to determin`, `Calculates the weighted moving average given a list of prices and their correspo`, `Volatility Detection: Calculates a Surge Index.     A \"Price Surge\" is flagged w` to the rest of the system?",
+      "why": "39 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.09 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.13 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

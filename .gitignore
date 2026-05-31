@@ -1,0 +1,35 @@
+# Environment secrets
+.env
+backend/.env
+frontend/.env
+
+# Python caching
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+ENV/
+
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+
+# Build outputs
+dist/
+build/
+out/
+
+# IDE and OS configurations
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+.DS_Store
+Thumbs.db
+.gemini/
