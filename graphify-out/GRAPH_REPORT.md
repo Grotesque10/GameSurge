@@ -1,13 +1,18 @@
 # Graph Report - antilearn  (2026-05-31)
 
 ## Corpus Check
-- 32 files · ~20,786 words
+- 32 files · ~20,794 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 - 285 nodes · 380 edges · 19 communities (17 shown, 2 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `50f558b7`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Community 0|Community 0]]

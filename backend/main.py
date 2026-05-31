@@ -101,25 +101,23 @@ async def startup():
     # Load CheapShark store mapping
     await cheapshark.fetch_stores()
 
-    # Seed games if DB is empty
-    async with pool.acquire() as conn:
-        count = await conn.fetchval("SELECT COUNT(*) FROM games")
-        if count == 0:
-            logger.info("Empty database — seeding with real game data...")
-            await seed_games_from_api(conn)
-        else:
-            logger.info(f"Database connected — {count} games found")
-            if count < MIN_GAMES:
-                logger.info(f"Expanding game catalog to at least {MIN_GAMES} titles in background...")
-                
-                async def bg_expand():
-                    try:
-                        async with pool.acquire() as bg_conn:
-                            await ensure_minimum_games(bg_conn, MIN_GAMES)
-                    except Exception as bg_e:
-                        logger.error(f"Background game catalog expansion failed: {bg_e}")
-                        
-                asyncio.create_task(bg_expand())
+    # Seed and expand database in the background to avoid blocking server start
+    async def bg_seed_and_expand():
+        try:
+            async with pool.acquire() as bg_conn:
+                db_count = await bg_conn.fetchval("SELECT COUNT(*) FROM games")
+                if db_count == 0:
+                    logger.info("Empty database — seeding in background...")
+                    await seed_games_from_api(bg_conn)
+                else:
+                    logger.info(f"Database connected — {db_count} games found")
+                    if db_count < MIN_GAMES:
+                        logger.info(f"Expanding game catalog to at least {MIN_GAMES} titles in background...")
+                        await ensure_minimum_games(bg_conn, MIN_GAMES)
+        except Exception as bg_e:
+            logger.error(f"Background database initialization failed: {bg_e}")
+
+    asyncio.create_task(bg_seed_and_expand())
 
 
 @app.on_event("shutdown")

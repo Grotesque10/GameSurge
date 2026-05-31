@@ -394,7 +394,7 @@
       "label": "check()",
       "file_type": "code",
       "source_file": "backend/check_db.py",
-      "source_location": "L5",
+      "source_location": "L10",
       "id": "backend_check_db_check",
       "community": 13,
       "norm_label": "check()"
@@ -430,7 +430,7 @@
       "label": "shutdown()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L126",
+      "source_location": "L124",
       "id": "backend_main_shutdown",
       "community": 1,
       "norm_label": "shutdown()"
@@ -439,7 +439,7 @@
       "label": "seed_games_from_api()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L134",
+      "source_location": "L132",
       "id": "backend_main_seed_games_from_api",
       "community": 4,
       "norm_label": "seed_games_from_api()"
@@ -448,7 +448,7 @@
       "label": "seed_one_game()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L147",
+      "source_location": "L145",
       "id": "backend_main_seed_one_game",
       "community": 4,
       "norm_label": "seed_one_game()"
@@ -457,7 +457,7 @@
       "label": "ensure_minimum_games()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L233",
+      "source_location": "L231",
       "id": "backend_main_ensure_minimum_games",
       "community": 4,
       "norm_label": "ensure_minimum_games()"
@@ -466,7 +466,7 @@
       "label": "_is_price_cache_expired()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L260",
+      "source_location": "L258",
       "id": "backend_main_is_price_cache_expired",
       "community": 2,
       "norm_label": "_is_price_cache_expired()"
@@ -475,7 +475,7 @@
       "label": "refresh_game_prices()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L268",
+      "source_location": "L266",
       "id": "backend_main_refresh_game_prices",
       "community": 2,
       "norm_label": "refresh_game_prices()"
@@ -484,7 +484,7 @@
       "label": "get_latest_prices()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L342",
+      "source_location": "L340",
       "id": "backend_main_get_latest_prices",
       "community": 9,
       "norm_label": "get_latest_prices()"
@@ -493,7 +493,7 @@
       "label": "get_price_history()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L355",
+      "source_location": "L353",
       "id": "backend_main_get_price_history",
       "community": 9,
       "norm_label": "get_price_history()"
@@ -502,7 +502,7 @@
       "label": "extract_base_title()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L368",
+      "source_location": "L366",
       "id": "backend_main_extract_base_title",
       "community": 2,
       "norm_label": "extract_base_title()"
@@ -511,7 +511,7 @@
       "label": "compute_buying_sentiment()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L382",
+      "source_location": "L380",
       "id": "backend_main_compute_buying_sentiment",
       "community": 5,
       "norm_label": "compute_buying_sentiment()"
@@ -520,7 +520,7 @@
       "label": "compute_recommendation_score()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L391",
+      "source_location": "L389",
       "id": "backend_main_compute_recommendation_score",
       "community": 5,
       "norm_label": "compute_recommendation_score()"
@@ -529,7 +529,7 @@
       "label": "build_game_response()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L398",
+      "source_location": "L396",
       "id": "backend_main_build_game_response",
       "community": 5,
       "norm_label": "build_game_response()"
@@ -538,7 +538,7 @@
       "label": "background_refresh_task()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L507",
+      "source_location": "L505",
       "id": "backend_main_background_refresh_task",
       "community": 2,
       "norm_label": "background_refresh_task()"
@@ -547,7 +547,7 @@
       "label": "get_market_status()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L526",
+      "source_location": "L524",
       "id": "backend_main_get_market_status",
       "community": 2,
       "norm_label": "get_market_status()"
@@ -556,7 +556,7 @@
       "label": "get_game_details()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L602",
+      "source_location": "L600",
       "id": "backend_main_get_game_details",
       "community": 2,
       "norm_label": "get_game_details()"
@@ -565,7 +565,7 @@
       "label": "force_refresh()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L649",
+      "source_location": "L647",
       "id": "backend_main_force_refresh",
       "community": 7,
       "norm_label": "force_refresh()"
@@ -574,7 +574,7 @@
       "label": "seed_more()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L658",
+      "source_location": "L656",
       "id": "backend_main_seed_more",
       "community": 7,
       "norm_label": "seed_more()"
@@ -583,7 +583,7 @@
       "label": "games_count()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L676",
+      "source_location": "L674",
       "id": "backend_main_games_count",
       "community": 10,
       "norm_label": "games_count()"
@@ -592,7 +592,7 @@
       "label": "health_check()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L684",
+      "source_location": "L682",
       "id": "backend_main_health_check",
       "community": 1,
       "norm_label": "health_check()"
@@ -601,7 +601,7 @@
       "label": "get_current_user()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L691",
+      "source_location": "L689",
       "id": "backend_main_get_current_user",
       "community": 1,
       "norm_label": "get_current_user()"
@@ -610,7 +610,7 @@
       "label": "LoginRequest",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L715",
+      "source_location": "L713",
       "id": "backend_main_loginrequest",
       "community": 1,
       "norm_label": "loginrequest"
@@ -628,7 +628,7 @@
       "label": "SyncItem",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L719",
+      "source_location": "L717",
       "id": "backend_main_syncitem",
       "community": 1,
       "norm_label": "syncitem"
@@ -637,7 +637,7 @@
       "label": "SyncRequest",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L723",
+      "source_location": "L721",
       "id": "backend_main_syncrequest",
       "community": 1,
       "norm_label": "syncrequest"
@@ -646,7 +646,7 @@
       "label": "AddItemRequest",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L726",
+      "source_location": "L724",
       "id": "backend_main_additemrequest",
       "community": 1,
       "norm_label": "additemrequest"
@@ -655,7 +655,7 @@
       "label": "get_auth_config()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L732",
+      "source_location": "L730",
       "id": "backend_main_get_auth_config",
       "community": 1,
       "norm_label": "get_auth_config()"
@@ -664,7 +664,7 @@
       "label": "auth_login()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L742",
+      "source_location": "L740",
       "id": "backend_main_auth_login",
       "community": 1,
       "norm_label": "auth_login()"
@@ -673,7 +673,7 @@
       "label": "auth_me()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L800",
+      "source_location": "L798",
       "id": "backend_main_auth_me",
       "community": 1,
       "norm_label": "auth_me()"
@@ -682,7 +682,7 @@
       "label": "get_db_watchlist()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L809",
+      "source_location": "L807",
       "id": "backend_main_get_db_watchlist",
       "community": 1,
       "norm_label": "get_db_watchlist()"
@@ -691,7 +691,7 @@
       "label": "sync_watchlist()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L840",
+      "source_location": "L838",
       "id": "backend_main_sync_watchlist",
       "community": 1,
       "norm_label": "sync_watchlist()"
@@ -700,7 +700,7 @@
       "label": "add_to_db_watchlist()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L860",
+      "source_location": "L858",
       "id": "backend_main_add_to_db_watchlist",
       "community": 1,
       "norm_label": "add_to_db_watchlist()"
@@ -709,7 +709,7 @@
       "label": "remove_from_db_watchlist()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L876",
+      "source_location": "L874",
       "id": "backend_main_remove_from_db_watchlist",
       "community": 1,
       "norm_label": "remove_from_db_watchlist()"
@@ -718,8 +718,8 @@
       "label": "Search for each tracked game on CheapShark, fetch metadata from Steam,     and p",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L135",
-      "id": "backend_main_rationale_135",
+      "source_location": "L133",
+      "id": "backend_main_rationale_133",
       "community": 4,
       "norm_label": "search for each tracked game on cheapshark, fetch metadata from steam,     and p"
     },
@@ -727,8 +727,8 @@
       "label": "Seed one game by title. Returns True if inserted, else False.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L148",
-      "id": "backend_main_rationale_148",
+      "source_location": "L146",
+      "id": "backend_main_rationale_146",
       "community": 4,
       "norm_label": "seed one game by title. returns true if inserted, else false."
     },
@@ -736,8 +736,8 @@
       "label": "Expand DB catalog until at least target_count games exist.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L234",
-      "id": "backend_main_rationale_234",
+      "source_location": "L232",
+      "id": "backend_main_rationale_232",
       "community": 4,
       "norm_label": "expand db catalog until at least target_count games exist."
     },
@@ -745,8 +745,8 @@
       "label": "Fetch fresh prices from CheapShark for a single game.     Only calls the API if",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L269",
-      "id": "backend_main_rationale_269",
+      "source_location": "L267",
+      "id": "backend_main_rationale_267",
       "community": 2,
       "norm_label": "fetch fresh prices from cheapshark for a single game.     only calls the api if"
     },
@@ -754,8 +754,8 @@
       "label": "Get the most recent price for each platform from the database.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L343",
-      "id": "backend_main_rationale_343",
+      "source_location": "L341",
+      "id": "backend_main_rationale_341",
       "community": 9,
       "norm_label": "get the most recent price for each platform from the database."
     },
@@ -763,17 +763,17 @@
       "label": "Fetch price history for a specific platform from the DB.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L356",
-      "id": "backend_main_rationale_356",
-      "community": 9,
+      "source_location": "L354",
+      "id": "backend_main_rationale_354",
+      "community": 2,
       "norm_label": "fetch price history for a specific platform from the db."
     },
     {
       "label": "Extract a base title prefix by splitting at common delimiters of editions and DL",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L369",
-      "id": "backend_main_rationale_369",
+      "source_location": "L367",
+      "id": "backend_main_rationale_367",
       "community": 2,
       "norm_label": "extract a base title prefix by splitting at common delimiters of editions and dl"
     },
@@ -781,8 +781,8 @@
       "label": "Build the API response for a single game with real price data.          When lig",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L399",
-      "id": "backend_main_rationale_399",
+      "source_location": "L397",
+      "id": "backend_main_rationale_397",
       "community": 5,
       "norm_label": "build the api response for a single game with real price data.          when lig"
     },
@@ -790,8 +790,8 @@
       "label": "Background task to fetch fresh prices without blocking the API response.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L508",
-      "id": "backend_main_rationale_508",
+      "source_location": "L506",
+      "id": "backend_main_rationale_506",
       "community": 2,
       "norm_label": "background task to fetch fresh prices without blocking the api response."
     },
@@ -799,8 +799,8 @@
       "label": "Aggregates live data from PostgreSQL + external APIs for all games.          Sup",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L531",
-      "id": "backend_main_rationale_531",
+      "source_location": "L529",
+      "id": "backend_main_rationale_529",
       "community": 2,
       "norm_label": "aggregates live data from postgresql + external apis for all games.          sup"
     },
@@ -808,8 +808,8 @@
       "label": "Returns details for a single game by ID with real price data.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L603",
-      "id": "backend_main_rationale_603",
+      "source_location": "L601",
+      "id": "backend_main_rationale_601",
       "community": 2,
       "norm_label": "returns details for a single game by id with real price data."
     },
@@ -817,8 +817,8 @@
       "label": "Force refresh all game prices from external APIs.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L650",
-      "id": "backend_main_rationale_650",
+      "source_location": "L648",
+      "id": "backend_main_rationale_648",
       "community": 7,
       "norm_label": "force refresh all game prices from external apis."
     },
@@ -826,8 +826,8 @@
       "label": "Manually add more games to the catalog.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L659",
-      "id": "backend_main_rationale_659",
+      "source_location": "L657",
+      "id": "backend_main_rationale_657",
       "community": 7,
       "norm_label": "manually add more games to the catalog."
     },
@@ -835,8 +835,8 @@
       "label": "Returns the total number of games in the database.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L677",
-      "id": "backend_main_rationale_677",
+      "source_location": "L675",
+      "id": "backend_main_rationale_675",
       "community": 10,
       "norm_label": "returns the total number of games in the database."
     },
@@ -844,8 +844,8 @@
       "label": "FastAPI Dependency to authenticate and fetch the current mock user.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L692",
-      "id": "backend_main_rationale_692",
+      "source_location": "L690",
+      "id": "backend_main_rationale_690",
       "community": 1,
       "norm_label": "fastapi dependency to authenticate and fetch the current mock user."
     },
@@ -853,8 +853,8 @@
       "label": "Dynamically serve social provider Client IDs securely from backend environment.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L733",
-      "id": "backend_main_rationale_733",
+      "source_location": "L731",
+      "id": "backend_main_rationale_731",
       "community": 1,
       "norm_label": "dynamically serve social provider client ids securely from backend environment."
     },
@@ -862,8 +862,8 @@
       "label": "Frictionless social sign-in simulator or live Discord OAuth2 token exchange.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L743",
-      "id": "backend_main_rationale_743",
+      "source_location": "L741",
+      "id": "backend_main_rationale_741",
       "community": 1,
       "norm_label": "frictionless social sign-in simulator or live discord oauth2 token exchange."
     },
@@ -871,8 +871,8 @@
       "label": "Fetch profile metadata of the currently logged-in user.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L801",
-      "id": "backend_main_rationale_801",
+      "source_location": "L799",
+      "id": "backend_main_rationale_799",
       "community": 1,
       "norm_label": "fetch profile metadata of the currently logged-in user."
     },
@@ -880,8 +880,8 @@
       "label": "Fetch persistent user watchlist items synced from the backend database.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L810",
-      "id": "backend_main_rationale_810",
+      "source_location": "L808",
+      "id": "backend_main_rationale_808",
       "community": 1,
       "norm_label": "fetch persistent user watchlist items synced from the backend database."
     },
@@ -889,8 +889,8 @@
       "label": "Bulk merge client-side localStorage wishlists into the persistent database.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L841",
-      "id": "backend_main_rationale_841",
+      "source_location": "L839",
+      "id": "backend_main_rationale_839",
       "community": 1,
       "norm_label": "bulk merge client-side localstorage wishlists into the persistent database."
     },
@@ -898,8 +898,8 @@
       "label": "Add a targeted game deal to the user's persistent backend watchlist.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L861",
-      "id": "backend_main_rationale_861",
+      "source_location": "L859",
+      "id": "backend_main_rationale_859",
       "community": 1,
       "norm_label": "add a targeted game deal to the user's persistent backend watchlist."
     },
@@ -907,8 +907,8 @@
       "label": "Remove a tracked game deal from the user's backend watchlist database.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L877",
-      "id": "backend_main_rationale_877",
+      "source_location": "L875",
+      "id": "backend_main_rationale_875",
       "community": 1,
       "norm_label": "remove a tracked game deal from the user's backend watchlist database."
     },
@@ -1834,199 +1834,199 @@
       "label": "Search for each tracked game on CheapShark, fetch metadata from Steam,     and p",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L133",
+      "source_location": "L135",
       "community": 4,
       "norm_label": "search for each tracked game on cheapshark, fetch metadata from steam,     and p",
-      "id": "backend_main_rationale_133"
+      "id": "backend_main_rationale_135"
     },
     {
       "label": "Seed one game by title. Returns True if inserted, else False.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L146",
+      "source_location": "L148",
       "community": 4,
       "norm_label": "seed one game by title. returns true if inserted, else false.",
-      "id": "backend_main_rationale_146"
+      "id": "backend_main_rationale_148"
     },
     {
       "label": "Expand DB catalog until at least target_count games exist.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L232",
+      "source_location": "L234",
       "community": 4,
       "norm_label": "expand db catalog until at least target_count games exist.",
-      "id": "backend_main_rationale_232"
+      "id": "backend_main_rationale_234"
     },
     {
       "label": "Fetch fresh prices from CheapShark for a single game.     Only calls the API if",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L267",
+      "source_location": "L269",
       "community": 2,
       "norm_label": "fetch fresh prices from cheapshark for a single game.     only calls the api if",
-      "id": "backend_main_rationale_267"
+      "id": "backend_main_rationale_269"
     },
     {
       "label": "Get the most recent price for each platform from the database.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L341",
+      "source_location": "L343",
       "community": 9,
       "norm_label": "get the most recent price for each platform from the database.",
-      "id": "backend_main_rationale_341"
+      "id": "backend_main_rationale_343"
     },
     {
       "label": "Fetch price history for a specific platform from the DB.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L354",
-      "community": 2,
+      "source_location": "L356",
+      "community": 9,
       "norm_label": "fetch price history for a specific platform from the db.",
-      "id": "backend_main_rationale_354"
+      "id": "backend_main_rationale_356"
     },
     {
       "label": "Extract a base title prefix by splitting at common delimiters of editions and DL",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L367",
+      "source_location": "L369",
       "community": 2,
       "norm_label": "extract a base title prefix by splitting at common delimiters of editions and dl",
-      "id": "backend_main_rationale_367"
+      "id": "backend_main_rationale_369"
     },
     {
       "label": "Build the API response for a single game with real price data.          When lig",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L397",
+      "source_location": "L399",
       "community": 5,
       "norm_label": "build the api response for a single game with real price data.          when lig",
-      "id": "backend_main_rationale_397"
+      "id": "backend_main_rationale_399"
     },
     {
       "label": "Background task to fetch fresh prices without blocking the API response.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L506",
+      "source_location": "L508",
       "community": 2,
       "norm_label": "background task to fetch fresh prices without blocking the api response.",
-      "id": "backend_main_rationale_506"
+      "id": "backend_main_rationale_508"
     },
     {
       "label": "Aggregates live data from PostgreSQL + external APIs for all games.          Sup",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L529",
+      "source_location": "L531",
       "community": 2,
       "norm_label": "aggregates live data from postgresql + external apis for all games.          sup",
-      "id": "backend_main_rationale_529"
+      "id": "backend_main_rationale_531"
     },
     {
       "label": "Returns details for a single game by ID with real price data.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L601",
+      "source_location": "L603",
       "community": 2,
       "norm_label": "returns details for a single game by id with real price data.",
-      "id": "backend_main_rationale_601"
+      "id": "backend_main_rationale_603"
     },
     {
       "label": "Force refresh all game prices from external APIs.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L648",
+      "source_location": "L650",
       "community": 7,
       "norm_label": "force refresh all game prices from external apis.",
-      "id": "backend_main_rationale_648"
+      "id": "backend_main_rationale_650"
     },
     {
       "label": "Manually add more games to the catalog.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L657",
+      "source_location": "L659",
       "community": 7,
       "norm_label": "manually add more games to the catalog.",
-      "id": "backend_main_rationale_657"
+      "id": "backend_main_rationale_659"
     },
     {
       "label": "Returns the total number of games in the database.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L675",
+      "source_location": "L677",
       "community": 10,
       "norm_label": "returns the total number of games in the database.",
-      "id": "backend_main_rationale_675"
+      "id": "backend_main_rationale_677"
     },
     {
       "label": "FastAPI Dependency to authenticate and fetch the current mock user.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L690",
+      "source_location": "L692",
       "community": 1,
       "norm_label": "fastapi dependency to authenticate and fetch the current mock user.",
-      "id": "backend_main_rationale_690"
+      "id": "backend_main_rationale_692"
     },
     {
       "label": "Dynamically serve social provider Client IDs securely from backend environment.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L731",
+      "source_location": "L733",
       "community": 1,
       "norm_label": "dynamically serve social provider client ids securely from backend environment.",
-      "id": "backend_main_rationale_731"
+      "id": "backend_main_rationale_733"
     },
     {
       "label": "Frictionless social sign-in simulator or live Discord OAuth2 token exchange.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L741",
+      "source_location": "L743",
       "community": 1,
       "norm_label": "frictionless social sign-in simulator or live discord oauth2 token exchange.",
-      "id": "backend_main_rationale_741"
+      "id": "backend_main_rationale_743"
     },
     {
       "label": "Fetch profile metadata of the currently logged-in user.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L799",
+      "source_location": "L801",
       "community": 1,
       "norm_label": "fetch profile metadata of the currently logged-in user.",
-      "id": "backend_main_rationale_799"
+      "id": "backend_main_rationale_801"
     },
     {
       "label": "Fetch persistent user watchlist items synced from the backend database.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L808",
+      "source_location": "L810",
       "community": 1,
       "norm_label": "fetch persistent user watchlist items synced from the backend database.",
-      "id": "backend_main_rationale_808"
+      "id": "backend_main_rationale_810"
     },
     {
       "label": "Bulk merge client-side localStorage wishlists into the persistent database.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L839",
+      "source_location": "L841",
       "community": 1,
       "norm_label": "bulk merge client-side localstorage wishlists into the persistent database.",
-      "id": "backend_main_rationale_839"
+      "id": "backend_main_rationale_841"
     },
     {
       "label": "Add a targeted game deal to the user's persistent backend watchlist.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L859",
+      "source_location": "L861",
       "community": 1,
       "norm_label": "add a targeted game deal to the user's persistent backend watchlist.",
-      "id": "backend_main_rationale_859"
+      "id": "backend_main_rationale_861"
     },
     {
       "label": "Remove a tracked game deal from the user's backend watchlist database.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L875",
+      "source_location": "L877",
       "community": 1,
       "norm_label": "remove a tracked game deal from the user's backend watchlist database.",
-      "id": "backend_main_rationale_875"
+      "id": "backend_main_rationale_877"
     },
     {
       "label": "Search for each tracked game on CheapShark, fetch metadata from Steam,     and p",
@@ -3493,20 +3493,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L135",
+      "source_location": "L133",
       "weight": 1.0,
-      "source": "backend_main_rationale_135",
-      "target": "backend_main_seed_games_from_api",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_133",
+      "target": "backend_main_seed_games_from_api"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L133",
+      "source_location": "L135",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_133",
+      "source": "backend_main_rationale_135",
       "target": "backend_main_seed_games_from_api"
     },
     {
@@ -3554,20 +3554,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L148",
+      "source_location": "L146",
       "weight": 1.0,
-      "source": "backend_main_rationale_148",
-      "target": "backend_main_seed_one_game",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_146",
+      "target": "backend_main_seed_one_game"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L146",
+      "source_location": "L148",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_146",
+      "source": "backend_main_rationale_148",
       "target": "backend_main_seed_one_game"
     },
     {
@@ -3615,20 +3615,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L234",
+      "source_location": "L232",
       "weight": 1.0,
-      "source": "backend_main_rationale_234",
-      "target": "backend_main_ensure_minimum_games",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_232",
+      "target": "backend_main_ensure_minimum_games"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L232",
+      "source_location": "L234",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_232",
+      "source": "backend_main_rationale_234",
       "target": "backend_main_ensure_minimum_games"
     },
     {
@@ -3742,20 +3742,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L269",
+      "source_location": "L267",
       "weight": 1.0,
-      "source": "backend_main_rationale_269",
-      "target": "backend_main_refresh_game_prices",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_267",
+      "target": "backend_main_refresh_game_prices"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L267",
+      "source_location": "L269",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_267",
+      "source": "backend_main_rationale_269",
       "target": "backend_main_refresh_game_prices"
     },
     {
@@ -3792,20 +3792,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L343",
+      "source_location": "L341",
       "weight": 1.0,
-      "source": "backend_main_rationale_343",
-      "target": "backend_main_get_latest_prices",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_341",
+      "target": "backend_main_get_latest_prices"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L341",
+      "source_location": "L343",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_341",
+      "source": "backend_main_rationale_343",
       "target": "backend_main_get_latest_prices"
     },
     {
@@ -3874,20 +3874,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L356",
+      "source_location": "L354",
       "weight": 1.0,
-      "source": "backend_main_rationale_356",
-      "target": "backend_main_get_price_history",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_354",
+      "target": "backend_main_get_price_history"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L354",
+      "source_location": "L356",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_354",
+      "source": "backend_main_rationale_356",
       "target": "backend_main_get_price_history"
     },
     {
@@ -3956,20 +3956,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L369",
+      "source_location": "L367",
       "weight": 1.0,
-      "source": "backend_main_rationale_369",
-      "target": "backend_main_extract_base_title",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_367",
+      "target": "backend_main_extract_base_title"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L367",
+      "source_location": "L369",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_367",
+      "source": "backend_main_rationale_369",
       "target": "backend_main_extract_base_title"
     },
     {
@@ -4050,20 +4050,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L399",
+      "source_location": "L397",
       "weight": 1.0,
-      "source": "backend_main_rationale_399",
-      "target": "backend_main_build_game_response",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_397",
+      "target": "backend_main_build_game_response"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L397",
+      "source_location": "L399",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_397",
+      "source": "backend_main_rationale_399",
       "target": "backend_main_build_game_response"
     },
     {
@@ -4131,20 +4131,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L508",
+      "source_location": "L506",
       "weight": 1.0,
-      "source": "backend_main_rationale_508",
-      "target": "backend_main_background_refresh_task",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_506",
+      "target": "backend_main_background_refresh_task"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L506",
+      "source_location": "L508",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_506",
+      "source": "backend_main_rationale_508",
       "target": "backend_main_background_refresh_task"
     },
     {
@@ -4191,20 +4191,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L531",
+      "source_location": "L529",
       "weight": 1.0,
-      "source": "backend_main_rationale_531",
-      "target": "backend_main_get_market_status",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_529",
+      "target": "backend_main_get_market_status"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L529",
+      "source_location": "L531",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_529",
+      "source": "backend_main_rationale_531",
       "target": "backend_main_get_market_status"
     },
     {
@@ -4261,20 +4261,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L603",
+      "source_location": "L601",
       "weight": 1.0,
-      "source": "backend_main_rationale_603",
-      "target": "backend_main_get_game_details",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_601",
+      "target": "backend_main_get_game_details"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L601",
+      "source_location": "L603",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_601",
+      "source": "backend_main_rationale_603",
       "target": "backend_main_get_game_details"
     },
     {
@@ -4341,20 +4341,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L650",
+      "source_location": "L648",
       "weight": 1.0,
-      "source": "backend_main_rationale_650",
-      "target": "backend_main_force_refresh",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_648",
+      "target": "backend_main_force_refresh"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L648",
+      "source_location": "L650",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_648",
+      "source": "backend_main_rationale_650",
       "target": "backend_main_force_refresh"
     },
     {
@@ -4421,20 +4421,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L659",
+      "source_location": "L657",
       "weight": 1.0,
-      "source": "backend_main_rationale_659",
-      "target": "backend_main_seed_more",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_657",
+      "target": "backend_main_seed_more"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L657",
+      "source_location": "L659",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_657",
+      "source": "backend_main_rationale_659",
       "target": "backend_main_seed_more"
     },
     {
@@ -4501,20 +4501,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L677",
+      "source_location": "L675",
       "weight": 1.0,
-      "source": "backend_main_rationale_677",
-      "target": "backend_main_games_count",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_675",
+      "target": "backend_main_games_count"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L675",
+      "source_location": "L677",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_675",
+      "source": "backend_main_rationale_677",
       "target": "backend_main_games_count"
     },
     {
@@ -4571,20 +4571,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L692",
+      "source_location": "L690",
       "weight": 1.0,
-      "source": "backend_main_rationale_692",
-      "target": "backend_main_get_current_user",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_690",
+      "target": "backend_main_get_current_user"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L690",
+      "source_location": "L692",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_690",
+      "source": "backend_main_rationale_692",
       "target": "backend_main_get_current_user"
     },
     {
@@ -4641,16 +4641,6 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L733",
-      "weight": 1.0,
-      "source": "backend_main_rationale_733",
-      "target": "backend_main_get_auth_config",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/main.py",
       "source_location": "L731",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4661,11 +4651,11 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L743",
+      "source_location": "L733",
       "weight": 1.0,
-      "source": "backend_main_rationale_743",
-      "target": "backend_main_auth_login",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_733",
+      "target": "backend_main_get_auth_config"
     },
     {
       "relation": "rationale_for",
@@ -4675,6 +4665,16 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "backend_main_rationale_741",
+      "target": "backend_main_auth_login"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/main.py",
+      "source_location": "L743",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_743",
       "target": "backend_main_auth_login"
     },
     {
@@ -4691,20 +4691,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L801",
+      "source_location": "L799",
       "weight": 1.0,
-      "source": "backend_main_rationale_801",
-      "target": "backend_main_auth_me",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_799",
+      "target": "backend_main_auth_me"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L799",
+      "source_location": "L801",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_799",
+      "source": "backend_main_rationale_801",
       "target": "backend_main_auth_me"
     },
     {
@@ -4732,20 +4732,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L810",
+      "source_location": "L808",
       "weight": 1.0,
-      "source": "backend_main_rationale_810",
-      "target": "backend_main_get_db_watchlist",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_808",
+      "target": "backend_main_get_db_watchlist"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L808",
+      "source_location": "L810",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_808",
+      "source": "backend_main_rationale_810",
       "target": "backend_main_get_db_watchlist"
     },
     {
@@ -4762,20 +4762,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L841",
+      "source_location": "L839",
       "weight": 1.0,
-      "source": "backend_main_rationale_841",
-      "target": "backend_main_sync_watchlist",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_839",
+      "target": "backend_main_sync_watchlist"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L839",
+      "source_location": "L841",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_839",
+      "source": "backend_main_rationale_841",
       "target": "backend_main_sync_watchlist"
     },
     {
@@ -4792,20 +4792,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L861",
+      "source_location": "L859",
       "weight": 1.0,
-      "source": "backend_main_rationale_861",
-      "target": "backend_main_add_to_db_watchlist",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_859",
+      "target": "backend_main_add_to_db_watchlist"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L859",
+      "source_location": "L861",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_859",
+      "source": "backend_main_rationale_861",
       "target": "backend_main_add_to_db_watchlist"
     },
     {
@@ -4822,20 +4822,20 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L877",
+      "source_location": "L875",
       "weight": 1.0,
-      "source": "backend_main_rationale_877",
-      "target": "backend_main_remove_from_db_watchlist",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "backend_main_rationale_875",
+      "target": "backend_main_remove_from_db_watchlist"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
-      "source_location": "L875",
+      "source_location": "L877",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "backend_main_rationale_875",
+      "source": "backend_main_rationale_877",
       "target": "backend_main_remove_from_db_watchlist"
     },
     {
@@ -6262,9 +6262,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_md",
-      "target": "antilearn_readme_gamesurge_real_time_game_price_intelligence_platform",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_gamesurge_real_time_game_price_intelligence_platform"
     },
     {
       "relation": "contains",
@@ -6272,9 +6272,9 @@
       "source_file": "README.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "antilearn_readme_gamesurge_real_time_game_price_intelligence_platform",
-      "target": "antilearn_readme_key_features",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_key_features"
     },
     {
       "relation": "contains",
@@ -6282,9 +6282,9 @@
       "source_file": "README.md",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "antilearn_readme_gamesurge_real_time_game_price_intelligence_platform",
-      "target": "antilearn_readme_technical_stack",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_technical_stack"
     },
     {
       "relation": "contains",
@@ -6292,9 +6292,9 @@
       "source_file": "README.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "antilearn_readme_gamesurge_real_time_game_price_intelligence_platform",
-      "target": "antilearn_readme_getting_started",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_getting_started"
     },
     {
       "relation": "contains",
@@ -6302,9 +6302,9 @@
       "source_file": "README.md",
       "source_location": "L95",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "antilearn_readme_gamesurge_real_time_game_price_intelligence_platform",
-      "target": "antilearn_readme_discord_oauth2_configuration",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_discord_oauth2_configuration"
     },
     {
       "relation": "contains",
@@ -6312,9 +6312,9 @@
       "source_file": "README.md",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "antilearn_readme_getting_started",
-      "target": "antilearn_readme_prerequisites",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_prerequisites"
     },
     {
       "relation": "contains",
@@ -6322,9 +6322,9 @@
       "source_file": "README.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "antilearn_readme_getting_started",
-      "target": "antilearn_readme_1_database_setup",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_1_database_setup"
     },
     {
       "relation": "contains",
@@ -6332,9 +6332,9 @@
       "source_file": "README.md",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "antilearn_readme_getting_started",
-      "target": "antilearn_readme_2_backend_setup",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_2_backend_setup"
     },
     {
       "relation": "contains",
@@ -6342,9 +6342,9 @@
       "source_file": "README.md",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "antilearn_readme_getting_started",
-      "target": "antilearn_readme_3_frontend_setup",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_3_frontend_setup"
     },
     {
       "relation": "contains",
@@ -6352,9 +6352,9 @@
       "source_file": "README.md",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "antilearn_readme_1_database_setup",
-      "target": "antilearn_readme_codeblock_1",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_codeblock_1"
     },
     {
       "relation": "contains",
@@ -6362,9 +6362,9 @@
       "source_file": "README.md",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "antilearn_readme_2_backend_setup",
-      "target": "antilearn_readme_codeblock_2",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_codeblock_2"
     },
     {
       "relation": "contains",
@@ -6372,9 +6372,9 @@
       "source_file": "README.md",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "antilearn_readme_2_backend_setup",
-      "target": "antilearn_readme_codeblock_3",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_codeblock_3"
     },
     {
       "relation": "contains",
@@ -6382,9 +6382,9 @@
       "source_file": "README.md",
       "source_location": "L64",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "antilearn_readme_2_backend_setup",
-      "target": "antilearn_readme_codeblock_4",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_codeblock_4"
     },
     {
       "relation": "contains",
@@ -6392,9 +6392,9 @@
       "source_file": "README.md",
       "source_location": "L70",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "antilearn_readme_2_backend_setup",
-      "target": "antilearn_readme_codeblock_5",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_codeblock_5"
     },
     {
       "relation": "contains",
@@ -6402,9 +6402,9 @@
       "source_file": "README.md",
       "source_location": "L80",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "antilearn_readme_3_frontend_setup",
-      "target": "antilearn_readme_codeblock_6",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_codeblock_6"
     },
     {
       "relation": "contains",
@@ -6412,9 +6412,9 @@
       "source_file": "README.md",
       "source_location": "L84",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "antilearn_readme_3_frontend_setup",
-      "target": "antilearn_readme_codeblock_7",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_codeblock_7"
     },
     {
       "relation": "contains",
@@ -6422,9 +6422,9 @@
       "source_file": "README.md",
       "source_location": "L88",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "antilearn_readme_3_frontend_setup",
-      "target": "antilearn_readme_codeblock_8",
-      "confidence_score": 1.0
+      "target": "antilearn_readme_codeblock_8"
     },
     {
       "relation": "contains",
@@ -6487,5 +6487,6 @@
       "target": "frontend_readme_notes"
     }
   ],
-  "hyperedges": []
+  "hyperedges": [],
+  "built_at_commit": "50f558b77972c57c3fa4ac21ad1ebcc46ded8f29"
 }

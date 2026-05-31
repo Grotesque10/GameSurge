@@ -7,7 +7,7 @@ import logging
 import os
 import httpx
 import asyncpg
-from typing import Optional, Dict, List, Any
+from typing import Optional
 from dotenv import load_dotenv
 
 # Load env variables explicitly
