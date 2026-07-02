@@ -115,6 +115,39 @@ The application utilizes a **"Lazy / Hybrid" Watchlist Architecture** where user
 
 ---
 
+## Running with Docker (Recommended)
+
+You can run the entire stack (Database, Backend, and Frontend) using Docker Compose for a consistent, isolated environment.
+
+1. Ensure Docker Desktop is running.
+2. From the root directory, run:
+   ```bash
+   docker compose up -d
+   ```
+3. The frontend will be available at `http://localhost:5173` and the backend at `http://localhost:8080`.
+4. To stop the application:
+   ```bash
+   docker compose down
+   ```
+
+---
+
+## Jenkins CI/CD Pipeline
+
+This project includes an automated Continuous Integration (CI) pipeline defined in the `Jenkinsfile`.
+
+When code is pushed to the repository, Jenkins will:
+1. **Build** the Backend and Frontend Docker images.
+2. **Spin up** a completely isolated, temporary test environment using `docker-compose.ci.yml`.
+3. **Seed** the temporary database with test data using `seed_missing.py`.
+4. **Run** all 42 Playwright End-to-End tests inside a dedicated testing container.
+5. **Tear down** the test environment automatically to keep the workspace clean.
+6. **Push** the verified Docker images to Docker Hub (on successful builds).
+
+To run this pipeline locally, you must configure a Jenkins server with Docker installed, and provide a credential named `docker-hub-credentials` containing your Docker Hub username and password.
+
+---
+
 ## Discord OAuth2 Configuration
 
 To enable the live cloud synchronization feature:
