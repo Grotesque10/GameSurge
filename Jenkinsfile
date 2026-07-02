@@ -29,9 +29,11 @@ pipeline {
                     sh 'docker compose up -d'
                     
                     dir('e2e') {
-                        echo 'Installing dependencies and running Playwright tests...'
-                        sh 'npm ci || npm install'
-                        sh 'PLAYWRIGHT_BASE_URL=http://host.docker.internal:5173 npx playwright test'
+                        echo 'Building E2E test image...'
+                        sh 'docker build -t gamesurge-e2e .'
+                        
+                        echo 'Running E2E tests inside container...'
+                        sh 'docker run --rm -e PLAYWRIGHT_BASE_URL=http://host.docker.internal:5173 gamesurge-e2e npx playwright test'
                     }
                 }
             }
