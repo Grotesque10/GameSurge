@@ -28,6 +28,9 @@ pipeline {
                     echo 'Starting application for E2E testing...'
                     sh 'docker compose -f docker-compose.ci.yml -p gamesurge-ci up -d'
                     
+                    echo 'Seeding database for E2E tests...'
+                    sh 'docker compose -f docker-compose.ci.yml -p gamesurge-ci exec -T backend python seed_missing.py'
+                    
                     dir('e2e') {
                         echo 'Building E2E test image...'
                         sh 'docker build -t gamesurge-e2e .'
