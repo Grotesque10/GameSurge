@@ -17,7 +17,7 @@ pipeline {
 
                     echo 'Building Frontend Image...'
                     // Use production Dockerfile for frontend
-                    sh "docker build -f ./frontend/Dockerfile -t ${DOCKERHUB_USERNAME}/gamesurge-frontend:latest ./frontend"
+                    sh "docker build --build-arg VITE_API_BASE_URL=http://backend:8080 -f ./frontend/Dockerfile -t ${DOCKERHUB_USERNAME}/gamesurge-frontend:latest ./frontend"
                 }
             }
         }
