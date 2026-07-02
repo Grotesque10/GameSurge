@@ -9,9 +9,11 @@ import httpx
 import asyncpg
 from typing import Optional
 from dotenv import load_dotenv
+from pathlib import Path
 
 # Load env variables explicitly
-load_dotenv(dotenv_path="c:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\.env")
+backend_dir = Path(__file__).resolve().parent
+load_dotenv(dotenv_path=backend_dir / ".env")
 DATABASE_URL = os.getenv("DATABASE_URL")
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -45,7 +47,9 @@ async def search_steam_by_title(client: httpx.AsyncClient, title: str) -> Option
 
 async def backfill():
     import sys
-    sys.path.append("c:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend")
+    from pathlib import Path
+    backend_dir = Path(__file__).resolve().parent
+    sys.path.append(str(backend_dir))
     import steam_api
 
     logger.info(f"Connecting to database...")

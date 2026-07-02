@@ -115,7 +115,7 @@
       "label": "search_steam_by_title()",
       "file_type": "code",
       "source_file": "backend/backfill_metadata.py",
-      "source_location": "L20",
+      "source_location": "L22",
       "id": "backend_backfill_metadata_search_steam_by_title",
       "community": 12,
       "norm_label": "search_steam_by_title()"
@@ -124,7 +124,7 @@
       "label": "backfill()",
       "file_type": "code",
       "source_file": "backend/backfill_metadata.py",
-      "source_location": "L46",
+      "source_location": "L48",
       "id": "backend_backfill_metadata_backfill",
       "community": 12,
       "norm_label": "backfill()"
@@ -142,8 +142,8 @@
       "label": "Search Steam store API by title and return the best matching App ID.",
       "file_type": "rationale",
       "source_file": "backend/backfill_metadata.py",
-      "source_location": "L21",
-      "id": "backend_backfill_metadata_rationale_21",
+      "source_location": "L23",
+      "id": "backend_backfill_metadata_rationale_23",
       "community": 12,
       "norm_label": "search steam store api by title and return the best matching app id."
     },
@@ -486,7 +486,7 @@
       "source_file": "backend/main.py",
       "source_location": "L340",
       "id": "backend_main_get_latest_prices",
-      "community": 9,
+      "community": 8,
       "norm_label": "get_latest_prices()"
     },
     {
@@ -495,7 +495,7 @@
       "source_file": "backend/main.py",
       "source_location": "L353",
       "id": "backend_main_get_price_history",
-      "community": 9,
+      "community": 8,
       "norm_label": "get_price_history()"
     },
     {
@@ -756,7 +756,7 @@
       "source_file": "backend/main.py",
       "source_location": "L341",
       "id": "backend_main_rationale_341",
-      "community": 9,
+      "community": 8,
       "norm_label": "get the most recent price for each platform from the database."
     },
     {
@@ -925,7 +925,7 @@
       "label": "seed()",
       "file_type": "code",
       "source_file": "backend/seed_missing.py",
-      "source_location": "L22",
+      "source_location": "L30",
       "id": "backend_seed_missing_seed",
       "community": 14,
       "norm_label": "seed()"
@@ -945,7 +945,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L1",
       "id": "backend_steam_api_py",
-      "community": 8,
+      "community": 9,
       "norm_label": "steam_api.py"
     },
     {
@@ -954,7 +954,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L18",
       "id": "backend_steam_api_get_app_details",
-      "community": 8,
+      "community": 9,
       "norm_label": "get_app_details()"
     },
     {
@@ -963,7 +963,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L63",
       "id": "backend_steam_api_parse_steam_data",
-      "community": 8,
+      "community": 9,
       "norm_label": "_parse_steam_data()"
     },
     {
@@ -972,7 +972,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L123",
       "id": "backend_steam_api_parse_system_requirements",
-      "community": 8,
+      "community": 9,
       "norm_label": "_parse_system_requirements()"
     },
     {
@@ -981,7 +981,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L136",
       "id": "backend_steam_api_extract_req_fields",
-      "community": 8,
+      "community": 9,
       "norm_label": "_extract_req_fields()"
     },
     {
@@ -990,7 +990,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L170",
       "id": "backend_steam_api_get_multiple_app_details",
-      "community": 8,
+      "community": 9,
       "norm_label": "get_multiple_app_details()"
     },
     {
@@ -999,7 +999,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L1",
       "id": "backend_steam_api_rationale_1",
-      "community": 8,
+      "community": 9,
       "norm_label": "steam store api integration module undocumented but widely-used public api \u2014 no"
     },
     {
@@ -1008,7 +1008,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L19",
       "id": "backend_steam_api_rationale_19",
-      "community": 8,
+      "community": 9,
       "norm_label": "fetch game details from the steam store api.      args:         steam_app_id: th"
     },
     {
@@ -1017,7 +1017,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L64",
       "id": "backend_steam_api_rationale_64",
-      "community": 8,
+      "community": 9,
       "norm_label": "parse raw steam api response into our app's format."
     },
     {
@@ -1026,7 +1026,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L124",
       "id": "backend_steam_api_rationale_124",
-      "community": 8,
+      "community": 9,
       "norm_label": "parse system requirements from steam api response."
     },
     {
@@ -1035,7 +1035,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L137",
       "id": "backend_steam_api_rationale_137",
-      "community": 8,
+      "community": 9,
       "norm_label": "extract system requirement fields from steam's html format.     steam returns re"
     },
     {
@@ -1044,7 +1044,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L175",
       "id": "backend_steam_api_rationale_175",
-      "community": 8,
+      "community": 9,
       "norm_label": "fetch details for multiple steam apps with rate limiting.     returns a dict map"
     },
     {
@@ -1831,6 +1831,15 @@
       "norm_label": "notes"
     },
     {
+      "label": "Search Steam store API by title and return the best matching App ID.",
+      "file_type": "rationale",
+      "source_file": "backend/backfill_metadata.py",
+      "source_location": "L21",
+      "community": 12,
+      "norm_label": "search steam store api by title and return the best matching app id.",
+      "id": "backend_backfill_metadata_rationale_21"
+    },
+    {
       "label": "Search for each tracked game on CheapShark, fetch metadata from Steam,     and p",
       "file_type": "rationale",
       "source_file": "backend/main.py",
@@ -1871,7 +1880,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L343",
-      "community": 9,
+      "community": 8,
       "norm_label": "get the most recent price for each platform from the database.",
       "id": "backend_main_rationale_343"
     },
@@ -1880,7 +1889,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L356",
-      "community": 9,
+      "community": 8,
       "norm_label": "fetch price history for a specific platform from the db.",
       "id": "backend_main_rationale_356"
     },
@@ -2069,7 +2078,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L338",
-      "community": 9,
+      "community": 8,
       "norm_label": "get the most recent price for each platform from the database.",
       "id": "backend_main_rationale_338"
     },
@@ -2078,7 +2087,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L351",
-      "community": 9,
+      "community": 8,
       "norm_label": "fetch price history for a specific platform from the db.",
       "id": "backend_main_rationale_351"
     },
@@ -2258,7 +2267,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L337",
-      "community": 9,
+      "community": 8,
       "norm_label": "get the most recent price for each platform from the database.",
       "id": "backend_main_rationale_337"
     },
@@ -2267,7 +2276,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L350",
-      "community": 9,
+      "community": 8,
       "norm_label": "fetch price history for a specific platform from the db.",
       "id": "backend_main_rationale_350"
     },
@@ -2375,7 +2384,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L328",
-      "community": 9,
+      "community": 8,
       "norm_label": "get the most recent price for each platform from the database.",
       "id": "backend_main_rationale_328"
     },
@@ -2519,7 +2528,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L327",
-      "community": 9,
+      "community": 8,
       "norm_label": "get the most recent price for each platform from the database.",
       "id": "backend_main_rationale_327"
     },
@@ -2528,7 +2537,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L340",
-      "community": 9,
+      "community": 8,
       "norm_label": "fetch price history for a specific platform from the db.",
       "id": "backend_main_rationale_340"
     },
@@ -2733,6 +2742,16 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "backend_backfill_metadata_backfill",
+      "target": "backend_backfill_metadata_search_steam_by_title"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/backfill_metadata.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_backfill_metadata_rationale_23",
       "target": "backend_backfill_metadata_search_steam_by_title"
     },
     {
@@ -6488,5 +6507,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "50f558b77972c57c3fa4ac21ad1ebcc46ded8f29"
+  "built_at_commit": "880286c704d1378875f7566bb6ba967625323ddb"
 }

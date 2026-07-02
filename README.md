@@ -92,6 +92,29 @@ The application utilizes a **"Lazy / Hybrid" Watchlist Architecture** where user
 
 ---
 
+### 4. End-to-End Testing (Playwright)
+
+1. Ensure both the backend and frontend development servers (or Docker containers) are running.
+2. Navigate to the `e2e` directory:
+   ```bash
+   cd e2e
+   ```
+3. Install Playwright and its dependencies:
+   ```bash
+   npm install
+   npx playwright install --with-deps
+   ```
+4. Run the test suite:
+   ```bash
+   # Run tests in headless mode
+   npm run test
+   
+   # Run tests in interactive UI mode
+   npm run test:ui
+   ```
+
+---
+
 ## Discord OAuth2 Configuration
 
 To enable the live cloud synchronization feature:

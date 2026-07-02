@@ -52,7 +52,7 @@ function App() {
   }, []);
 
   const handleKeyDown = useCallback((e) => {
-    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
       e.preventDefault();
       setPaletteOpen(prev => !prev);
     }

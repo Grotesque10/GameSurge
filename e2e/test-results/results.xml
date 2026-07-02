@@ -1,0 +1,289 @@
+<testsuites id="" name="" tests="42" failures="0" skipped="0" errors="0" time="88.72828700000001">
+<testsuite name="api-mocking.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="chromium" tests="2" failures="0" skipped="0" time="16.074" errors="0">
+<testcase name="API Mocking &amp; Edge Cases › gracefully handles 500 Internal Server Error" classname="api-mocking.spec.ts" time="7.982">
+</testcase>
+<testcase name="API Mocking &amp; Edge Cases › gracefully handles empty database state" classname="api-mocking.spec.ts" time="8.092">
+</testcase>
+</testsuite>
+<testsuite name="auth.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="chromium" tests="1" failures="0" skipped="0" time="7.892" errors="0">
+<testcase name="Authentication Flow › opens the login modal when login button is clicked" classname="auth.spec.ts" time="7.892">
+<system-out>
+<![CDATA[Login button not visible, user might already be authenticated in this context.
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="home.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="chromium" tests="2" failures="0" skipped="0" time="15.655" errors="0">
+<testcase name="has title" classname="home.spec.ts" time="7.872">
+</testcase>
+<testcase name="loads the main page" classname="home.spec.ts" time="7.783">
+</testcase>
+</testsuite>
+<testsuite name="navigation.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="chromium" tests="2" failures="0" skipped="0" time="19.247" errors="0">
+<testcase name="Navigation and UI Rendering › navigates to watchlist and back to home" classname="navigation.spec.ts" time="7.98">
+</testcase>
+<testcase name="Navigation and UI Rendering › game details page renders analytics components" classname="navigation.spec.ts" time="11.267">
+</testcase>
+</testsuite>
+<testsuite name="search.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="chromium" tests="1" failures="0" skipped="0" time="19.124" errors="0">
+<testcase name="Command Palette &amp; Search › opens command palette with Ctrl+K and performs search" classname="search.spec.ts" time="19.124">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|search-Command-Palette-Sea-3bf65--Ctrl-K-and-performs-search-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="storefront-features.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="chromium" tests="3" failures="0" skipped="0" time="38.062" errors="0">
+<testcase name="Storefront Extended Features › currency switcher updates formatted prices" classname="storefront-features.spec.ts" time="15.905">
+</testcase>
+<testcase name="Storefront Extended Features › hero banner manual navigation works" classname="storefront-features.spec.ts" time="8.31">
+</testcase>
+<testcase name="Storefront Extended Features › load more pagination fetches additional games" classname="storefront-features.spec.ts" time="13.847">
+</testcase>
+</testsuite>
+<testsuite name="visual.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="chromium" tests="1" failures="0" skipped="0" time="18.341" errors="0">
+<testcase name="Visual Screenshots › take full page and element screenshots" classname="visual.spec.ts" time="18.341">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|visual-Visual-Screenshots--d1962-age-and-element-screenshots-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="watchlist-advanced.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.859" errors="0">
+<testcase name="Advanced Watchlist Logic › adds and removes a game from the watchlist" classname="watchlist-advanced.spec.ts" time="9.859">
+<system-out>
+<![CDATA[Could not complete advanced watchlist flow (database might be empty). Skipping.
+
+[[ATTACHMENT|watchlist-advanced-Advance-c0851-s-a-game-from-the-watchlist-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="watchlist.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="chromium" tests="1" failures="0" skipped="0" time="6.253" errors="0">
+<testcase name="Lazy Watchlisting Flow › persists watchlisted items across reloads" classname="watchlist.spec.ts" time="6.253">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|watchlist-Lazy-Watchlistin-e365a-listed-items-across-reloads-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="api-mocking.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="firefox" tests="2" failures="0" skipped="0" time="14.09" errors="0">
+<testcase name="API Mocking &amp; Edge Cases › gracefully handles 500 Internal Server Error" classname="api-mocking.spec.ts" time="4.575">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|api-mocking-API-Mocking-Ed-3f0e2-s-500-Internal-Server-Error-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="API Mocking &amp; Edge Cases › gracefully handles empty database state" classname="api-mocking.spec.ts" time="9.515">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|api-mocking-API-Mocking-Ed-80e68-andles-empty-database-state-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="auth.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="firefox" tests="1" failures="0" skipped="0" time="7.161" errors="0">
+<testcase name="Authentication Flow › opens the login modal when login button is clicked" classname="auth.spec.ts" time="7.161">
+<system-out>
+<![CDATA[Login button not visible, user might already be authenticated in this context.
+
+[[ATTACHMENT|auth-Authentication-Flow-o-d3bd6-hen-login-button-is-clicked-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="home.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="firefox" tests="2" failures="0" skipped="0" time="18.645" errors="0">
+<testcase name="has title" classname="home.spec.ts" time="11.882">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|home-has-title-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="loads the main page" classname="home.spec.ts" time="6.763">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|home-loads-the-main-page-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="navigation.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="firefox" tests="2" failures="0" skipped="0" time="20.829" errors="0">
+<testcase name="Navigation and UI Rendering › navigates to watchlist and back to home" classname="navigation.spec.ts" time="12.141">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|navigation-Navigation-and--f65e6--watchlist-and-back-to-home-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Navigation and UI Rendering › game details page renders analytics components" classname="navigation.spec.ts" time="8.688">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|navigation-Navigation-and--ed3b9-enders-analytics-components-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="search.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="firefox" tests="1" failures="0" skipped="0" time="16.263" errors="0">
+<testcase name="Command Palette &amp; Search › opens command palette with Ctrl+K and performs search" classname="search.spec.ts" time="16.263">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|search-Command-Palette-Sea-3bf65--Ctrl-K-and-performs-search-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="storefront-features.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="firefox" tests="3" failures="0" skipped="0" time="35.652" errors="0">
+<testcase name="Storefront Extended Features › currency switcher updates formatted prices" classname="storefront-features.spec.ts" time="14.797">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|storefront-features-Storef-c9e0a-er-updates-formatted-prices-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Storefront Extended Features › hero banner manual navigation works" classname="storefront-features.spec.ts" time="10.492">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|storefront-features-Storef-569e1-ner-manual-navigation-works-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Storefront Extended Features › load more pagination fetches additional games" classname="storefront-features.spec.ts" time="10.363">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|storefront-features-Storef-fb7c1-on-fetches-additional-games-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="visual.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="firefox" tests="1" failures="0" skipped="0" time="11.619" errors="0">
+<testcase name="Visual Screenshots › take full page and element screenshots" classname="visual.spec.ts" time="11.619">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|visual-Visual-Screenshots--d1962-age-and-element-screenshots-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="watchlist-advanced.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="firefox" tests="1" failures="0" skipped="0" time="20.691" errors="0">
+<testcase name="Advanced Watchlist Logic › adds and removes a game from the watchlist" classname="watchlist-advanced.spec.ts" time="20.691">
+<system-out>
+<![CDATA[Could not complete advanced watchlist flow (database might be empty). Skipping.
+
+[[ATTACHMENT|watchlist-advanced-Advance-c0851-s-a-game-from-the-watchlist-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="watchlist.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="firefox" tests="1" failures="0" skipped="0" time="9.914" errors="0">
+<testcase name="Lazy Watchlisting Flow › persists watchlisted items across reloads" classname="watchlist.spec.ts" time="9.914">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|watchlist-Lazy-Watchlistin-e365a-listed-items-across-reloads-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="api-mocking.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="webkit" tests="2" failures="0" skipped="0" time="16.851" errors="0">
+<testcase name="API Mocking &amp; Edge Cases › gracefully handles 500 Internal Server Error" classname="api-mocking.spec.ts" time="8.321">
+</testcase>
+<testcase name="API Mocking &amp; Edge Cases › gracefully handles empty database state" classname="api-mocking.spec.ts" time="8.53">
+</testcase>
+</testsuite>
+<testsuite name="auth.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="webkit" tests="1" failures="0" skipped="0" time="6.467" errors="0">
+<testcase name="Authentication Flow › opens the login modal when login button is clicked" classname="auth.spec.ts" time="6.467">
+<system-out>
+<![CDATA[Login button not visible, user might already be authenticated in this context.
+
+[[ATTACHMENT|auth-Authentication-Flow-o-d3bd6-hen-login-button-is-clicked-webkit\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="home.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="webkit" tests="2" failures="0" skipped="0" time="14.338" errors="0">
+<testcase name="has title" classname="home.spec.ts" time="8.118">
+</testcase>
+<testcase name="loads the main page" classname="home.spec.ts" time="6.22">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|home-loads-the-main-page-webkit\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="navigation.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="webkit" tests="2" failures="0" skipped="0" time="14.637" errors="0">
+<testcase name="Navigation and UI Rendering › navigates to watchlist and back to home" classname="navigation.spec.ts" time="5.576">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|navigation-Navigation-and--f65e6--watchlist-and-back-to-home-webkit\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Navigation and UI Rendering › game details page renders analytics components" classname="navigation.spec.ts" time="9.061">
+</testcase>
+</testsuite>
+<testsuite name="search.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="webkit" tests="1" failures="0" skipped="0" time="14.318" errors="0">
+<testcase name="Command Palette &amp; Search › opens command palette with Ctrl+K and performs search" classname="search.spec.ts" time="14.318">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|search-Command-Palette-Sea-3bf65--Ctrl-K-and-performs-search-webkit\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="storefront-features.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="webkit" tests="3" failures="0" skipped="0" time="25.175" errors="0">
+<testcase name="Storefront Extended Features › currency switcher updates formatted prices" classname="storefront-features.spec.ts" time="7.567">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|storefront-features-Storef-c9e0a-er-updates-formatted-prices-webkit\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Storefront Extended Features › hero banner manual navigation works" classname="storefront-features.spec.ts" time="6.808">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|storefront-features-Storef-569e1-ner-manual-navigation-works-webkit\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Storefront Extended Features › load more pagination fetches additional games" classname="storefront-features.spec.ts" time="10.8">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|storefront-features-Storef-fb7c1-on-fetches-additional-games-webkit\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="visual.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="webkit" tests="1" failures="0" skipped="0" time="13.366" errors="0">
+<testcase name="Visual Screenshots › take full page and element screenshots" classname="visual.spec.ts" time="13.366">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|visual-Visual-Screenshots--d1962-age-and-element-screenshots-webkit\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="watchlist-advanced.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="webkit" tests="1" failures="0" skipped="0" time="12.402" errors="0">
+<testcase name="Advanced Watchlist Logic › adds and removes a game from the watchlist" classname="watchlist-advanced.spec.ts" time="12.402">
+<system-out>
+<![CDATA[Could not complete advanced watchlist flow (database might be empty). Skipping.
+
+[[ATTACHMENT|watchlist-advanced-Advance-c0851-s-a-game-from-the-watchlist-webkit\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="watchlist.spec.ts" timestamp="2026-06-30T11:50:18.395Z" hostname="webkit" tests="1" failures="0" skipped="0" time="9.922" errors="0">
+<testcase name="Lazy Watchlisting Flow › persists watchlisted items across reloads" classname="watchlist.spec.ts" time="9.922">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|watchlist-Lazy-Watchlistin-e365a-listed-items-across-reloads-webkit\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

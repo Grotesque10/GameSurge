@@ -12,15 +12,15 @@
     "hash": "2675079fb41de7fb5b3650523e8b861d"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\backfill_metadata.py": {
-    "mtime": 1780148311.0313728,
-    "hash": "278915fdd7640068c055bed52727472b"
+    "mtime": 1781852944.51635,
+    "hash": "d6b660480c2b3c8468f993f30855030c"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\cheapshark.py": {
     "mtime": 1780144584.9894834,
     "hash": "9c297241b410c19975b1066d505cb111"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\check_db.py": {
-    "mtime": 1780210812.5511768,
+    "mtime": 1780211803.4581563,
     "hash": "9636a3748b86608dfa648fee408bf644"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\main.py": {
@@ -32,8 +32,8 @@
     "hash": "37345d5b6932ba62a2369bafe5a05cd3"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\seed_missing.py": {
-    "mtime": 1778488214.2188692,
-    "hash": "673cbfe7057fe986b5e36e16f7dda97b"
+    "mtime": 1781852961.9558916,
+    "hash": "a4a5e41a62407e89a9b97ec42a9e5f06"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\steam_api.py": {
     "mtime": 1778484683.8056302,
@@ -48,8 +48,8 @@
     "hash": "3aa4b57d7f08181d86bde52a4dcb7f22"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\vite.config.js": {
-    "mtime": 1777393295.9763374,
-    "hash": "5b641ab5f85eff4b0b9acec3417ca9b5"
+    "mtime": 1781853975.5857034,
+    "hash": "5317d6971824b4485e7884c334f64abd"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\App.jsx": {
     "mtime": 1780208869.1294703,
@@ -119,9 +119,21 @@
     "mtime": 1780208844.3477137,
     "hash": "9b884c7f64ca972e08df38bae0fd7b32"
   },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\docker-compose.yml": {
+    "mtime": 1781856126.8895059,
+    "hash": "384caf6f281e9fa6be285c26bdc2f122"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\docker_run_guide.txt": {
+    "mtime": 1781862510.8171768,
+    "hash": "71b2f0748fde44ef961d5080329d87fb"
+  },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\README.md": {
     "mtime": 1780209375.579184,
     "hash": "04022cc426cf2fc8cb6cdcbee8c498c3"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\requirements.txt": {
+    "mtime": 1781852984.172478,
+    "hash": "8ed5d01e862e64567bcff9327f9a17a4"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\index.html": {
     "mtime": 1777391818.3799965,

@@ -1,16 +1,16 @@
-# Graph Report - antilearn  (2026-05-31)
+# Graph Report - antilearn  (2026-06-19)
 
 ## Corpus Check
-- 32 files · ~20,794 words
+- 32 files · ~21,238 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 285 nodes · 380 edges · 19 communities (17 shown, 2 thin omitted)
+- 286 nodes · 381 edges · 19 communities (17 shown, 2 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `50f558b7`
+- Built from commit: `880286c7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -90,12 +90,12 @@ Cohesion: 0.12
 Nodes (17): force_refresh(), Force refresh all game prices from external APIs., Manually add more games to the catalog., Force refresh all game prices from external APIs., Manually add more games to the catalog., Force refresh all game prices from external APIs., Manually add more games to the catalog., Force refresh all game prices from external APIs. (+9 more)
 
 ### Community 8 - "Community 8"
-Cohesion: 0.23
-Nodes (11): _extract_req_fields(), get_app_details(), get_multiple_app_details(), _parse_steam_data(), _parse_system_requirements(), Steam Store API Integration Module Undocumented but widely-used public API — no, Parse system requirements from Steam API response., Extract system requirement fields from Steam's HTML format.     Steam returns re (+3 more)
-
-### Community 9 - "Community 9"
 Cohesion: 0.17
 Nodes (12): get_latest_prices(), get_price_history(), Get the most recent price for each platform from the database., Get the most recent price for each platform from the database., Get the most recent price for each platform from the database., Get the most recent price for each platform from the database., Fetch price history for a specific platform from the DB., Get the most recent price for each platform from the database. (+4 more)
+
+### Community 9 - "Community 9"
+Cohesion: 0.23
+Nodes (11): _extract_req_fields(), get_app_details(), get_multiple_app_details(), _parse_steam_data(), _parse_system_requirements(), Steam Store API Integration Module Undocumented but widely-used public API — no, Parse system requirements from Steam API response., Extract system requirement fields from Steam's HTML format.     Steam returns re (+3 more)
 
 ### Community 10 - "Community 10"
 Cohesion: 0.25
@@ -106,18 +106,18 @@ Cohesion: 0.29
 Nodes (6): GameSurge Frontend, Key Pages, Notes, Requirements, Scripts, Setup
 
 ### Community 12 - "Community 12"
-Cohesion: 0.5
-Nodes (4): backfill(), Dynamic metadata backfiller. Finds games missing summaries or images, searches S, Search Steam store API by title and return the best matching App ID., search_steam_by_title()
+Cohesion: 0.4
+Nodes (5): backfill(), Dynamic metadata backfiller. Finds games missing summaries or images, searches S, Search Steam store API by title and return the best matching App ID., Search Steam store API by title and return the best matching App ID., search_steam_by_title()
 
 ## Knowledge Gaps
-- **146 isolated node(s):** `Calculates the standard deviation of prices for a specific game      to determin`, `Calculates the weighted moving average given a list of prices and their correspo`, `Volatility Detection: Calculates a Surge Index.     A "Price Surge" is flagged w`, `Economic Filtering: Calculates Value Score (Current Price vs. Historical Low).`, `Dynamic metadata backfiller. Finds games missing summaries or images, searches S` (+141 more)
+- **147 isolated node(s):** `Calculates the standard deviation of prices for a specific game      to determin`, `Calculates the weighted moving average given a list of prices and their correspo`, `Volatility Detection: Calculates a Surge Index.     A "Price Surge" is flagged w`, `Economic Filtering: Calculates Value Score (Current Price vs. Historical Low).`, `Dynamic metadata backfiller. Finds games missing summaries or images, searches S` (+142 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `build_game_response()` connect `Community 5` to `Community 1`, `Community 2`, `Community 4`, `Community 9`?**
+- **Why does `build_game_response()` connect `Community 5` to `Community 8`, `Community 1`, `Community 2`, `Community 4`?**
   _High betweenness centrality (0.059) - this node is a cross-community bridge._
 - **Why does `get_game_details()` connect `Community 2` to `Community 1`, `Community 10`, `Community 5`?**
   _High betweenness centrality (0.029) - this node is a cross-community bridge._
@@ -126,7 +126,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 4 inferred relationships involving `build_game_response()` (e.g. with `detect_price_surge()` and `calculate_price_stability()`) actually correct?**
   _`build_game_response()` has 4 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `Calculates the standard deviation of prices for a specific game      to determin`, `Calculates the weighted moving average given a list of prices and their correspo`, `Volatility Detection: Calculates a Surge Index.     A "Price Surge" is flagged w` to the rest of the system?**
-  _146 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _147 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.07 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

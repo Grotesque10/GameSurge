@@ -1,0 +1,41 @@
+# Updating and Pushing Docker Images
+
+Whenever you make changes to your local code and want those changes to be reflected on Docker Hub, you need to rebuild the Docker image and push it again. 
+
+Here are the exact steps:
+
+### Step 1: Rebuild the Docker Image
+Run this command from the directory where your `Dockerfile` is located. This tells Docker to look at your updated code and create a brand new image.
+
+docker build -t <your-dockerhub-username>/<your-repo-name>:latest .
+
+- `docker build`: The command to create a new image.
+- `-t`: Stands for "tag", which lets you name the image.
+- `<your-dockerhub-username>/<your-repo-name>:latest`: Replace this with your actual username and repository name. The `:latest` tag means this is the most recent version.
+- `.` (Don't miss the dot at the end!): This tells Docker that the `Dockerfile` and the code are in the current folder.
+
+### Step 2: Push the Image to Docker Hub
+Now that the new image is built on your local computer, you upload it to Docker Hub.
+
+docker push <your-dockerhub-username>/<your-repo-name>:latest
+
+
+---
+
+### Best Practice: Using Version Tags (Recommended)
+
+Instead of just overriding the `latest` tag every time, it's highly recommended to tag your images with version numbers (like `v1`, `v2`, `v1.1`, etc.). 
+
+Why do this? It allows you to easily roll back to an older, working version if your new code breaks something in production.
+
+To use version tags, simply replace `latest` with your version number in both commands:
+
+# Build the new version (e.g., v2)
+docker build -t <your-dockerhub-username>/<your-repo-name>:v2 .
+
+# Push the new version
+docker push <your-dockerhub-username>/<your-repo-name>:v2
+
+# (Optional) You can also update the 'latest' tag to point to your new version
+docker build -t <your-dockerhub-username>/<your-repo-name>:latest .
+docker push <your-dockerhub-username>/<your-repo-name>:latest

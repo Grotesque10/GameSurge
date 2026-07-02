@@ -9,7 +9,15 @@ import steam_api
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-DATABASE_URL = "postgresql://postgres:postgres123@localhost:5432/antigravity"
+import os
+from dotenv import load_dotenv
+from pathlib import Path
+
+# Load env variables explicitly
+backend_dir = Path(__file__).resolve().parent
+load_dotenv(dotenv_path=backend_dir / ".env")
+
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:postgres123@localhost:5432/antigravity")
 
 MISSING_GAMES = [
     "Red Dead Redemption 2",

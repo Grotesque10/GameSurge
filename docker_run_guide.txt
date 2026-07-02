@@ -1,0 +1,103 @@
+========================================================================
+             GAMESURGE PLATFORM - DOCKER RUN GUIDE
+========================================================================
+
+This guide explains how others can run the GameSurge Platform on their local
+machine using your public Docker Hub images. They do not need your source
+code, Node.js, Python, or PostgreSQL installed locally.
+
+------------------------------------------------------------------------
+PREREQUISITES
+------------------------------------------------------------------------
+1. Install Docker Desktop (or Docker Engine and Docker Compose):
+   https://www.docker.com/products/docker-desktop/
+
+------------------------------------------------------------------------
+STEP-BY-STEP SETUP
+------------------------------------------------------------------------
+
+1. Create a new, empty directory on your computer:
+   mkdir gamesurge-app
+   cd gamesurge-app
+
+2. Inside that directory, create a file named "docker-compose.yml" and paste
+   the following configuration inside it:
+
+--- START OF FILE (docker-compose.yml) ---
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: gamesurge_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+      POSTGRES_DB: GameSurge
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d GameSurge"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    image: vernon10/gamesurge-backend:latest
+    container_name: gamesurge_backend
+    ports:
+      - "8080:8080"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres123@db:5432/GameSurge
+      - MIN_GAMES=500
+      - CACHE_TTL_MINUTES=30
+      - CORS_ALLOWED_ORIGINS=*
+      - DISCORD_CLIENT_ID=your_discord_client_id_here
+      - DISCORD_REDIRECT_URI=http://localhost:5173/auth/callback
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    image: vernon10/gamesurge-frontend:latest
+    container_name: gamesurge_frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
+--- END OF FILE (docker-compose.yml) ---
+
+3. (Optional) In the "docker-compose.yml" file, replace "your_discord_client_id_here"
+   with your actual Discord Application Client ID if you want to support Discord Login.
+
+4. Open a terminal in the folder containing "docker-compose.yml" and run
+   this command to start all services in the background:
+   
+   docker compose up -d
+
+5. Wait for Docker to download the images and start the containers. Once done,
+   you can access the services:
+   
+   * Web App Interface: http://localhost:5173
+   * API Interactive Docs: http://localhost:8080/docs
+   * API Health Check: http://localhost:8080/health
+
+------------------------------------------------------------------------
+USEFUL COMMANDS
+------------------------------------------------------------------------
+
+* To check if the containers are running and healthy:
+  docker compose ps
+
+* To view the real-time server logs:
+  docker compose logs -f
+
+* To stop the application (keeps database data saved):
+  docker compose down
+
+* To stop the application and delete the database storage:
+  docker compose down -v
+========================================================================
