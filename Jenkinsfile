@@ -26,14 +26,14 @@ pipeline {
             steps {
                 script {
                     echo 'Starting application for E2E testing...'
-                    sh 'docker compose up -d'
+                    sh 'docker compose -f docker-compose.ci.yml -p gamesurge-ci up -d'
                     
                     dir('e2e') {
                         echo 'Building E2E test image...'
                         sh 'docker build -t gamesurge-e2e .'
                         
                         echo 'Running E2E tests inside container...'
-                        sh 'docker run --rm -e PLAYWRIGHT_BASE_URL=http://host.docker.internal:5173 gamesurge-e2e npx playwright test'
+                        sh 'docker run --rm --network gamesurge-ci_default -e PLAYWRIGHT_BASE_URL=http://frontend:80 gamesurge-e2e npx playwright test'
                     }
                 }
             }
@@ -41,7 +41,7 @@ pipeline {
                 always {
                     script {
                         echo 'Tearing down test environment...'
-                        sh 'docker compose down'
+                        sh 'docker compose -f docker-compose.ci.yml -p gamesurge-ci down'
                     }
                 }
             }
