@@ -3,3 +3,12 @@ FROM docker:24 AS docker-cli
 FROM jenkins/jenkins:lts
 USER root
 COPY --from=docker-cli /usr/local/bin/docker /usr/local/bin/
+
+# Install Node.js 20 and Playwright dependencies
+RUN apt-get update && \
+    apt-get install -y curl && \
+    curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+    apt-get install -y nodejs && \
+    npx -y playwright@1.49.0 install --with-deps
+
+USER jenkins

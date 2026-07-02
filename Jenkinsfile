@@ -24,7 +24,24 @@ pipeline {
 
         stage('Run E2E Tests') {
             steps {
-                echo 'Skipping E2E tests in Jenkins for now to avoid Docker-in-Docker volume mapping issues.'
+                script {
+                    echo 'Starting application for E2E testing...'
+                    sh 'docker compose up -d'
+                    
+                    dir('e2e') {
+                        echo 'Installing dependencies and running Playwright tests...'
+                        sh 'npm ci || npm install'
+                        sh 'PLAYWRIGHT_BASE_URL=http://host.docker.internal:5173 npx playwright test'
+                    }
+                }
+            }
+            post {
+                always {
+                    script {
+                        echo 'Tearing down test environment...'
+                        sh 'docker compose down'
+                    }
+                }
             }
         }
 
