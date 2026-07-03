@@ -161,3 +161,4 @@ To enable the live cloud synchronization feature:
 6. Click **Save Changes**.
 
 *Your live Discord authentication is now operational!*
+
