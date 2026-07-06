@@ -98,8 +98,11 @@ async def startup():
             except Exception:
                 pass
 
-    # Load CheapShark store mapping
-    await cheapshark.fetch_stores()
+    # Load CheapShark store mapping (non-fatal — will retry lazily on first request)
+    try:
+        await cheapshark.fetch_stores()
+    except Exception as e:
+        logger.warning(f"Could not load stores on startup (will retry lazily): {e}")
 
     # Seed and expand database in the background to avoid blocking server start
     async def bg_seed_and_expand():
@@ -123,6 +126,8 @@ async def startup():
 @app.on_event("shutdown")
 async def shutdown():
     global pool
+    # Close Redis connection pool
+    await cheapshark.close_redis()
     if pool:
         await pool.close()
 

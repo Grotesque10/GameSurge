@@ -2,14 +2,19 @@
 CheapShark API Integration Module
 Free API — no API key required. Requires custom User-Agent header.
 Docs: https://apidocs.cheapshark.com/
+
+Redis caching layer: all external GET requests are cached with a 15-minute TTL.
 """
 
 import os
+import json
 import time
 import httpx
 import asyncio
 import logging
 from typing import Dict, List, Optional, Any
+
+import redis.asyncio as aioredis
 
 logger = logging.getLogger(__name__)
 
@@ -25,6 +30,45 @@ _last_cheapshark_monotonic: float = 0.0
 _store_cache: Dict[str, str] = {}
 _store_active: Dict[str, bool] = {}
 
+# ─── Redis Connection ─────────────────────────────────────────────────────────
+REDIS_URL = os.getenv("REDIS_URL", "")
+CACHE_TTL_SECONDS = int(os.getenv("CHEAPSHARK_CACHE_TTL", "900"))  # 15 minutes
+
+_redis_pool: Optional[aioredis.Redis] = None
+
+
+async def get_redis() -> Optional[aioredis.Redis]:
+    """Lazily initialize and return the Redis connection pool."""
+    global _redis_pool
+    if not REDIS_URL:
+        return None
+    if _redis_pool is None:
+        try:
+            _redis_pool = aioredis.from_url(
+                REDIS_URL, decode_responses=True, socket_connect_timeout=3
+            )
+            await _redis_pool.ping()
+            logger.info("Redis connected at %s", REDIS_URL)
+        except Exception as e:
+            logger.warning("Redis unavailable (%s) — running without cache", e)
+            _redis_pool = None
+    return _redis_pool
+
+
+async def close_redis():
+    """Gracefully close the Redis connection pool."""
+    global _redis_pool
+    if _redis_pool:
+        await _redis_pool.aclose()
+        _redis_pool = None
+        logger.info("Redis connection closed")
+
+
+def _cache_key(path: str, params: Optional[Dict[str, Any]] = None) -> str:
+    """Generate a deterministic Redis key for a CheapShark request."""
+    sorted_params = json.dumps(params or {}, sort_keys=True)
+    return f"cheapshark:{path}:{sorted_params}"
+
 
 def _min_interval_sec() -> float:
     return float(os.getenv("CHEAPSHARK_MIN_INTERVAL_SEC", "0.9"))
@@ -34,14 +78,29 @@ def _max_retries() -> int:
     return int(os.getenv("CHEAPSHARK_MAX_RETRIES", "6"))
 
 
-async def _cheapshark_get(path: str, params: Optional[Dict[str, Any]] = None) -> httpx.Response:
+async def _cheapshark_get(path: str, params: Optional[Dict[str, Any]] = None) -> Any:
     """
-    Single CheapShark GET with process-wide pacing and bounded retries on 429.
-    All high-frequency endpoints should go through this.
+    Single CheapShark GET with Redis caching, process-wide pacing, and
+    bounded retries on 429. Returns parsed JSON directly.
     """
     global _last_cheapshark_monotonic
-    url = f"{BASE_URL}{path}" if path.startswith("/") else f"{BASE_URL}/{path}"
     params = params or {}
+
+    # ── Cache Read ──
+    r = await get_redis()
+    key = _cache_key(path, params)
+    if r:
+        try:
+            cached = await r.get(key)
+            if cached is not None:
+                logger.debug("CACHE HIT  %s", key)
+                return json.loads(cached)
+        except Exception as e:
+            logger.warning("Redis read error: %s", e)
+    logger.debug("CACHE MISS %s", key)
+
+    # ── API Fetch (with pacing + retries) ──
+    url = f"{BASE_URL}{path}" if path.startswith("/") else f"{BASE_URL}/{path}"
     max_r = _max_retries()
     last_resp: Optional[httpx.Response] = None
 
@@ -77,11 +136,22 @@ async def _cheapshark_get(path: str, params: Optional[Dict[str, Any]] = None) ->
                 continue
 
             resp.raise_for_status()
-            return resp
+            data = resp.json()
+
+            # ── Cache Write ──
+            if r:
+                try:
+                    await r.set(key, json.dumps(data), ex=CACHE_TTL_SECONDS)
+                    logger.debug("CACHE SET  %s (TTL %ds)", key, CACHE_TTL_SECONDS)
+                except Exception as e:
+                    logger.warning("Redis write error: %s", e)
+
+            return data
 
     if last_resp is not None:
         last_resp.raise_for_status()
     raise httpx.HTTPError("CheapShark request failed after retries")
+
 
 
 async def fetch_stores() -> Dict[str, str]:
@@ -94,8 +164,7 @@ async def fetch_stores() -> Dict[str, str]:
     if _store_cache:
         return _store_cache
 
-    resp = await _cheapshark_get("/stores")
-    stores = resp.json()
+    stores = await _cheapshark_get("/stores")
 
     _store_cache = {s["storeID"]: s["storeName"] for s in stores}
     _store_active = {s["storeID"]: bool(s["isActive"]) for s in stores}
@@ -125,8 +194,7 @@ async def search_game(title: str, limit: int = 1) -> Optional[Dict]:
     Search for a game by title on CheapShark.
     Returns: {"gameID": "202350", "steamAppID": "1091500", "cheapest": "20.99", "external": "Cyberpunk 2077", ...}
     """
-    resp = await _cheapshark_get("/games", params={"title": title, "limit": limit})
-    results = resp.json()
+    results = await _cheapshark_get("/games", params={"title": title, "limit": limit})
 
     if results and len(results) > 0:
         return results[0]
@@ -146,14 +214,12 @@ async def get_game_deals(cheapshark_game_id: str) -> Optional[Dict]:
         ]
     }
     """
-    resp = await _cheapshark_get("/games", params={"id": cheapshark_game_id})
-    return resp.json()
+    return await _cheapshark_get("/games", params={"id": cheapshark_game_id})
 
 
 async def get_deal_details(deal_id: str) -> Optional[Dict]:
     """Get details for a specific deal (includes redirect URL to store)."""
-    resp = await _cheapshark_get("/deals", params={"id": deal_id})
-    return resp.json()
+    return await _cheapshark_get("/deals", params={"id": deal_id})
 
 
 def get_deal_redirect_url(deal_id: str) -> str:
@@ -190,7 +256,7 @@ async def discover_game_titles(limit: int = 100, page_size: int = 60) -> List[st
     page = 0
 
     while len(unique_titles) < limit:
-        resp = await _cheapshark_get(
+        rows = await _cheapshark_get(
             "/deals",
             params={
                 "pageNumber": page,
@@ -199,7 +265,6 @@ async def discover_game_titles(limit: int = 100, page_size: int = 60) -> List[st
                 "desc": 1,
             },
         )
-        rows = resp.json()
         if not rows:
             break
 
