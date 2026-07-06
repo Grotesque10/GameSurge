@@ -36,7 +36,7 @@ pipeline {
                         sh 'docker build -t gamesurge-e2e .'
                         
                         echo 'Running E2E tests inside container...'
-                        sh 'docker run --rm --network gamesurge-ci_default -e PLAYWRIGHT_BASE_URL=http://frontend:80 gamesurge-e2e npx playwright test'
+                        sh 'docker run --rm --network gamesurge-ci_default -e PLAYWRIGHT_BASE_URL=http://frontend:80 -e CI=true gamesurge-e2e npx playwright test'
                     }
                 }
             }
