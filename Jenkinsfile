@@ -8,6 +8,23 @@ pipeline {
     }
 
     stages {
+        stage('Lint and Code Quality') {
+            steps {
+                script {
+                    echo 'Linting Backend (FastAPI)...'
+                    // Check backend for syntax errors & undefined names strictly (fails if syntax is broken)
+                    sh 'docker run --rm -v ${WORKSPACE}/backend:/app -w /app python:3.10-slim sh -c "pip install flake8 && flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics"'
+                    
+                    // Report style warnings but do not fail the build
+                    sh 'docker run --rm -v ${WORKSPACE}/backend:/app -w /app python:3.10-slim sh -c "pip install flake8 && flake8 . --count --exit-zero --max-line-length=120 --statistics"'
+
+                    echo 'Linting Frontend (React)...'
+                    // Run ESLint via node:20-alpine using host cache. Output warnings but do not fail the build.
+                    sh 'docker run --rm -v ${WORKSPACE}/frontend:/app -w /app node:20-alpine sh -c "npm install && npm run lint || true"'
+                }
+            }
+        }
+
         stage('Build Images') {
             steps {
                 script {
