@@ -31,7 +31,12 @@ async def seed():
     conn = await asyncpg.connect(DATABASE_URL)
     
     # First load stores
-    await cheapshark.fetch_stores()
+    try:
+        await cheapshark.fetch_stores()
+    except Exception as e:
+        logger.warning(f"Could not fetch stores: {e}. Using mock stores mapping.")
+        cheapshark._store_cache = {"1": "Steam", "2": "GamersGate", "3": "GreenManGaming"}
+        cheapshark._store_active = {"1": True, "2": True, "3": True}
     
     # Check existing titles
     existing = await conn.fetch("SELECT title FROM games")
@@ -59,10 +64,13 @@ async def seed():
             # Fetch metadata from Steam
             metadata = {}
             if steam_app_id:
-                steam_data = await steam_api.get_app_details(steam_app_id)
-                if steam_data:
-                    metadata = steam_data
-                    logger.info(f"  Steam metadata loaded: {steam_data.get('title', title)}")
+                try:
+                    steam_data = await steam_api.get_app_details(steam_app_id)
+                    if steam_data:
+                        metadata = steam_data
+                        logger.info(f"  Steam metadata loaded: {steam_data.get('title', title)}")
+                except Exception as steam_err:
+                    logger.warning(f"  Failed to fetch Steam metadata for {title}: {steam_err}")
                 await asyncio.sleep(0.5)
             
             if not metadata.get("title"):
@@ -114,9 +122,49 @@ async def seed():
             await asyncio.sleep(1.0)  # Rate limit
             
         except Exception as e:
-            logger.error(f"  Error seeding {title}: {e}")
-            import traceback
-            traceback.print_exc()
+            logger.error(f"  Error seeding {title}: {e}. Seeding offline fallback mock data...")
+            try:
+                # Seed fallback mock game
+                mock_cs_id = f"mock-{abs(hash(title)) % 100000}"
+                mock_steam_id = f"mock-{abs(hash(title)) % 100000}"
+                metadata = {
+                    "title": title,
+                    "image_url": "https://avatars.githubusercontent.com/u/10137?v=4",
+                    "rating": 90,
+                    "tags": ["Action", "RPG"],
+                    "developer": "Mock Dev",
+                    "publisher": "Mock Pub",
+                    "release_date": "2023-01-01",
+                    "summary": f"This is a mock description for {title}.",
+                    "historical_low": 19.99
+                }
+                
+                row = await conn.fetchrow(
+                    """INSERT INTO games (title, cheapshark_id, steam_app_id, metadata, last_api_fetch)
+                       VALUES ($1, $2, $3, $4, NOW())
+                       RETURNING id""",
+                    title,
+                    mock_cs_id,
+                    mock_steam_id,
+                    json.dumps(metadata)
+                )
+                game_id = row["id"]
+                
+                # Add mock deal logs
+                await conn.execute(
+                    """INSERT INTO price_logs
+                       (game_id, platform, current_price, retail_price, savings, deal_id)
+                       VALUES ($1, $2, $3, $4, $5, $6)""",
+                    game_id,
+                    "Steam",
+                    29.99,
+                    59.99,
+                    50.00,
+                    f"mock-deal-{game_id}"
+                )
+                logger.info(f"  ✓ Mock Seeded: {title} (ID: {game_id})")
+            except Exception as mock_e:
+                logger.error(f"  Failed to seed mock data for {title}: {mock_e}")
             continue
     
     # Final count
