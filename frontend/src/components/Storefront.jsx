@@ -69,6 +69,33 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
   const surgingGames = useMemo(() => data.filter(g => g.platforms?.some(p => p.surge_detected)), [data]);
   const recoveryGames = useMemo(() => data.filter(g => g.surge_recovery), [data]);
   const allGames = data;
+  const [selectedTag, setSelectedTag] = useState('All');
+  const [maxPrice, setMaxPrice] = useState(Infinity);
+  const [sortBy, setSortBy] = useState('default');
+
+  const filteredAndSortedGames = useMemo(() => {
+    let result = [...allGames];
+    if (selectedTag && selectedTag !== 'All') {
+      result = result.filter(g => g.tags?.includes(selectedTag));
+    }
+    if (maxPrice !== Infinity) {
+      result = result.filter(g => (g.best_deal?.price || 0) <= maxPrice);
+    }
+    if (sortBy === 'rating') {
+      result.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    } else if (sortBy === 'savings') {
+      result.sort((a, b) => {
+        const maxSavingsA = a.platforms?.reduce((max, p) => Math.max(max, p.savings || 0), 0) || 0;
+        const maxSavingsB = b.platforms?.reduce((max, p) => Math.max(max, p.savings || 0), 0) || 0;
+        return maxSavingsB - maxSavingsA;
+      });
+    } else if (sortBy === 'price_asc') {
+      result.sort((a, b) => (a.best_deal?.price || 0) - (b.best_deal?.price || 0));
+    } else if (sortBy === 'price_desc') {
+      result.sort((a, b) => (b.best_deal?.price || 0) - (a.best_deal?.price || 0));
+    }
+    return result;
+  }, [allGames, selectedTag, sortBy, maxPrice]);
   const featuredGames = useMemo(() => allGames.slice(0, 5), [allGames]);
   const featuredGame = featuredGames[currentHeroIndex];
 
@@ -427,24 +454,96 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
 
         {/* ═══ Section: Browse All (Paginated) ═══ */}
         <section style={{ marginTop: '40px', paddingTop: '20px', borderTop: '1px solid #1e1e1e' }}>
-          <div className="flex items-center justify-between mb-5">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
             <div className="flex items-center gap-2">
               <Search className="w-5 h-5 text-[#0078f2]" />
               <h2 className="text-base sm:text-lg md:text-xl font-bold text-white">Browse All</h2>
               {pagination && (
-                <span className="bg-[#1e1e1e] text-[#888] text-[10px] font-mono px-2 py-0.5 rounded-full border border-[#2a2a2a]">
-                  {allGames.length} / {pagination.total}
+                <span className="bg-[#1e1e1e] text-[#888] text-[10px] font-mono px-2.5 py-0.5 rounded-full border border-[#2a2a2a]">
+                  {filteredAndSortedGames.length} of {allGames.length}
                 </span>
               )}
             </div>
+
+            {/* Filter and Sort Controls */}
+            <div className="flex flex-wrap items-center gap-4">
+              {/* Genre Filter */}
+              <div className="flex items-center gap-2">
+                <span className="text-[#666] text-[10px] font-bold uppercase tracking-wider">Genre:</span>
+                <select
+                  value={selectedTag}
+                  onChange={(e) => setSelectedTag(e.target.value)}
+                  className="bg-[#1a1a1a] border border-[#2a2a2a] text-white text-xs rounded-lg px-2.5 py-1.5 outline-none hover:border-[#444] transition-colors cursor-pointer"
+                >
+                  <option value="All">All Genres</option>
+                  <option value="Action">Action</option>
+                  <option value="Adventure">Adventure</option>
+                  <option value="RPG">RPG</option>
+                  <option value="Strategy">Strategy</option>
+                  <option value="Indie">Indie</option>
+                  <option value="Casual">Casual</option>
+                </select>
+              </div>
+
+              {/* Price Filter */}
+              <div className="flex items-center gap-2">
+                <span className="text-[#666] text-[10px] font-bold uppercase tracking-wider">Price:</span>
+                <select
+                  value={maxPrice === Infinity ? 'Any' : maxPrice}
+                  onChange={(e) => setMaxPrice(e.target.value === 'Any' ? Infinity : Number(e.target.value))}
+                  className="bg-[#1a1a1a] border border-[#2a2a2a] text-white text-xs rounded-lg px-2.5 py-1.5 outline-none hover:border-[#444] transition-colors cursor-pointer"
+                >
+                  <option value="Any">Any Price</option>
+                  <option value="10">Under $10</option>
+                  <option value="20">Under $20</option>
+                  <option value="30">Under $30</option>
+                  <option value="50">Under $50</option>
+                </select>
+              </div>
+
+              {/* Sort By */}
+              <div className="flex items-center gap-2">
+                <span className="text-[#666] text-[10px] font-bold uppercase tracking-wider">Sort:</span>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="bg-[#1a1a1a] border border-[#2a2a2a] text-white text-xs rounded-lg px-2.5 py-1.5 outline-none hover:border-[#444] transition-colors cursor-pointer"
+                >
+                  <option value="default">Default</option>
+                  <option value="rating">Rating (High to Low)</option>
+                  <option value="savings">Discount % (High to Low)</option>
+                  <option value="price_asc">Price (Low to High)</option>
+                  <option value="price_desc">Price (High to Low)</option>
+                </select>
+              </div>
+            </div>
           </div>
+
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-5">
-            {allGames.map(game => (
+            {filteredAndSortedGames.map(game => (
               <GameCard key={`browse-${game.game_id}`} game={game} isGrid={true} />
             ))}
           </div>
+
+          {/* Empty State */}
+          {filteredAndSortedGames.length === 0 && (
+            <div className="flex flex-col items-center justify-center text-center py-16 bg-[#151515] rounded-xl border border-[#222] mt-4">
+              <p className="text-[#666] text-sm">No games match the selected filters.</p>
+              <button
+                onClick={() => {
+                  setSelectedTag('All');
+                  setMaxPrice(Infinity);
+                  setSortBy('default');
+                }}
+                className="mt-3 text-xs text-[#0078f2] hover:underline"
+              >
+                Reset Filters
+              </button>
+            </div>
+          )}
+
           {/* Load More Button */}
-          {pagination && pagination.page < pagination.total_pages && (
+          {pagination && pagination.page < pagination.total_pages && filteredAndSortedGames.length > 0 && (
             <div className="flex justify-center mt-8">
               <button
                 onClick={onLoadMore}
