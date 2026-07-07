@@ -506,7 +506,15 @@ const GameDetails = () => {
         {/* ─── Platform Analytics Cards ─── */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6" style={{ marginTop: '64px' }}>
           {chartPlatforms.map(p => (
-            <div key={p.store} className="rounded-2xl p-7 pb-9 border border-[#222] relative overflow-hidden" style={{ background: `linear-gradient(135deg, ${getStoreColor(p.store)}15, ${getStoreColor(p.store)}05)` }}>
+            <div
+              key={p.store}
+              className="rounded-2xl border border-[#222] relative overflow-hidden"
+              style={{
+                padding: '20px',
+                boxSizing: 'border-box',
+                background: `linear-gradient(135deg, ${getStoreColor(p.store)}15, ${getStoreColor(p.store)}05)`
+              }}
+            >
               {/* Decorative circle */}
               <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full opacity-10" style={{ backgroundColor: getStoreColor(p.store) }} />
 
@@ -565,7 +573,14 @@ const GameDetails = () => {
         </div>
 
         {/* ─── Deal Comparison Table ─── */}
-        <section className="bg-[#151515] rounded-2xl p-8 sm:p-10 border border-[#222]" style={{ marginTop: '64px' }}>
+        <section
+          className="bg-[#151515] rounded-2xl border border-[#222]"
+          style={{
+            marginTop: '64px',
+            padding: '24px',
+            boxSizing: 'border-box'
+          }}
+        >
           <h3 className="text-white font-bold text-base sm:text-lg mb-1">Deal Comparison</h3>
           <p className="text-[#666] text-xs mb-5">Total cost of ownership across platforms</p>
           <div className="overflow-x-auto">
@@ -618,21 +633,56 @@ const GameDetails = () => {
         </section>
 
         {/* ─── Global Regional Pricing Estimates (Feature 5) ─── */}
-        <section className="bg-[#151515] rounded-2xl p-8 sm:p-10 border border-[#222]" style={{ marginTop: '40px' }}>
+        <section
+          className="bg-[#151515] rounded-2xl border border-[#222]"
+          style={{
+            marginTop: '40px',
+            padding: '24px',
+            boxSizing: 'border-box'
+          }}
+        >
           <h3 className="text-white font-bold text-base sm:text-lg mb-1 flex items-center gap-2">
             <Globe className="w-5 h-5 text-[#00d26a]" />
             Global Regional Pricing Estimates
           </h3>
-          <p className="text-[#666] text-xs mb-6">Real-time converted pricing estimates across major global currencies based on current exchange rates</p>
+          <p className="text-[#888] text-xs mb-6">Real-time converted pricing estimates across major global currencies based on current exchange rates</p>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '16px' }}>
             {Object.entries(SUPPORTED_CURRENCIES).map(([code, config]) => {
               const isCurrent = currency === code;
               return (
-                <div key={code} className={`rounded-xl p-4 border transition-all ${isCurrent ? 'bg-[#0078f2]/10 border-[#0078f2]/30 ring-1 ring-[#0078f2]/20' : 'bg-[#1a1a1a] border-[#222] hover:border-[#333]'}`}>
-                  <p className="text-[#666] text-[10px] font-bold uppercase tracking-wider">{config.label}</p>
-                  <p className="text-white font-bold text-lg font-mono mt-1.5">{formatPriceInCurrency(bestDeal?.price, code)}</p>
-                  <p className="text-[#888] text-[10px] mt-1 uppercase font-semibold">{code}</p>
+                <div
+                  key={code}
+                  className="rounded-xl border transition-all"
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    paddingTop: '16px',
+                    paddingBottom: '16px',
+                    paddingLeft: '16px',
+                    paddingRight: '16px',
+                    height: '125px',
+                    boxSizing: 'border-box',
+                    backgroundColor: isCurrent ? 'rgba(0, 120, 242, 0.08)' : '#1a1a1a',
+                    borderColor: isCurrent ? '#0078f2' : '#222',
+                    boxShadow: isCurrent ? '0 0 12px rgba(0, 120, 242, 0.15)' : 'none',
+                    borderWidth: isCurrent ? '1.5px' : '1px'
+                  }}
+                >
+                  <div className="min-w-0">
+                    <span className="text-[#888] text-[10px] font-bold uppercase tracking-wider block truncate">
+                      {config.label}
+                    </span>
+                    <span className="text-white font-extrabold text-base sm:text-lg font-mono block mt-2.5 leading-none">
+                      {formatPriceInCurrency(bestDeal?.price, code)}
+                    </span>
+                  </div>
+                  <div className={`text-[10px] font-bold uppercase tracking-wider block ${
+                    isCurrent ? 'text-[#0078f2] opacity-80' : 'text-[#888]/40'
+                  }`}>
+                    {code}
+                  </div>
                 </div>
               );
             })}
