@@ -7,6 +7,21 @@ import { useCurrency } from '../contexts/CurrencyContext';
 import { useWatchlist } from '../contexts/WatchlistContext';
 import LoginModal from './LoginModal';
 
+const decodeHtmlEntities = (str) => {
+  if (!str) return '';
+  try {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(str, 'text/html');
+    return doc.documentElement.textContent || str;
+  } catch (e) {
+    return str.replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'");
+  }
+};
+
 const GameCarousel = ({ title, icon: Icon, iconColor, games, subtitle, hideTopBorder }) => {
   const scrollRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -29,7 +44,7 @@ const GameCarousel = ({ title, icon: Icon, iconColor, games, subtitle, hideTopBo
 
   return (
     <section style={{ marginTop: hideTopBorder ? '0px' : '40px', paddingTop: hideTopBorder ? '0px' : '20px', borderTop: hideTopBorder ? 'none' : '1px solid #1e1e1e' }}>
-      <div className="flex items-center justify-between mb-5">
+      <div className="flex items-center justify-between" style={{ marginBottom: '16px' }}>
         <div>
           <div className="flex items-center gap-2">
             {Icon && <Icon className={`w-5 h-5 ${iconColor || 'text-white'}`} />}
@@ -171,8 +186,8 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
             <span className="text-lg font-bold text-white tracking-tight">GameSurge</span>
           </div>
           <div className="flex items-center gap-4">
-            <select 
-              value={currency} 
+            <select
+              value={currency}
               onChange={(e) => setCurrency(e.target.value)}
               className="bg-[#1e1e1e] border border-[#2a2a2a] text-[#aaa] text-xs rounded px-2 py-1 outline-none hover:border-[#444] transition-colors cursor-pointer"
             >
@@ -203,15 +218,15 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
                   <ChevronDown className="w-3.5 h-3.5 text-[#888] hidden sm:block" />
                 </button>
                 {showUserDropdown && (
-                  <div 
+                  <div
                     className="absolute right-0 mt-3.5 w-60 bg-[#151515]/95 border border-white/10 rounded-xl shadow-2xl z-50 backdrop-blur-xl animate-in fade-in slide-in-from-top-1.5 duration-200"
                     style={{ padding: '8px 0', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)' }}
                   >
                     {/* Upward pointer arrow */}
                     <div className="absolute -top-1 right-3.5 w-2 h-2 bg-[#151515] border-t border-l border-white/10 rotate-45" />
-                    
+
                     <div className="relative z-10">
-                      <div 
+                      <div
                         className="text-left"
                         style={{ padding: '12px 20px', borderBottom: '1px solid rgba(255, 255, 255, 0.05)', marginBottom: '6px' }}
                       >
@@ -220,8 +235,8 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
                           <span className="w-1.5 h-1.5 rounded-full bg-[#00d26a] animate-pulse" title="Cloud Sync Active" />
                         </div>
                         <p className="text-[#888] text-[9px] uppercase tracking-wider mt-1 flex items-center gap-1.5">
-                          <span 
-                            className="w-1.5 h-1.5 rounded-full" 
+                          <span
+                            className="w-1.5 h-1.5 rounded-full"
                             style={{ backgroundColor: user.auth_provider === 'steam' ? '#66c0f4' : '#5865F2' }}
                           />
                           {user.auth_provider} cloud
@@ -235,7 +250,7 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
                         className="w-full flex items-center gap-2.5 text-left text-xs text-[#ff4e4e] hover:bg-[#ff4e4e]/10 transition-all duration-200 font-semibold cursor-pointer group"
                         style={{ padding: '10px 20px' }}
                       >
-                        <LogOut className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" /> 
+                        <LogOut className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                         <span>Log Out</span>
                       </button>
                     </div>
@@ -322,35 +337,42 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
               <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-              <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8">
-                <div className="flex items-center gap-2 mb-2 flex-wrap">
-                  <span className="bg-[#0078f2] text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">Featured</span>
-                  {featuredGame.platforms?.some(p => p.surge_detected) && (
-                    <span className="bg-[#ff4444] text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded flex items-center gap-1">
-                      <Flame className="w-3 h-3" /> Price Surge Active
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end">
+                <div style={{ paddingLeft: '32px', paddingBottom: '32px', boxSizing: 'border-box' }} className="w-full">
+                  <div className="flex items-center gap-2 mb-3 flex-wrap">
+                    <span className="bg-[#0078f2] text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded shadow-md">Featured</span>
+                    {featuredGame.platforms?.some(p => p.surge_detected) && (
+                      <span className="bg-[#ff4444] text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded flex items-center gap-1 shadow-md">
+                        <Flame className="w-3 h-3" /> Price Surge Active
+                      </span>
+                    )}
+                  </div>
+                  <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 drop-shadow-xl animate-in slide-in-from-bottom-2 duration-500 fade-in leading-tight" key={`title-${featuredGame.game_id}`}>{featuredGame.title}</h2>
+                  <p className="text-[#ccc] text-xs sm:text-sm max-w-xl leading-relaxed mb-0 hidden sm:block line-clamp-2 animate-in slide-in-from-bottom-2 duration-500 delay-100 fade-in" key={`summary-${featuredGame.game_id}`}>
+                    {decodeHtmlEntities(featuredGame.summary)?.slice(0, 260)}...
+                  </p>
+                  <div className="flex items-center gap-3 flex-wrap mt-5 animate-in slide-in-from-bottom-2 duration-500 delay-200 fade-in" key={`badges-${featuredGame.game_id}`}>
+                    <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '36px', padding: '0 16px', lineHeight: 'normal', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.1)', backgroundColor: 'rgba(255, 255, 255, 0.08)', backdropFilter: 'blur(4px)', color: '#ffffff', fontWeight: '600', fontSize: '14px', boxSizing: 'border-box' }}>
+                      Best: {formatPrice(featuredGame.best_deal?.price)} on {featuredGame.best_deal?.store}
                     </span>
-                  )}
-                </div>
-                <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-1 drop-shadow-lg animate-in slide-in-from-bottom-2 duration-500 fade-in" key={`title-${featuredGame.game_id}`}>{featuredGame.title}</h2>
-                <p className="text-[#bbb] text-xs sm:text-sm max-w-lg leading-relaxed mb-3 hidden sm:block animate-in slide-in-from-bottom-2 duration-500 delay-100 fade-in" key={`summary-${featuredGame.game_id}`}>
-                  {featuredGame.summary?.slice(0, 120)}...
-                </p>
-                <div className="flex items-center gap-3 flex-wrap animate-in slide-in-from-bottom-2 duration-500 delay-200 fade-in" key={`badges-${featuredGame.game_id}`}>
-                  <span className="bg-white/10 backdrop-blur-sm text-white text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-lg border border-white/20">
-                    Best: {formatPrice(featuredGame.best_deal?.price)} on {featuredGame.best_deal?.store}
-                  </span>
-                  <span className="bg-[#f5a623]/20 text-[#f5a623] text-xs sm:text-sm font-semibold px-2.5 py-1.5 rounded-lg">
-                    ★ {featuredGame.rating}/100
-                  </span>
+                    <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '36px', padding: '0 16px', lineHeight: 'normal', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.1)', backgroundColor: 'rgba(255, 255, 255, 0.08)', backdropFilter: 'blur(4px)', color: '#f5a623', fontWeight: '600', fontSize: '14px', boxSizing: 'border-box' }}>
+                      ★ {featuredGame.rating}/100
+                    </span>
+                  </div>
                 </div>
               </div>
 
               {/* Pagination Dots */}
-              <div className="absolute bottom-4 right-5 sm:right-8 flex gap-1.5">
+              <div className="absolute bottom-5 right-6 sm:right-10 flex gap-2">
                 {featuredGames.map((_, idx) => (
-                  <div
+                  <button
                     key={idx}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentHeroIndex ? 'bg-white w-6' : 'bg-white/30 w-1.5'}`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setCurrentHeroIndex(idx);
+                    }}
+                    className={`h-2 rounded-full transition-all duration-300 focus:outline-none cursor-pointer border-none ${idx === currentHeroIndex ? 'bg-white w-8' : 'bg-white/40 hover:bg-white/70 w-2'}`}
+                    title={`Go to slide ${idx + 1}`}
                   />
                 ))}
               </div>
@@ -454,7 +476,7 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
 
         {/* ═══ Section: Browse All (Paginated) ═══ */}
         <section style={{ marginTop: '40px', paddingTop: '20px', borderTop: '1px solid #1e1e1e' }}>
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4" style={{ marginBottom: '16px' }}>
             <div className="flex items-center gap-2">
               <Search className="w-5 h-5 text-[#0078f2]" />
               <h2 className="text-base sm:text-lg md:text-xl font-bold text-white">Browse All</h2>
