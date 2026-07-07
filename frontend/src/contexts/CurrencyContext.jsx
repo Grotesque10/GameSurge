@@ -90,8 +90,21 @@ export const CurrencyProvider = ({ children }) => {
     return `${SUPPORTED_CURRENCIES[currency].symbol}${converted.toFixed(2)}`;
   };
 
+  const formatPriceInCurrency = (usdAmount, targetCurrency) => {
+    if (usdAmount === null || usdAmount === undefined || isNaN(usdAmount)) return 'Unavailable';
+    if (!rates || !rates[targetCurrency] || !SUPPORTED_CURRENCIES[targetCurrency]) {
+      return `$${Number(usdAmount).toFixed(2)}`;
+    }
+    const converted = usdAmount * rates[targetCurrency];
+    const symbol = SUPPORTED_CURRENCIES[targetCurrency].symbol;
+    if (targetCurrency === 'JPY') {
+      return `${symbol}${Math.round(converted)}`;
+    }
+    return `${symbol}${converted.toFixed(2)}`;
+  };
+
   return (
-    <CurrencyContext.Provider value={{ currency, setCurrency, formatPrice, supportedCurrencies: Object.keys(SUPPORTED_CURRENCIES) }}>
+    <CurrencyContext.Provider value={{ currency, setCurrency, formatPrice, formatPriceInCurrency, supportedCurrencies: Object.keys(SUPPORTED_CURRENCIES) }}>
       {children}
     </CurrencyContext.Provider>
   );

@@ -8,9 +8,10 @@ import {
   ArrowLeft, Star, Monitor, Cpu, HardDrive, MemoryStick,
   TrendingUp, AlertTriangle, Shield, Clock, Tag,
   Copy, Check, Gamepad2, ShoppingBag, Award, ExternalLink, BellPlus, BellRing, X,
-  Cloud, LogOut, ChevronDown
+  Cloud, LogOut, ChevronDown, Globe
 } from 'lucide-react';
 import BuyingSentiment from './BuyingSentiment';
+import PriceAdvisor from './PriceAdvisor';
 import { SkeletonGameDetails } from './SkeletonCard';
 import LoginModal from './LoginModal';
 import { useWatchlist } from '../contexts/WatchlistContext';
@@ -70,7 +71,7 @@ const GameDetails = () => {
   const { isWatched, addToWatchlist, removeFromWatchlist, user, handleLogout } = useWatchlist();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
-  const { formatPrice, currency } = useCurrency();
+  const { formatPrice, formatPriceInCurrency, currency } = useCurrency();
   const currencySymbol = (currency && Object.prototype.hasOwnProperty.call(SUPPORTED_CURRENCIES, currency))
     ? SUPPORTED_CURRENCIES[currency]?.symbol
     : '$';
@@ -376,12 +377,15 @@ const GameDetails = () => {
       {/* ─── Main Content ─── */}
       <div className="container-wide pb-20" style={{ paddingTop: '64px' }}>
 
-        {/* ─── Buying Sentiment Gauge ─── */}
-        <BuyingSentiment
-          sentiment={game.buying_sentiment}
-          bestPrice={bestDeal?.price}
-          historicalLow={game.historical_low}
-        />
+        {/* ─── Gauges & Advisor Row (Feature 4) ─── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <BuyingSentiment
+            sentiment={game.buying_sentiment}
+            bestPrice={bestDeal?.price}
+            historicalLow={game.historical_low}
+          />
+          <PriceAdvisor game={game} bestDeal={bestDeal} />
+        </div>
 
         {/* ─── About ─── */}
         <section className="bg-[#151515] rounded-2xl p-8 sm:p-10 border border-[#222]" style={{ marginTop: '64px' }}>
@@ -610,6 +614,28 @@ const GameDetails = () => {
                 ))}
               </tbody>
             </table>
+          </div>
+        </section>
+
+        {/* ─── Global Regional Pricing Estimates (Feature 5) ─── */}
+        <section className="bg-[#151515] rounded-2xl p-8 sm:p-10 border border-[#222]" style={{ marginTop: '40px' }}>
+          <h3 className="text-white font-bold text-base sm:text-lg mb-1 flex items-center gap-2">
+            <Globe className="w-5 h-5 text-[#00d26a]" />
+            Global Regional Pricing Estimates
+          </h3>
+          <p className="text-[#666] text-xs mb-6">Real-time converted pricing estimates across major global currencies based on current exchange rates</p>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4">
+            {Object.entries(SUPPORTED_CURRENCIES).map(([code, config]) => {
+              const isCurrent = currency === code;
+              return (
+                <div key={code} className={`rounded-xl p-4 border transition-all ${isCurrent ? 'bg-[#0078f2]/10 border-[#0078f2]/30 ring-1 ring-[#0078f2]/20' : 'bg-[#1a1a1a] border-[#222] hover:border-[#333]'}`}>
+                  <p className="text-[#666] text-[10px] font-bold uppercase tracking-wider">{config.label}</p>
+                  <p className="text-white font-bold text-lg font-mono mt-1.5">{formatPriceInCurrency(bestDeal?.price, code)}</p>
+                  <p className="text-[#888] text-[10px] mt-1 uppercase font-semibold">{code}</p>
+                </div>
+              );
+            })}
           </div>
         </section>
 
