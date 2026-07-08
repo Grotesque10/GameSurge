@@ -23,8 +23,8 @@ const LoginModal = ({ isOpen, onClose }) => {
   const triggerLogin = async (provider) => {
     setActiveProvider(provider);
     if (provider === 'discord') {
-      const clientId = authConfig?.discord_client_id || '1510527836589523164';
-      const redirectUri = encodeURIComponent(authConfig?.discord_redirect_uri || 'http://localhost:5173/auth/callback');
+      const clientId = authConfig?.discord_client_id || import.meta.env.VITE_DISCORD_CLIENT_ID || '';
+      const redirectUri = encodeURIComponent(authConfig?.discord_redirect_uri || import.meta.env.VITE_DISCORD_REDIRECT_URI || 'http://localhost:5173/auth/callback');
       window.location.href = `https://discord.com/api/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=token&scope=identify`;
     } else {
       await handleLogin(provider);
