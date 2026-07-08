@@ -1,16 +1,16 @@
 # Graph Report - antilearn  (2026-07-08)
 
 ## Corpus Check
-- 43 files · ~1,616,180 words
+- 43 files · ~1,616,459 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 410 nodes · 514 edges · 31 communities (26 shown, 5 thin omitted)
+- 416 nodes · 521 edges · 30 communities (25 shown, 5 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a0702053`
+- Built from commit: `2a7ff94d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -40,7 +40,6 @@
 - [[_COMMUNITY_Community 22|Community 22]]
 - [[_COMMUNITY_Community 23|Community 23]]
 - [[_COMMUNITY_Community 24|Community 24]]
-- [[_COMMUNITY_Community 25|Community 25]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `build_game_response()` - 21 edges
@@ -66,111 +65,107 @@
 - `build_game_response()` --calls--> `calculate_value_score()`  [INFERRED]
   backend/main.py → backend/analytics.py
 
-## Communities (31 total, 5 thin omitted)
+## Communities (30 total, 5 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.07
 Nodes (29): AuthCallback(), BuyingSentiment(), SENTIMENT_CONFIG, CommandPalette(), GameCard(), ChartTooltip(), FALLBACK_PALETTE, GameDetails() (+21 more)
 
 ### Community 1 - "Community 1"
+Cohesion: 0.05
+Nodes (44): background_refresh_task(), extract_base_title(), get_game_details(), get_market_status(), _is_price_cache_expired(), Fetch fresh prices from CheapShark for a single game.     Only calls the API if, Fetch fresh prices from CheapShark for a single game.     Only calls the API if, Fetch fresh prices from CheapShark for a single game.     Only calls the API if (+36 more)
+
+### Community 2 - "Community 2"
 Cohesion: 0.06
 Nodes (41): _cache_key(), _cheapshark_get(), close_redis(), discover_game_titles(), fetch_stores(), get_deal_details(), get_deal_redirect_url(), get_game_deals() (+33 more)
 
-### Community 2 - "Community 2"
+### Community 3 - "Community 3"
 Cohesion: 0.07
 Nodes (34): calculate_price_stability(), calculate_value_score(), calculate_weighted_moving_average(), detect_price_surge(), Calculates the weighted moving average given a list of prices and their correspo, Volatility Detection: Calculates a Surge Index.     A "Price Surge" is flagged w, Economic Filtering: Calculates Value Score (Current Price vs. Historical Low)., Calculates the standard deviation of prices for a specific game      to determin (+26 more)
 
-### Community 3 - "Community 3"
-Cohesion: 0.07
-Nodes (30): auth_login(), auth_me(), get_db_watchlist(), Frictionless social sign-in simulator for Steam and Discord accounts., Frictionless social sign-in simulator or live Discord OAuth2 token exchange., Frictionless social sign-in simulator or live Discord OAuth2 token exchange., Frictionless social sign-in simulator or live Discord OAuth2 token exchange., Frictionless social sign-in simulator or live Discord OAuth2 token exchange. (+22 more)
-
 ### Community 4 - "Community 4"
-Cohesion: 0.08
-Nodes (26): ensure_minimum_games(), Search for each tracked game on CheapShark, fetch metadata from Steam,     and p, Search for each tracked game on CheapShark, fetch metadata from Steam,     and p, Search for each tracked game on CheapShark, fetch metadata from Steam,     and p, Search for each tracked game on CheapShark, fetch metadata from Steam,     and p, Search for each tracked game on CheapShark, fetch metadata from Steam,     and p, Search for each tracked game on CheapShark, fetch metadata from Steam,     and p, Search for each tracked game on CheapShark, fetch metadata from Steam,     and p (+18 more)
+Cohesion: 0.06
+Nodes (33): add_to_db_watchlist(), auth_login(), auth_me(), Frictionless social sign-in simulator for Steam and Discord accounts., Frictionless social sign-in simulator or live Discord OAuth2 token exchange., Frictionless social sign-in simulator or live Discord OAuth2 token exchange., Frictionless social sign-in simulator or live Discord OAuth2 token exchange., Frictionless social sign-in simulator or live Discord OAuth2 token exchange. (+25 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.08
-Nodes (27): background_refresh_task(), get_market_status(), _is_price_cache_expired(), Fetch fresh prices from CheapShark for a single game.     Only calls the API if, Fetch fresh prices from CheapShark for a single game.     Only calls the API if, Fetch fresh prices from CheapShark for a single game.     Only calls the API if, Fetch fresh prices from CheapShark for a single game.     Only calls the API if, Fetch fresh prices from CheapShark for a single game.     Only calls the API if (+19 more)
+Cohesion: 0.07
+Nodes (28): force_refresh(), games_count(), Manually add more games to the catalog., Force refresh all game prices from external APIs., Manually add more games to the catalog., Returns details for a single game by ID with real price data., Force refresh all game prices from external APIs., Manually add more games to the catalog. (+20 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.08
-Nodes (25): 1. Database Setup, 2. Backend Setup, 3. Frontend Setup, 4. End-to-End Testing (Playwright), code:sql (CREATE DATABASE GameSurge;), code:bash (npm install), code:bash (# Run tests in headless mode), code:bash (docker compose up -d) (+17 more)
+Nodes (26): ensure_minimum_games(), Search for each tracked game on CheapShark, fetch metadata from Steam,     and p, Search for each tracked game on CheapShark, fetch metadata from Steam,     and p, Search for each tracked game on CheapShark, fetch metadata from Steam,     and p, Search for each tracked game on CheapShark, fetch metadata from Steam,     and p, Search for each tracked game on CheapShark, fetch metadata from Steam,     and p, Search for each tracked game on CheapShark, fetch metadata from Steam,     and p, Search for each tracked game on CheapShark, fetch metadata from Steam,     and p (+18 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.08
-Nodes (24): extract_base_title(), get_latest_prices(), get_price_history(), Get the most recent price for each platform from the database., Get the most recent price for each platform from the database., Get the most recent price for each platform from the database., Get the most recent price for each platform from the database., Fetch price history for a specific platform from the DB. (+16 more)
+Nodes (25): 1. Database Setup, 2. Backend Setup, 3. Frontend Setup, 4. End-to-End Testing (Playwright), code:sql (CREATE DATABASE GameSurge;), code:bash (npm install), code:bash (# Run tests in headless mode), code:bash (docker compose up -d) (+17 more)
 
 ### Community 8 - "Community 8"
-Cohesion: 0.1
-Nodes (20): games_count(), get_game_details(), Returns details for a single game by ID with real price data., Returns details for a single game by ID with real price data., Returns details for a single game by ID with real price data., Returns details for a single game by ID with real price data., Returns details for a single game by ID with real price data., Returns details for a single game by ID with real price data. (+12 more)
+Cohesion: 0.12
+Nodes (17): get_db_watchlist(), Fetch persistent user watchlist items synced from the backend database., Fetch persistent user watchlist items synced from the backend database., Fetch persistent user watchlist items synced from the backend database., Fetch persistent user watchlist items synced from the backend database., Fetch persistent user watchlist items synced from the backend database., Bulk merge client-side localStorage wishlists into the persistent database., Bulk merge client-side localStorage wishlists into the persistent database. (+9 more)
 
 ### Community 9 - "Community 9"
 Cohesion: 0.12
-Nodes (18): force_refresh(), Manually add more games to the catalog., Force refresh all game prices from external APIs., Manually add more games to the catalog., Force refresh all game prices from external APIs., Manually add more games to the catalog., Force refresh all game prices from external APIs., Force refresh all game prices from external APIs. (+10 more)
+Nodes (17): get_latest_prices(), get_price_history(), Get the most recent price for each platform from the database., Get the most recent price for each platform from the database., Get the most recent price for each platform from the database., Get the most recent price for each platform from the database., Fetch price history for a specific platform from the DB., Get the most recent price for each platform from the database. (+9 more)
 
 ### Community 10 - "Community 10"
-Cohesion: 0.13
-Nodes (15): add_to_db_watchlist(), Add a targeted game deal to the user's persistent backend watchlist., Remove a tracked game deal from the user's backend watchlist database., Add a targeted game deal to the user's persistent backend watchlist., Add a targeted game deal to the user's persistent backend watchlist., Add a targeted game deal to the user's persistent backend watchlist., Remove a tracked game deal from the user's backend watchlist database., Remove a tracked game deal from the user's backend watchlist database. (+7 more)
-
-### Community 11 - "Community 11"
 Cohesion: 0.23
 Nodes (11): _extract_req_fields(), get_app_details(), get_multiple_app_details(), _parse_steam_data(), _parse_system_requirements(), Steam Store API Integration Module Undocumented but widely-used public API — no, Parse system requirements from Steam API response., Extract system requirement fields from Steam's HTML format.     Steam returns re (+3 more)
 
-### Community 12 - "Community 12"
+### Community 11 - "Community 11"
 Cohesion: 0.22
 Nodes (8): currencySelect, euroPrice, firstDot, gameCards, gbpPrice, loadMoreBtn, paginationDots, secondDot
 
-### Community 13 - "Community 13"
-Cohesion: 0.29
-Nodes (7): get_auth_config(), Dynamically serve social provider Client IDs securely from backend environment., Dynamically serve social provider Client IDs securely from backend environment., Dynamically serve social provider Client IDs securely from backend environment., Dynamically serve social provider Client IDs securely from backend environment., Dynamically serve social provider Client IDs securely from backend environment., Dynamically serve social provider Client IDs securely from backend environment.
+### Community 12 - "Community 12"
+Cohesion: 0.25
+Nodes (8): get_auth_config(), Dynamically serve social provider Client IDs securely from backend environment., Dynamically serve social provider Client IDs securely from backend environment., Dynamically serve social provider Client IDs securely from backend environment., Dynamically serve social provider Client IDs securely from backend environment., Dynamically serve social provider Client IDs securely from backend environment., Dynamically serve social provider Client IDs securely from backend environment., Dynamically serve social provider Client IDs securely from backend environment.
 
-### Community 14 - "Community 14"
+### Community 13 - "Community 13"
 Cohesion: 0.29
 Nodes (6): GameSurge Frontend, Key Pages, Notes, Requirements, Scripts, Setup
 
-### Community 15 - "Community 15"
+### Community 14 - "Community 14"
 Cohesion: 0.4
 Nodes (5): backfill(), Dynamic metadata backfiller. Finds games missing summaries or images, searches, Search Steam store API by title and return the best matching App ID., Search Steam store API by title and return the best matching App ID., search_steam_by_title()
 
-### Community 16 - "Community 16"
+### Community 15 - "Community 15"
 Cohesion: 0.33
 Nodes (5): confirmBtn, gameCard, removeBtn, targetInput, watchBtn
 
-### Community 17 - "Community 17"
+### Community 16 - "Community 16"
 Cohesion: 0.4
 Nodes (4): gameCard, items, watchButton, watchlistLink
 
-### Community 18 - "Community 18"
+### Community 17 - "Community 17"
 Cohesion: 0.5
 Nodes (3): errorMessage, gameCards, retryButton
 
-### Community 19 - "Community 19"
+### Community 18 - "Community 18"
 Cohesion: 0.5
 Nodes (3): backLink, gameCard, watchlistLink
 
-### Community 20 - "Community 20"
+### Community 19 - "Community 19"
 Cohesion: 0.5
 Nodes (3): resultItem, searchInput, searchTrigger
 
 ## Knowledge Gaps
-- **243 isolated node(s):** `Calculates the standard deviation of prices for a specific game      to determin`, `Calculates the weighted moving average given a list of prices and their correspo`, `Volatility Detection: Calculates a Surge Index.     A "Price Surge" is flagged w`, `Economic Filtering: Calculates Value Score (Current Price vs. Historical Low).`, `Dynamic metadata backfiller. Finds games missing summaries or images, searches` (+238 more)
+- **248 isolated node(s):** `Calculates the standard deviation of prices for a specific game      to determin`, `Calculates the weighted moving average given a list of prices and their correspo`, `Volatility Detection: Calculates a Surge Index.     A "Price Surge" is flagged w`, `Economic Filtering: Calculates Value Score (Current Price vs. Historical Low).`, `Dynamic metadata backfiller. Finds games missing summaries or images, searches` (+243 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `build_game_response()` connect `Community 2` to `Community 8`, `Community 4`, `Community 5`, `Community 7`?**
+- **Why does `build_game_response()` connect `Community 3` to `Community 9`, `Community 1`, `Community 6`?**
   _High betweenness centrality (0.045) - this node is a cross-community bridge._
-- **Why does `get_game_details()` connect `Community 8` to `Community 2`, `Community 5`, `Community 7`?**
+- **Why does `get_game_details()` connect `Community 1` to `Community 3`, `Community 5`?**
   _High betweenness centrality (0.024) - this node is a cross-community bridge._
-- **Why does `get_market_status()` connect `Community 5` to `Community 2`, `Community 7`?**
+- **Why does `get_market_status()` connect `Community 1` to `Community 3`?**
   _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **Are the 4 inferred relationships involving `build_game_response()` (e.g. with `detect_price_surge()` and `calculate_price_stability()`) actually correct?**
   _`build_game_response()` has 4 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `Calculates the standard deviation of prices for a specific game      to determin`, `Calculates the weighted moving average given a list of prices and their correspo`, `Volatility Detection: Calculates a Surge Index.     A "Price Surge" is flagged w` to the rest of the system?**
-  _243 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _248 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.07 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.06 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05 - nodes in this community are weakly interconnected._

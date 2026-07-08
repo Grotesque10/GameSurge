@@ -26,6 +26,16 @@ const LoginModal = ({ isOpen, onClose }) => {
       const clientId = authConfig?.discord_client_id || import.meta.env.VITE_DISCORD_CLIENT_ID || '';
       const redirectUri = encodeURIComponent(authConfig?.discord_redirect_uri || import.meta.env.VITE_DISCORD_REDIRECT_URI || 'http://localhost:5173/auth/callback');
       window.location.href = `https://discord.com/api/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=token&scope=identify`;
+    } else if (provider === 'steam') {
+      const returnUrl = `${window.location.origin}/auth/callback?provider=steam`;
+      const steamUrl = `https://steamcommunity.com/openid/login` +
+        `?openid.ns=http://specs.openid.net/auth/2.0` +
+        `&openid.mode=checkid_setup` +
+        `&openid.return_to=${encodeURIComponent(returnUrl)}` +
+        `&openid.realm=${encodeURIComponent(window.location.origin)}` +
+        `&openid.identity=http://specs.openid.net/auth/2.0/identifier_select` +
+        `&openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select`;
+      window.location.href = steamUrl;
     } else {
       await handleLogin(provider);
       onClose();

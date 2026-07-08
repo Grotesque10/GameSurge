@@ -9,7 +9,7 @@
       "source_file": "run_ast.py",
       "source_location": "L1",
       "id": "run_ast_py",
-      "community": 26,
+      "community": 25,
       "norm_label": "run_ast.py"
     },
     {
@@ -18,7 +18,7 @@
       "source_file": "run_build.py",
       "source_location": "L1",
       "id": "run_build_py",
-      "community": 27,
+      "community": 26,
       "norm_label": "run_build.py"
     },
     {
@@ -27,7 +27,7 @@
       "source_file": "backend/analytics.py",
       "source_location": "L1",
       "id": "backend_analytics_py",
-      "community": 2,
+      "community": 3,
       "norm_label": "analytics.py"
     },
     {
@@ -36,7 +36,7 @@
       "source_file": "backend/analytics.py",
       "source_location": "L5",
       "id": "backend_analytics_calculate_price_stability",
-      "community": 2,
+      "community": 3,
       "norm_label": "calculate_price_stability()"
     },
     {
@@ -45,7 +45,7 @@
       "source_file": "backend/analytics.py",
       "source_location": "L15",
       "id": "backend_analytics_calculate_weighted_moving_average",
-      "community": 2,
+      "community": 3,
       "norm_label": "calculate_weighted_moving_average()"
     },
     {
@@ -54,7 +54,7 @@
       "source_file": "backend/analytics.py",
       "source_location": "L25",
       "id": "backend_analytics_detect_price_surge",
-      "community": 2,
+      "community": 3,
       "norm_label": "detect_price_surge()"
     },
     {
@@ -63,7 +63,7 @@
       "source_file": "backend/analytics.py",
       "source_location": "L57",
       "id": "backend_analytics_calculate_value_score",
-      "community": 2,
+      "community": 3,
       "norm_label": "calculate_value_score()"
     },
     {
@@ -72,7 +72,7 @@
       "source_file": "backend/analytics.py",
       "source_location": "L6",
       "id": "backend_analytics_rationale_6",
-      "community": 2,
+      "community": 3,
       "norm_label": "calculates the standard deviation of prices for a specific game      to determin"
     },
     {
@@ -81,7 +81,7 @@
       "source_file": "backend/analytics.py",
       "source_location": "L16",
       "id": "backend_analytics_rationale_16",
-      "community": 2,
+      "community": 3,
       "norm_label": "calculates the weighted moving average given a list of prices and their correspo"
     },
     {
@@ -90,7 +90,7 @@
       "source_file": "backend/analytics.py",
       "source_location": "L26",
       "id": "backend_analytics_rationale_26",
-      "community": 2,
+      "community": 3,
       "norm_label": "volatility detection: calculates a surge index.     a \"price surge\" is flagged w"
     },
     {
@@ -99,7 +99,7 @@
       "source_file": "backend/analytics.py",
       "source_location": "L58",
       "id": "backend_analytics_rationale_58",
-      "community": 2,
+      "community": 3,
       "norm_label": "economic filtering: calculates value score (current price vs. historical low)."
     },
     {
@@ -108,7 +108,7 @@
       "source_file": "backend/backfill_metadata.py",
       "source_location": "L1",
       "id": "backend_backfill_metadata_py",
-      "community": 15,
+      "community": 14,
       "norm_label": "backfill_metadata.py"
     },
     {
@@ -117,7 +117,7 @@
       "source_file": "backend/backfill_metadata.py",
       "source_location": "L22",
       "id": "backend_backfill_metadata_search_steam_by_title",
-      "community": 15,
+      "community": 14,
       "norm_label": "search_steam_by_title()"
     },
     {
@@ -126,7 +126,7 @@
       "source_file": "backend/backfill_metadata.py",
       "source_location": "L48",
       "id": "backend_backfill_metadata_backfill",
-      "community": 15,
+      "community": 14,
       "norm_label": "backfill()"
     },
     {
@@ -135,7 +135,7 @@
       "source_file": "backend/backfill_metadata.py",
       "source_location": "L1",
       "id": "backend_backfill_metadata_rationale_1",
-      "community": 15,
+      "community": 14,
       "norm_label": "dynamic metadata backfiller. finds games missing summaries or images, searches"
     },
     {
@@ -144,7 +144,7 @@
       "source_file": "backend/backfill_metadata.py",
       "source_location": "L23",
       "id": "backend_backfill_metadata_rationale_23",
-      "community": 15,
+      "community": 14,
       "norm_label": "search steam store api by title and return the best matching app id."
     },
     {
@@ -153,7 +153,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L1",
       "id": "backend_cheapshark_py",
-      "community": 1,
+      "community": 2,
       "norm_label": "cheapshark.py"
     },
     {
@@ -162,7 +162,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L40",
       "id": "backend_cheapshark_get_redis",
-      "community": 1,
+      "community": 2,
       "norm_label": "get_redis()"
     },
     {
@@ -171,7 +171,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L58",
       "id": "backend_cheapshark_close_redis",
-      "community": 1,
+      "community": 2,
       "norm_label": "close_redis()"
     },
     {
@@ -180,7 +180,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L67",
       "id": "backend_cheapshark_cache_key",
-      "community": 1,
+      "community": 2,
       "norm_label": "_cache_key()"
     },
     {
@@ -189,7 +189,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L73",
       "id": "backend_cheapshark_min_interval_sec",
-      "community": 1,
+      "community": 2,
       "norm_label": "_min_interval_sec()"
     },
     {
@@ -198,7 +198,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L77",
       "id": "backend_cheapshark_max_retries",
-      "community": 1,
+      "community": 2,
       "norm_label": "_max_retries()"
     },
     {
@@ -207,7 +207,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L81",
       "id": "backend_cheapshark_cheapshark_get",
-      "community": 1,
+      "community": 2,
       "norm_label": "_cheapshark_get()"
     },
     {
@@ -216,7 +216,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L157",
       "id": "backend_cheapshark_fetch_stores",
-      "community": 1,
+      "community": 2,
       "norm_label": "fetch_stores()"
     },
     {
@@ -225,7 +225,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L175",
       "id": "backend_cheapshark_get_store_name",
-      "community": 1,
+      "community": 2,
       "norm_label": "get_store_name()"
     },
     {
@@ -234,7 +234,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L180",
       "id": "backend_cheapshark_get_store_icon_url",
-      "community": 1,
+      "community": 2,
       "norm_label": "get_store_icon_url()"
     },
     {
@@ -243,7 +243,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L187",
       "id": "backend_cheapshark_is_store_active",
-      "community": 1,
+      "community": 2,
       "norm_label": "is_store_active()"
     },
     {
@@ -252,7 +252,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L192",
       "id": "backend_cheapshark_search_game",
-      "community": 1,
+      "community": 2,
       "norm_label": "search_game()"
     },
     {
@@ -261,7 +261,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L204",
       "id": "backend_cheapshark_get_game_deals",
-      "community": 1,
+      "community": 2,
       "norm_label": "get_game_deals()"
     },
     {
@@ -270,7 +270,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L220",
       "id": "backend_cheapshark_get_deal_details",
-      "community": 1,
+      "community": 2,
       "norm_label": "get_deal_details()"
     },
     {
@@ -279,7 +279,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L225",
       "id": "backend_cheapshark_get_deal_redirect_url",
-      "community": 1,
+      "community": 2,
       "norm_label": "get_deal_redirect_url()"
     },
     {
@@ -288,7 +288,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L230",
       "id": "backend_cheapshark_search_and_get_deals",
-      "community": 1,
+      "community": 2,
       "norm_label": "search_and_get_deals()"
     },
     {
@@ -297,7 +297,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L246",
       "id": "backend_cheapshark_discover_game_titles",
-      "community": 1,
+      "community": 2,
       "norm_label": "discover_game_titles()"
     },
     {
@@ -306,7 +306,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L1",
       "id": "backend_cheapshark_rationale_1",
-      "community": 1,
+      "community": 2,
       "norm_label": "cheapshark api integration module free api \u2014 no api key required. requires custo"
     },
     {
@@ -315,7 +315,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L41",
       "id": "backend_cheapshark_rationale_41",
-      "community": 1,
+      "community": 2,
       "norm_label": "lazily initialize and return the redis connection pool."
     },
     {
@@ -324,7 +324,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L59",
       "id": "backend_cheapshark_rationale_59",
-      "community": 1,
+      "community": 2,
       "norm_label": "gracefully close the redis connection pool."
     },
     {
@@ -333,7 +333,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L68",
       "id": "backend_cheapshark_rationale_68",
-      "community": 1,
+      "community": 2,
       "norm_label": "generate a deterministic redis key for a cheapshark request."
     },
     {
@@ -342,7 +342,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L82",
       "id": "backend_cheapshark_rationale_82",
-      "community": 1,
+      "community": 2,
       "norm_label": "single cheapshark get with redis caching, process-wide pacing, and     bounded r"
     },
     {
@@ -351,7 +351,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L158",
       "id": "backend_cheapshark_rationale_158",
-      "community": 1,
+      "community": 2,
       "norm_label": "fetch the store id \u2192 store name mapping from cheapshark.     cached in memory af"
     },
     {
@@ -360,7 +360,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L176",
       "id": "backend_cheapshark_rationale_176",
-      "community": 1,
+      "community": 2,
       "norm_label": "get store name from cached mapping."
     },
     {
@@ -369,7 +369,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L181",
       "id": "backend_cheapshark_rationale_181",
-      "community": 1,
+      "community": 2,
       "norm_label": "get the store icon url from cheapshark cdn."
     },
     {
@@ -378,7 +378,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L188",
       "id": "backend_cheapshark_rationale_188",
-      "community": 1,
+      "community": 2,
       "norm_label": "check if a store is currently active on cheapshark."
     },
     {
@@ -387,7 +387,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L193",
       "id": "backend_cheapshark_rationale_193",
-      "community": 1,
+      "community": 2,
       "norm_label": "search for a game by title on cheapshark.     returns: {\"gameid\": \"202350\", \"ste"
     },
     {
@@ -396,7 +396,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L205",
       "id": "backend_cheapshark_rationale_205",
-      "community": 1,
+      "community": 2,
       "norm_label": "get all active deals for a game by its cheapshark game id.     returns:     {"
     },
     {
@@ -405,7 +405,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L221",
       "id": "backend_cheapshark_rationale_221",
-      "community": 1,
+      "community": 2,
       "norm_label": "get details for a specific deal (includes redirect url to store)."
     },
     {
@@ -414,7 +414,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L226",
       "id": "backend_cheapshark_rationale_226",
-      "community": 1,
+      "community": 2,
       "norm_label": "get the redirect url that takes the user to the store page for a deal."
     },
     {
@@ -423,7 +423,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L231",
       "id": "backend_cheapshark_rationale_231",
-      "community": 1,
+      "community": 2,
       "norm_label": "convenience: search for a game by title and return its deals.     combines searc"
     },
     {
@@ -432,7 +432,7 @@
       "source_file": "backend/cheapshark.py",
       "source_location": "L247",
       "id": "backend_cheapshark_rationale_247",
-      "community": 1,
+      "community": 2,
       "norm_label": "discover many game titles from cheapshark's public deals feed.     returns uniqu"
     },
     {
@@ -441,7 +441,7 @@
       "source_file": "backend/check_db.py",
       "source_location": "L1",
       "id": "backend_check_db_py",
-      "community": 21,
+      "community": 20,
       "norm_label": "check_db.py"
     },
     {
@@ -450,7 +450,7 @@
       "source_file": "backend/check_db.py",
       "source_location": "L10",
       "id": "backend_check_db_check",
-      "community": 21,
+      "community": 20,
       "norm_label": "check()"
     },
     {
@@ -459,7 +459,7 @@
       "source_file": "backend/check_db.py",
       "source_location": "L1",
       "id": "backend_check_db_rationale_1",
-      "community": 21,
+      "community": 20,
       "norm_label": "quick db check script."
     },
     {
@@ -468,7 +468,7 @@
       "source_file": "backend/main.py",
       "source_location": "L1",
       "id": "backend_main_py",
-      "community": 2,
+      "community": 3,
       "norm_label": "main.py"
     },
     {
@@ -477,7 +477,7 @@
       "source_file": "backend/main.py",
       "source_location": "L66",
       "id": "backend_main_startup",
-      "community": 4,
+      "community": 6,
       "norm_label": "startup()"
     },
     {
@@ -486,7 +486,7 @@
       "source_file": "backend/main.py",
       "source_location": "L129",
       "id": "backend_main_shutdown",
-      "community": 2,
+      "community": 3,
       "norm_label": "shutdown()"
     },
     {
@@ -495,7 +495,7 @@
       "source_file": "backend/main.py",
       "source_location": "L139",
       "id": "backend_main_seed_games_from_api",
-      "community": 4,
+      "community": 6,
       "norm_label": "seed_games_from_api()"
     },
     {
@@ -504,7 +504,7 @@
       "source_file": "backend/main.py",
       "source_location": "L152",
       "id": "backend_main_seed_one_game",
-      "community": 4,
+      "community": 6,
       "norm_label": "seed_one_game()"
     },
     {
@@ -513,7 +513,7 @@
       "source_file": "backend/main.py",
       "source_location": "L238",
       "id": "backend_main_ensure_minimum_games",
-      "community": 4,
+      "community": 6,
       "norm_label": "ensure_minimum_games()"
     },
     {
@@ -522,7 +522,7 @@
       "source_file": "backend/main.py",
       "source_location": "L265",
       "id": "backend_main_is_price_cache_expired",
-      "community": 5,
+      "community": 1,
       "norm_label": "_is_price_cache_expired()"
     },
     {
@@ -531,7 +531,7 @@
       "source_file": "backend/main.py",
       "source_location": "L273",
       "id": "backend_main_refresh_game_prices",
-      "community": 5,
+      "community": 1,
       "norm_label": "refresh_game_prices()"
     },
     {
@@ -540,7 +540,7 @@
       "source_file": "backend/main.py",
       "source_location": "L347",
       "id": "backend_main_get_latest_prices",
-      "community": 7,
+      "community": 9,
       "norm_label": "get_latest_prices()"
     },
     {
@@ -549,7 +549,7 @@
       "source_file": "backend/main.py",
       "source_location": "L360",
       "id": "backend_main_get_price_history",
-      "community": 7,
+      "community": 9,
       "norm_label": "get_price_history()"
     },
     {
@@ -558,7 +558,7 @@
       "source_file": "backend/main.py",
       "source_location": "L373",
       "id": "backend_main_extract_base_title",
-      "community": 7,
+      "community": 1,
       "norm_label": "extract_base_title()"
     },
     {
@@ -567,7 +567,7 @@
       "source_file": "backend/main.py",
       "source_location": "L387",
       "id": "backend_main_compute_buying_sentiment",
-      "community": 2,
+      "community": 3,
       "norm_label": "compute_buying_sentiment()"
     },
     {
@@ -576,7 +576,7 @@
       "source_file": "backend/main.py",
       "source_location": "L396",
       "id": "backend_main_compute_recommendation_score",
-      "community": 2,
+      "community": 3,
       "norm_label": "compute_recommendation_score()"
     },
     {
@@ -585,7 +585,7 @@
       "source_file": "backend/main.py",
       "source_location": "L403",
       "id": "backend_main_build_game_response",
-      "community": 2,
+      "community": 3,
       "norm_label": "build_game_response()"
     },
     {
@@ -594,7 +594,7 @@
       "source_file": "backend/main.py",
       "source_location": "L512",
       "id": "backend_main_background_refresh_task",
-      "community": 5,
+      "community": 1,
       "norm_label": "background_refresh_task()"
     },
     {
@@ -603,7 +603,7 @@
       "source_file": "backend/main.py",
       "source_location": "L531",
       "id": "backend_main_get_market_status",
-      "community": 5,
+      "community": 1,
       "norm_label": "get_market_status()"
     },
     {
@@ -612,7 +612,7 @@
       "source_file": "backend/main.py",
       "source_location": "L607",
       "id": "backend_main_get_game_details",
-      "community": 8,
+      "community": 1,
       "norm_label": "get_game_details()"
     },
     {
@@ -621,7 +621,7 @@
       "source_file": "backend/main.py",
       "source_location": "L654",
       "id": "backend_main_force_refresh",
-      "community": 9,
+      "community": 5,
       "norm_label": "force_refresh()"
     },
     {
@@ -630,7 +630,7 @@
       "source_file": "backend/main.py",
       "source_location": "L663",
       "id": "backend_main_seed_more",
-      "community": 9,
+      "community": 5,
       "norm_label": "seed_more()"
     },
     {
@@ -639,7 +639,7 @@
       "source_file": "backend/main.py",
       "source_location": "L681",
       "id": "backend_main_games_count",
-      "community": 8,
+      "community": 5,
       "norm_label": "games_count()"
     },
     {
@@ -648,7 +648,7 @@
       "source_file": "backend/main.py",
       "source_location": "L689",
       "id": "backend_main_get_all_games",
-      "community": 2,
+      "community": 3,
       "norm_label": "get_all_games()"
     },
     {
@@ -657,7 +657,7 @@
       "source_file": "backend/main.py",
       "source_location": "L706",
       "id": "backend_main_health_check",
-      "community": 2,
+      "community": 3,
       "norm_label": "health_check()"
     },
     {
@@ -666,7 +666,7 @@
       "source_file": "backend/main.py",
       "source_location": "L713",
       "id": "backend_main_get_current_user",
-      "community": 2,
+      "community": 3,
       "norm_label": "get_current_user()"
     },
     {
@@ -675,7 +675,7 @@
       "source_file": "backend/main.py",
       "source_location": "L753",
       "id": "backend_main_loginrequest",
-      "community": 2,
+      "community": 3,
       "norm_label": "loginrequest"
     },
     {
@@ -684,97 +684,97 @@
       "source_file": "",
       "source_location": "",
       "id": "basemodel",
-      "community": 2,
+      "community": 3,
       "norm_label": "basemodel"
     },
     {
       "label": "SyncItem",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L757",
+      "source_location": "L758",
       "id": "backend_main_syncitem",
-      "community": 2,
+      "community": 3,
       "norm_label": "syncitem"
     },
     {
       "label": "SyncRequest",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L761",
+      "source_location": "L762",
       "id": "backend_main_syncrequest",
-      "community": 2,
+      "community": 3,
       "norm_label": "syncrequest"
     },
     {
       "label": "AddItemRequest",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L764",
+      "source_location": "L765",
       "id": "backend_main_additemrequest",
-      "community": 2,
+      "community": 3,
       "norm_label": "additemrequest"
     },
     {
       "label": "get_auth_config()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L770",
+      "source_location": "L771",
       "id": "backend_main_get_auth_config",
-      "community": 13,
+      "community": 12,
       "norm_label": "get_auth_config()"
     },
     {
       "label": "auth_login()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L780",
+      "source_location": "L781",
       "id": "backend_main_auth_login",
-      "community": 3,
+      "community": 4,
       "norm_label": "auth_login()"
     },
     {
       "label": "auth_me()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L845",
+      "source_location": "L888",
       "id": "backend_main_auth_me",
-      "community": 3,
+      "community": 4,
       "norm_label": "auth_me()"
     },
     {
       "label": "get_db_watchlist()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L854",
+      "source_location": "L897",
       "id": "backend_main_get_db_watchlist",
-      "community": 3,
+      "community": 8,
       "norm_label": "get_db_watchlist()"
     },
     {
       "label": "sync_watchlist()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L885",
+      "source_location": "L928",
       "id": "backend_main_sync_watchlist",
-      "community": 3,
+      "community": 8,
       "norm_label": "sync_watchlist()"
     },
     {
       "label": "add_to_db_watchlist()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L905",
+      "source_location": "L948",
       "id": "backend_main_add_to_db_watchlist",
-      "community": 10,
+      "community": 4,
       "norm_label": "add_to_db_watchlist()"
     },
     {
       "label": "remove_from_db_watchlist()",
       "file_type": "code",
       "source_file": "backend/main.py",
-      "source_location": "L921",
+      "source_location": "L964",
       "id": "backend_main_remove_from_db_watchlist",
-      "community": 10,
+      "community": 4,
       "norm_label": "remove_from_db_watchlist()"
     },
     {
@@ -783,7 +783,7 @@
       "source_file": "backend/main.py",
       "source_location": "L140",
       "id": "backend_main_rationale_140",
-      "community": 4,
+      "community": 6,
       "norm_label": "search for each tracked game on cheapshark, fetch metadata from steam,     and p"
     },
     {
@@ -792,7 +792,7 @@
       "source_file": "backend/main.py",
       "source_location": "L153",
       "id": "backend_main_rationale_153",
-      "community": 4,
+      "community": 6,
       "norm_label": "seed one game by title. returns true if inserted, else false."
     },
     {
@@ -801,7 +801,7 @@
       "source_file": "backend/main.py",
       "source_location": "L239",
       "id": "backend_main_rationale_239",
-      "community": 4,
+      "community": 6,
       "norm_label": "expand db catalog until at least target_count games exist."
     },
     {
@@ -810,7 +810,7 @@
       "source_file": "backend/main.py",
       "source_location": "L274",
       "id": "backend_main_rationale_274",
-      "community": 5,
+      "community": 1,
       "norm_label": "fetch fresh prices from cheapshark for a single game.     only calls the api if"
     },
     {
@@ -819,7 +819,7 @@
       "source_file": "backend/main.py",
       "source_location": "L348",
       "id": "backend_main_rationale_348",
-      "community": 7,
+      "community": 9,
       "norm_label": "get the most recent price for each platform from the database."
     },
     {
@@ -828,7 +828,7 @@
       "source_file": "backend/main.py",
       "source_location": "L361",
       "id": "backend_main_rationale_361",
-      "community": 7,
+      "community": 9,
       "norm_label": "fetch price history for a specific platform from the db."
     },
     {
@@ -837,7 +837,7 @@
       "source_file": "backend/main.py",
       "source_location": "L374",
       "id": "backend_main_rationale_374",
-      "community": 7,
+      "community": 1,
       "norm_label": "extract a base title prefix by splitting at common delimiters of editions and dl"
     },
     {
@@ -846,7 +846,7 @@
       "source_file": "backend/main.py",
       "source_location": "L404",
       "id": "backend_main_rationale_404",
-      "community": 2,
+      "community": 3,
       "norm_label": "build the api response for a single game with real price data.          when lig"
     },
     {
@@ -855,7 +855,7 @@
       "source_file": "backend/main.py",
       "source_location": "L513",
       "id": "backend_main_rationale_513",
-      "community": 5,
+      "community": 1,
       "norm_label": "background task to fetch fresh prices without blocking the api response."
     },
     {
@@ -864,7 +864,7 @@
       "source_file": "backend/main.py",
       "source_location": "L536",
       "id": "backend_main_rationale_536",
-      "community": 5,
+      "community": 1,
       "norm_label": "aggregates live data from postgresql + external apis for all games.          sup"
     },
     {
@@ -873,7 +873,7 @@
       "source_file": "backend/main.py",
       "source_location": "L608",
       "id": "backend_main_rationale_608",
-      "community": 8,
+      "community": 1,
       "norm_label": "returns details for a single game by id with real price data."
     },
     {
@@ -882,7 +882,7 @@
       "source_file": "backend/main.py",
       "source_location": "L655",
       "id": "backend_main_rationale_655",
-      "community": 9,
+      "community": 5,
       "norm_label": "force refresh all game prices from external apis."
     },
     {
@@ -891,7 +891,7 @@
       "source_file": "backend/main.py",
       "source_location": "L664",
       "id": "backend_main_rationale_664",
-      "community": 9,
+      "community": 5,
       "norm_label": "manually add more games to the catalog."
     },
     {
@@ -900,7 +900,7 @@
       "source_file": "backend/main.py",
       "source_location": "L682",
       "id": "backend_main_rationale_682",
-      "community": 8,
+      "community": 5,
       "norm_label": "returns the total number of games in the database."
     },
     {
@@ -909,7 +909,7 @@
       "source_file": "backend/main.py",
       "source_location": "L690",
       "id": "backend_main_rationale_690",
-      "community": 2,
+      "community": 3,
       "norm_label": "returns a list of all games with their best current deals (lightweight)."
     },
     {
@@ -918,70 +918,70 @@
       "source_file": "backend/main.py",
       "source_location": "L714",
       "id": "backend_main_rationale_714",
-      "community": 2,
+      "community": 3,
       "norm_label": "fastapi dependency to authenticate and fetch the current user using hmac validat"
     },
     {
       "label": "Dynamically serve social provider Client IDs securely from backend environment.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L771",
-      "id": "backend_main_rationale_771",
-      "community": 13,
+      "source_location": "L772",
+      "id": "backend_main_rationale_772",
+      "community": 12,
       "norm_label": "dynamically serve social provider client ids securely from backend environment."
     },
     {
       "label": "Frictionless social sign-in simulator or live Discord OAuth2 token exchange.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L781",
-      "id": "backend_main_rationale_781",
-      "community": 3,
+      "source_location": "L782",
+      "id": "backend_main_rationale_782",
+      "community": 4,
       "norm_label": "frictionless social sign-in simulator or live discord oauth2 token exchange."
     },
     {
       "label": "Fetch profile metadata of the currently logged-in user.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L846",
-      "id": "backend_main_rationale_846",
-      "community": 3,
+      "source_location": "L889",
+      "id": "backend_main_rationale_889",
+      "community": 4,
       "norm_label": "fetch profile metadata of the currently logged-in user."
     },
     {
       "label": "Fetch persistent user watchlist items synced from the backend database.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L855",
-      "id": "backend_main_rationale_855",
-      "community": 3,
+      "source_location": "L898",
+      "id": "backend_main_rationale_898",
+      "community": 8,
       "norm_label": "fetch persistent user watchlist items synced from the backend database."
     },
     {
       "label": "Bulk merge client-side localStorage wishlists into the persistent database.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L886",
-      "id": "backend_main_rationale_886",
-      "community": 3,
+      "source_location": "L929",
+      "id": "backend_main_rationale_929",
+      "community": 8,
       "norm_label": "bulk merge client-side localstorage wishlists into the persistent database."
     },
     {
       "label": "Add a targeted game deal to the user's persistent backend watchlist.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L906",
-      "id": "backend_main_rationale_906",
-      "community": 10,
+      "source_location": "L949",
+      "id": "backend_main_rationale_949",
+      "community": 4,
       "norm_label": "add a targeted game deal to the user's persistent backend watchlist."
     },
     {
       "label": "Remove a tracked game deal from the user's backend watchlist database.",
       "file_type": "rationale",
       "source_file": "backend/main.py",
-      "source_location": "L922",
-      "id": "backend_main_rationale_922",
-      "community": 10,
+      "source_location": "L965",
+      "id": "backend_main_rationale_965",
+      "community": 4,
       "norm_label": "remove a tracked game deal from the user's backend watchlist database."
     },
     {
@@ -990,7 +990,7 @@
       "source_file": "backend/seed_missing.py",
       "source_location": "L1",
       "id": "backend_seed_missing_py",
-      "community": 22,
+      "community": 21,
       "norm_label": "seed_missing.py"
     },
     {
@@ -999,7 +999,7 @@
       "source_file": "backend/seed_missing.py",
       "source_location": "L30",
       "id": "backend_seed_missing_seed",
-      "community": 22,
+      "community": 21,
       "norm_label": "seed()"
     },
     {
@@ -1008,7 +1008,7 @@
       "source_file": "backend/seed_missing.py",
       "source_location": "L1",
       "id": "backend_seed_missing_rationale_1",
-      "community": 22,
+      "community": 21,
       "norm_label": "seed the missing games into the database."
     },
     {
@@ -1017,7 +1017,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L1",
       "id": "backend_steam_api_py",
-      "community": 11,
+      "community": 10,
       "norm_label": "steam_api.py"
     },
     {
@@ -1026,7 +1026,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L18",
       "id": "backend_steam_api_get_app_details",
-      "community": 11,
+      "community": 10,
       "norm_label": "get_app_details()"
     },
     {
@@ -1035,7 +1035,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L63",
       "id": "backend_steam_api_parse_steam_data",
-      "community": 11,
+      "community": 10,
       "norm_label": "_parse_steam_data()"
     },
     {
@@ -1044,7 +1044,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L123",
       "id": "backend_steam_api_parse_system_requirements",
-      "community": 11,
+      "community": 10,
       "norm_label": "_parse_system_requirements()"
     },
     {
@@ -1053,7 +1053,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L136",
       "id": "backend_steam_api_extract_req_fields",
-      "community": 11,
+      "community": 10,
       "norm_label": "_extract_req_fields()"
     },
     {
@@ -1062,7 +1062,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L170",
       "id": "backend_steam_api_get_multiple_app_details",
-      "community": 11,
+      "community": 10,
       "norm_label": "get_multiple_app_details()"
     },
     {
@@ -1071,7 +1071,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L1",
       "id": "backend_steam_api_rationale_1",
-      "community": 11,
+      "community": 10,
       "norm_label": "steam store api integration module undocumented but widely-used public api \u2014 no"
     },
     {
@@ -1080,7 +1080,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L19",
       "id": "backend_steam_api_rationale_19",
-      "community": 11,
+      "community": 10,
       "norm_label": "fetch game details from the steam store api.      args:         steam_app_id: th"
     },
     {
@@ -1089,7 +1089,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L64",
       "id": "backend_steam_api_rationale_64",
-      "community": 11,
+      "community": 10,
       "norm_label": "parse raw steam api response into our app's format."
     },
     {
@@ -1098,7 +1098,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L124",
       "id": "backend_steam_api_rationale_124",
-      "community": 11,
+      "community": 10,
       "norm_label": "parse system requirements from steam api response."
     },
     {
@@ -1107,7 +1107,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L137",
       "id": "backend_steam_api_rationale_137",
-      "community": 11,
+      "community": 10,
       "norm_label": "extract system requirement fields from steam's html format.     steam returns re"
     },
     {
@@ -1116,7 +1116,7 @@
       "source_file": "backend/steam_api.py",
       "source_location": "L175",
       "id": "backend_steam_api_rationale_175",
-      "community": 11,
+      "community": 10,
       "norm_label": "fetch details for multiple steam apps with rate limiting.     returns a dict map"
     },
     {
@@ -1125,7 +1125,7 @@
       "source_file": "backend/test_api.py",
       "source_location": "L1",
       "id": "backend_test_api_py",
-      "community": 4,
+      "community": 6,
       "norm_label": "test_api.py"
     },
     {
@@ -1134,7 +1134,7 @@
       "source_file": "backend/test_api.py",
       "source_location": "L6",
       "id": "backend_test_api_test",
-      "community": 4,
+      "community": 6,
       "norm_label": "test()"
     },
     {
@@ -1143,7 +1143,7 @@
       "source_file": "backend/test_api.py",
       "source_location": "L1",
       "id": "backend_test_api_rationale_1",
-      "community": 4,
+      "community": 6,
       "norm_label": "quick test to debug the api response."
     },
     {
@@ -1152,7 +1152,7 @@
       "source_file": "e2e/playwright.config.ts",
       "source_location": "L1",
       "id": "e2e_playwright_config_ts",
-      "community": 28,
+      "community": 27,
       "norm_label": "playwright.config.ts"
     },
     {
@@ -1161,7 +1161,7 @@
       "source_file": "e2e/tests/api-mocking.spec.ts",
       "source_location": "L1",
       "id": "e2e_tests_api_mocking_spec_ts",
-      "community": 18,
+      "community": 17,
       "norm_label": "api-mocking.spec.ts"
     },
     {
@@ -1170,7 +1170,7 @@
       "source_file": "e2e/tests/api-mocking.spec.ts",
       "source_location": "L17",
       "id": "tests_api_mocking_spec_errormessage",
-      "community": 18,
+      "community": 17,
       "norm_label": "errormessage"
     },
     {
@@ -1179,7 +1179,7 @@
       "source_file": "e2e/tests/api-mocking.spec.ts",
       "source_location": "L21",
       "id": "tests_api_mocking_spec_retrybutton",
-      "community": 18,
+      "community": 17,
       "norm_label": "retrybutton"
     },
     {
@@ -1188,7 +1188,7 @@
       "source_file": "e2e/tests/api-mocking.spec.ts",
       "source_location": "L47",
       "id": "tests_api_mocking_spec_gamecards",
-      "community": 18,
+      "community": 17,
       "norm_label": "gamecards"
     },
     {
@@ -1197,7 +1197,7 @@
       "source_file": "e2e/tests/auth.spec.ts",
       "source_location": "L1",
       "id": "e2e_tests_auth_spec_ts",
-      "community": 23,
+      "community": 22,
       "norm_label": "auth.spec.ts"
     },
     {
@@ -1206,7 +1206,7 @@
       "source_file": "e2e/tests/auth.spec.ts",
       "source_location": "L8",
       "id": "tests_auth_spec_loginbtn",
-      "community": 23,
+      "community": 22,
       "norm_label": "loginbtn"
     },
     {
@@ -1215,7 +1215,7 @@
       "source_file": "e2e/tests/auth.spec.ts",
       "source_location": "L15",
       "id": "tests_auth_spec_modal",
-      "community": 23,
+      "community": 22,
       "norm_label": "modal"
     },
     {
@@ -1224,7 +1224,7 @@
       "source_file": "e2e/tests/home.spec.ts",
       "source_location": "L1",
       "id": "e2e_tests_home_spec_ts",
-      "community": 25,
+      "community": 24,
       "norm_label": "home.spec.ts"
     },
     {
@@ -1233,7 +1233,7 @@
       "source_file": "e2e/tests/home.spec.ts",
       "source_location": "L17",
       "id": "tests_home_spec_appcontainer",
-      "community": 25,
+      "community": 24,
       "norm_label": "appcontainer"
     },
     {
@@ -1242,7 +1242,7 @@
       "source_file": "e2e/tests/navigation.spec.ts",
       "source_location": "L1",
       "id": "e2e_tests_navigation_spec_ts",
-      "community": 19,
+      "community": 18,
       "norm_label": "navigation.spec.ts"
     },
     {
@@ -1251,7 +1251,7 @@
       "source_file": "e2e/tests/navigation.spec.ts",
       "source_location": "L8",
       "id": "tests_navigation_spec_watchlistlink",
-      "community": 19,
+      "community": 18,
       "norm_label": "watchlistlink"
     },
     {
@@ -1260,7 +1260,7 @@
       "source_file": "e2e/tests/navigation.spec.ts",
       "source_location": "L14",
       "id": "tests_navigation_spec_backlink",
-      "community": 19,
+      "community": 18,
       "norm_label": "backlink"
     },
     {
@@ -1269,7 +1269,7 @@
       "source_file": "e2e/tests/navigation.spec.ts",
       "source_location": "L25",
       "id": "tests_navigation_spec_gamecard",
-      "community": 19,
+      "community": 18,
       "norm_label": "gamecard"
     },
     {
@@ -1278,7 +1278,7 @@
       "source_file": "e2e/tests/search.spec.ts",
       "source_location": "L1",
       "id": "e2e_tests_search_spec_ts",
-      "community": 20,
+      "community": 19,
       "norm_label": "search.spec.ts"
     },
     {
@@ -1287,7 +1287,7 @@
       "source_file": "e2e/tests/search.spec.ts",
       "source_location": "L11",
       "id": "tests_search_spec_searchtrigger",
-      "community": 20,
+      "community": 19,
       "norm_label": "searchtrigger"
     },
     {
@@ -1296,7 +1296,7 @@
       "source_file": "e2e/tests/search.spec.ts",
       "source_location": "L15",
       "id": "tests_search_spec_searchinput",
-      "community": 20,
+      "community": 19,
       "norm_label": "searchinput"
     },
     {
@@ -1305,7 +1305,7 @@
       "source_file": "e2e/tests/search.spec.ts",
       "source_location": "L23",
       "id": "tests_search_spec_resultitem",
-      "community": 20,
+      "community": 19,
       "norm_label": "resultitem"
     },
     {
@@ -1314,7 +1314,7 @@
       "source_file": "e2e/tests/storefront-features.spec.ts",
       "source_location": "L1",
       "id": "e2e_tests_storefront_features_spec_ts",
-      "community": 12,
+      "community": 11,
       "norm_label": "storefront-features.spec.ts"
     },
     {
@@ -1323,7 +1323,7 @@
       "source_file": "e2e/tests/storefront-features.spec.ts",
       "source_location": "L9",
       "id": "tests_storefront_features_spec_currencyselect",
-      "community": 12,
+      "community": 11,
       "norm_label": "currencyselect"
     },
     {
@@ -1332,7 +1332,7 @@
       "source_file": "e2e/tests/storefront-features.spec.ts",
       "source_location": "L20",
       "id": "tests_storefront_features_spec_europrice",
-      "community": 12,
+      "community": 11,
       "norm_label": "europrice"
     },
     {
@@ -1341,7 +1341,7 @@
       "source_file": "e2e/tests/storefront-features.spec.ts",
       "source_location": "L25",
       "id": "tests_storefront_features_spec_gbpprice",
-      "community": 12,
+      "community": 11,
       "norm_label": "gbpprice"
     },
     {
@@ -1350,7 +1350,7 @@
       "source_file": "e2e/tests/storefront-features.spec.ts",
       "source_location": "L37",
       "id": "tests_storefront_features_spec_paginationdots",
-      "community": 12,
+      "community": 11,
       "norm_label": "paginationdots"
     },
     {
@@ -1359,7 +1359,7 @@
       "source_file": "e2e/tests/storefront-features.spec.ts",
       "source_location": "L43",
       "id": "tests_storefront_features_spec_firstdot",
-      "community": 12,
+      "community": 11,
       "norm_label": "firstdot"
     },
     {
@@ -1368,7 +1368,7 @@
       "source_file": "e2e/tests/storefront-features.spec.ts",
       "source_location": "L44",
       "id": "tests_storefront_features_spec_seconddot",
-      "community": 12,
+      "community": 11,
       "norm_label": "seconddot"
     },
     {
@@ -1377,7 +1377,7 @@
       "source_file": "e2e/tests/storefront-features.spec.ts",
       "source_location": "L63",
       "id": "tests_storefront_features_spec_loadmorebtn",
-      "community": 12,
+      "community": 11,
       "norm_label": "loadmorebtn"
     },
     {
@@ -1386,7 +1386,7 @@
       "source_file": "e2e/tests/storefront-features.spec.ts",
       "source_location": "L70",
       "id": "tests_storefront_features_spec_gamecards",
-      "community": 12,
+      "community": 11,
       "norm_label": "gamecards"
     },
     {
@@ -1395,7 +1395,7 @@
       "source_file": "e2e/tests/visual.spec.ts",
       "source_location": "L1",
       "id": "e2e_tests_visual_spec_ts",
-      "community": 24,
+      "community": 23,
       "norm_label": "visual.spec.ts"
     },
     {
@@ -1404,7 +1404,7 @@
       "source_file": "e2e/tests/visual.spec.ts",
       "source_location": "L19",
       "id": "tests_visual_spec_navbar",
-      "community": 24,
+      "community": 23,
       "norm_label": "navbar"
     },
     {
@@ -1413,7 +1413,7 @@
       "source_file": "e2e/tests/visual.spec.ts",
       "source_location": "L27",
       "id": "tests_visual_spec_herobanner",
-      "community": 24,
+      "community": 23,
       "norm_label": "herobanner"
     },
     {
@@ -1422,7 +1422,7 @@
       "source_file": "e2e/tests/watchlist-advanced.spec.ts",
       "source_location": "L1",
       "id": "e2e_tests_watchlist_advanced_spec_ts",
-      "community": 16,
+      "community": 15,
       "norm_label": "watchlist-advanced.spec.ts"
     },
     {
@@ -1431,7 +1431,7 @@
       "source_file": "e2e/tests/watchlist-advanced.spec.ts",
       "source_location": "L12",
       "id": "tests_watchlist_advanced_spec_gamecard",
-      "community": 16,
+      "community": 15,
       "norm_label": "gamecard"
     },
     {
@@ -1440,7 +1440,7 @@
       "source_file": "e2e/tests/watchlist-advanced.spec.ts",
       "source_location": "L19",
       "id": "tests_watchlist_advanced_spec_watchbtn",
-      "community": 16,
+      "community": 15,
       "norm_label": "watchbtn"
     },
     {
@@ -1449,7 +1449,7 @@
       "source_file": "e2e/tests/watchlist-advanced.spec.ts",
       "source_location": "L24",
       "id": "tests_watchlist_advanced_spec_targetinput",
-      "community": 16,
+      "community": 15,
       "norm_label": "targetinput"
     },
     {
@@ -1458,7 +1458,7 @@
       "source_file": "e2e/tests/watchlist-advanced.spec.ts",
       "source_location": "L28",
       "id": "tests_watchlist_advanced_spec_confirmbtn",
-      "community": 16,
+      "community": 15,
       "norm_label": "confirmbtn"
     },
     {
@@ -1467,7 +1467,7 @@
       "source_file": "e2e/tests/watchlist-advanced.spec.ts",
       "source_location": "L35",
       "id": "tests_watchlist_advanced_spec_removebtn",
-      "community": 16,
+      "community": 15,
       "norm_label": "removebtn"
     },
     {
@@ -1476,7 +1476,7 @@
       "source_file": "e2e/tests/watchlist.spec.ts",
       "source_location": "L1",
       "id": "e2e_tests_watchlist_spec_ts",
-      "community": 17,
+      "community": 16,
       "norm_label": "watchlist.spec.ts"
     },
     {
@@ -1485,7 +1485,7 @@
       "source_file": "e2e/tests/watchlist.spec.ts",
       "source_location": "L8",
       "id": "tests_watchlist_spec_gamecard",
-      "community": 17,
+      "community": 16,
       "norm_label": "gamecard"
     },
     {
@@ -1494,7 +1494,7 @@
       "source_file": "e2e/tests/watchlist.spec.ts",
       "source_location": "L18",
       "id": "tests_watchlist_spec_watchbutton",
-      "community": 17,
+      "community": 16,
       "norm_label": "watchbutton"
     },
     {
@@ -1503,7 +1503,7 @@
       "source_file": "e2e/tests/watchlist.spec.ts",
       "source_location": "L23",
       "id": "tests_watchlist_spec_watchlistlink",
-      "community": 17,
+      "community": 16,
       "norm_label": "watchlistlink"
     },
     {
@@ -1512,7 +1512,7 @@
       "source_file": "e2e/tests/watchlist.spec.ts",
       "source_location": "L29",
       "id": "tests_watchlist_spec_items",
-      "community": 17,
+      "community": 16,
       "norm_label": "items"
     },
     {
@@ -1521,7 +1521,7 @@
       "source_file": "frontend/eslint.config.js",
       "source_location": "L1",
       "id": "frontend_eslint_config_js",
-      "community": 29,
+      "community": 28,
       "norm_label": "eslint.config.js"
     },
     {
@@ -1530,7 +1530,7 @@
       "source_file": "frontend/vite.config.js",
       "source_location": "L1",
       "id": "frontend_vite_config_js",
-      "community": 30,
+      "community": 29,
       "norm_label": "vite.config.js"
     },
     {
@@ -2079,7 +2079,7 @@
       "source_file": "README.md",
       "source_location": "L1",
       "id": "readme_md",
-      "community": 6,
+      "community": 7,
       "norm_label": "readme.md"
     },
     {
@@ -2088,7 +2088,7 @@
       "source_file": "README.md",
       "source_location": "L1",
       "id": "antilearn_readme_gamesurge_real_time_game_price_intelligence_platform",
-      "community": 6,
+      "community": 7,
       "norm_label": "gamesurge: real-time game price intelligence platform"
     },
     {
@@ -2097,7 +2097,7 @@
       "source_file": "README.md",
       "source_location": "L9",
       "id": "antilearn_readme_key_features",
-      "community": 6,
+      "community": 7,
       "norm_label": "key features"
     },
     {
@@ -2106,7 +2106,7 @@
       "source_file": "README.md",
       "source_location": "L22",
       "id": "antilearn_readme_technical_stack",
-      "community": 6,
+      "community": 7,
       "norm_label": "technical stack"
     },
     {
@@ -2115,7 +2115,7 @@
       "source_file": "README.md",
       "source_location": "L31",
       "id": "antilearn_readme_getting_started",
-      "community": 6,
+      "community": 7,
       "norm_label": "getting started"
     },
     {
@@ -2124,7 +2124,7 @@
       "source_file": "README.md",
       "source_location": "L33",
       "id": "antilearn_readme_prerequisites",
-      "community": 6,
+      "community": 7,
       "norm_label": "prerequisites"
     },
     {
@@ -2133,7 +2133,7 @@
       "source_file": "README.md",
       "source_location": "L41",
       "id": "antilearn_readme_1_database_setup",
-      "community": 6,
+      "community": 7,
       "norm_label": "1. database setup"
     },
     {
@@ -2142,7 +2142,7 @@
       "source_file": "README.md",
       "source_location": "L45",
       "id": "antilearn_readme_codeblock_1",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:sql (create database gamesurge;)"
     },
     {
@@ -2151,7 +2151,7 @@
       "source_file": "README.md",
       "source_location": "L52",
       "id": "antilearn_readme_2_backend_setup",
-      "community": 6,
+      "community": 7,
       "norm_label": "2. backend setup"
     },
     {
@@ -2160,7 +2160,7 @@
       "source_file": "README.md",
       "source_location": "L55",
       "id": "antilearn_readme_codeblock_2",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:bash (cd backend)"
     },
     {
@@ -2169,7 +2169,7 @@
       "source_file": "README.md",
       "source_location": "L59",
       "id": "antilearn_readme_codeblock_3",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:bash (cp .env.example .env)"
     },
     {
@@ -2178,7 +2178,7 @@
       "source_file": "README.md",
       "source_location": "L66",
       "id": "antilearn_readme_codeblock_4",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:bash (pip install -r requirements.txt)"
     },
     {
@@ -2187,7 +2187,7 @@
       "source_file": "README.md",
       "source_location": "L72",
       "id": "antilearn_readme_codeblock_5",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:bash (python -m uvicorn main:app --host 127.0.0.1 --port 8080 --re)"
     },
     {
@@ -2196,7 +2196,7 @@
       "source_file": "README.md",
       "source_location": "L79",
       "id": "antilearn_readme_3_frontend_setup",
-      "community": 6,
+      "community": 7,
       "norm_label": "3. frontend setup"
     },
     {
@@ -2205,7 +2205,7 @@
       "source_file": "README.md",
       "source_location": "L82",
       "id": "antilearn_readme_codeblock_6",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:bash (cd ../frontend)"
     },
     {
@@ -2214,7 +2214,7 @@
       "source_file": "README.md",
       "source_location": "L86",
       "id": "antilearn_readme_codeblock_7",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:bash (npm install)"
     },
     {
@@ -2223,7 +2223,7 @@
       "source_file": "README.md",
       "source_location": "L90",
       "id": "antilearn_readme_codeblock_8",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:bash (npm run dev)"
     },
     {
@@ -2232,7 +2232,7 @@
       "source_file": "README.md",
       "source_location": "L97",
       "id": "antilearn_readme_4_end_to_end_testing_playwright",
-      "community": 6,
+      "community": 7,
       "norm_label": "4. end-to-end testing (playwright)"
     },
     {
@@ -2241,7 +2241,7 @@
       "source_file": "README.md",
       "source_location": "L101",
       "id": "antilearn_readme_codeblock_9",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:bash (cd e2e)"
     },
     {
@@ -2250,7 +2250,7 @@
       "source_file": "README.md",
       "source_location": "L105",
       "id": "antilearn_readme_codeblock_10",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:bash (npm install)"
     },
     {
@@ -2259,7 +2259,7 @@
       "source_file": "README.md",
       "source_location": "L110",
       "id": "antilearn_readme_codeblock_11",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:bash (# run tests in headless mode)"
     },
     {
@@ -2268,7 +2268,7 @@
       "source_file": "README.md",
       "source_location": "L120",
       "id": "antilearn_readme_running_with_docker_recommended",
-      "community": 6,
+      "community": 7,
       "norm_label": "running with docker (recommended)"
     },
     {
@@ -2277,7 +2277,7 @@
       "source_file": "README.md",
       "source_location": "L126",
       "id": "antilearn_readme_codeblock_12",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:bash (docker compose up -d)"
     },
     {
@@ -2286,7 +2286,7 @@
       "source_file": "README.md",
       "source_location": "L131",
       "id": "antilearn_readme_codeblock_13",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:bash (docker compose down)"
     },
     {
@@ -2295,7 +2295,7 @@
       "source_file": "README.md",
       "source_location": "L137",
       "id": "antilearn_readme_jenkins_ci_cd_pipeline",
-      "community": 6,
+      "community": 7,
       "norm_label": "jenkins ci/cd pipeline"
     },
     {
@@ -2304,7 +2304,7 @@
       "source_file": "README.md",
       "source_location": "L153",
       "id": "antilearn_readme_discord_oauth2_configuration",
-      "community": 6,
+      "community": 7,
       "norm_label": "discord oauth2 configuration"
     },
     {
@@ -2313,7 +2313,7 @@
       "source_file": "frontend/README.md",
       "source_location": "L1",
       "id": "frontend_readme_md",
-      "community": 14,
+      "community": 13,
       "norm_label": "readme.md"
     },
     {
@@ -2322,7 +2322,7 @@
       "source_file": "frontend/README.md",
       "source_location": "L1",
       "id": "frontend_readme_gamesurge_frontend",
-      "community": 14,
+      "community": 13,
       "norm_label": "gamesurge frontend"
     },
     {
@@ -2331,7 +2331,7 @@
       "source_file": "frontend/README.md",
       "source_location": "L5",
       "id": "frontend_readme_requirements",
-      "community": 14,
+      "community": 13,
       "norm_label": "requirements"
     },
     {
@@ -2340,7 +2340,7 @@
       "source_file": "frontend/README.md",
       "source_location": "L10",
       "id": "frontend_readme_setup",
-      "community": 14,
+      "community": 13,
       "norm_label": "setup"
     },
     {
@@ -2349,7 +2349,7 @@
       "source_file": "frontend/README.md",
       "source_location": "L20",
       "id": "frontend_readme_scripts",
-      "community": 14,
+      "community": 13,
       "norm_label": "scripts"
     },
     {
@@ -2358,7 +2358,7 @@
       "source_file": "frontend/README.md",
       "source_location": "L27",
       "id": "frontend_readme_key_pages",
-      "community": 14,
+      "community": 13,
       "norm_label": "key pages"
     },
     {
@@ -2367,15 +2367,78 @@
       "source_file": "frontend/README.md",
       "source_location": "L32",
       "id": "frontend_readme_notes",
-      "community": 14,
+      "community": 13,
       "norm_label": "notes"
+    },
+    {
+      "label": "Dynamically serve social provider Client IDs securely from backend environment.",
+      "file_type": "rationale",
+      "source_file": "backend/main.py",
+      "source_location": "L771",
+      "community": 12,
+      "norm_label": "dynamically serve social provider client ids securely from backend environment.",
+      "id": "backend_main_rationale_771"
+    },
+    {
+      "label": "Frictionless social sign-in simulator or live Discord OAuth2 token exchange.",
+      "file_type": "rationale",
+      "source_file": "backend/main.py",
+      "source_location": "L781",
+      "community": 4,
+      "norm_label": "frictionless social sign-in simulator or live discord oauth2 token exchange.",
+      "id": "backend_main_rationale_781"
+    },
+    {
+      "label": "Fetch profile metadata of the currently logged-in user.",
+      "file_type": "rationale",
+      "source_file": "backend/main.py",
+      "source_location": "L846",
+      "community": 4,
+      "norm_label": "fetch profile metadata of the currently logged-in user.",
+      "id": "backend_main_rationale_846"
+    },
+    {
+      "label": "Fetch persistent user watchlist items synced from the backend database.",
+      "file_type": "rationale",
+      "source_file": "backend/main.py",
+      "source_location": "L855",
+      "community": 8,
+      "norm_label": "fetch persistent user watchlist items synced from the backend database.",
+      "id": "backend_main_rationale_855"
+    },
+    {
+      "label": "Bulk merge client-side localStorage wishlists into the persistent database.",
+      "file_type": "rationale",
+      "source_file": "backend/main.py",
+      "source_location": "L886",
+      "community": 8,
+      "norm_label": "bulk merge client-side localstorage wishlists into the persistent database.",
+      "id": "backend_main_rationale_886"
+    },
+    {
+      "label": "Add a targeted game deal to the user's persistent backend watchlist.",
+      "file_type": "rationale",
+      "source_file": "backend/main.py",
+      "source_location": "L906",
+      "community": 4,
+      "norm_label": "add a targeted game deal to the user's persistent backend watchlist.",
+      "id": "backend_main_rationale_906"
+    },
+    {
+      "label": "Remove a tracked game deal from the user's backend watchlist database.",
+      "file_type": "rationale",
+      "source_file": "backend/main.py",
+      "source_location": "L922",
+      "community": 4,
+      "norm_label": "remove a tracked game deal from the user's backend watchlist database.",
+      "id": "backend_main_rationale_922"
     },
     {
       "label": "get_games_list()",
       "file_type": "code",
       "source_file": "backend/main.py",
       "source_location": "L689",
-      "community": 2,
+      "community": 3,
       "norm_label": "get_games_list()",
       "id": "backend_main_get_games_list"
     },
@@ -2384,7 +2447,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L713",
-      "community": 2,
+      "community": 3,
       "norm_label": "fastapi dependency to authenticate and fetch the current user using hmac validat",
       "id": "backend_main_rationale_713"
     },
@@ -2393,7 +2456,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L770",
-      "community": 13,
+      "community": 12,
       "norm_label": "dynamically serve social provider client ids securely from backend environment.",
       "id": "backend_main_rationale_770"
     },
@@ -2402,7 +2465,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L780",
-      "community": 3,
+      "community": 4,
       "norm_label": "frictionless social sign-in simulator or live discord oauth2 token exchange.",
       "id": "backend_main_rationale_780"
     },
@@ -2411,7 +2474,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L845",
-      "community": 3,
+      "community": 4,
       "norm_label": "fetch profile metadata of the currently logged-in user.",
       "id": "backend_main_rationale_845"
     },
@@ -2420,7 +2483,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L854",
-      "community": 3,
+      "community": 8,
       "norm_label": "fetch persistent user watchlist items synced from the backend database.",
       "id": "backend_main_rationale_854"
     },
@@ -2429,7 +2492,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L885",
-      "community": 3,
+      "community": 8,
       "norm_label": "bulk merge client-side localstorage wishlists into the persistent database.",
       "id": "backend_main_rationale_885"
     },
@@ -2438,7 +2501,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L905",
-      "community": 10,
+      "community": 4,
       "norm_label": "add a targeted game deal to the user's persistent backend watchlist.",
       "id": "backend_main_rationale_905"
     },
@@ -2447,7 +2510,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L921",
-      "community": 10,
+      "community": 4,
       "norm_label": "remove a tracked game deal from the user's backend watchlist database.",
       "id": "backend_main_rationale_921"
     },
@@ -2456,7 +2519,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L697",
-      "community": 2,
+      "community": 3,
       "norm_label": "fastapi dependency to authenticate and fetch the current user using hmac validat",
       "id": "backend_main_rationale_697"
     },
@@ -2465,7 +2528,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L754",
-      "community": 13,
+      "community": 12,
       "norm_label": "dynamically serve social provider client ids securely from backend environment.",
       "id": "backend_main_rationale_754"
     },
@@ -2474,7 +2537,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L764",
-      "community": 3,
+      "community": 4,
       "norm_label": "frictionless social sign-in simulator or live discord oauth2 token exchange.",
       "id": "backend_main_rationale_764"
     },
@@ -2483,7 +2546,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L829",
-      "community": 3,
+      "community": 4,
       "norm_label": "fetch profile metadata of the currently logged-in user.",
       "id": "backend_main_rationale_829"
     },
@@ -2492,7 +2555,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L838",
-      "community": 3,
+      "community": 8,
       "norm_label": "fetch persistent user watchlist items synced from the backend database.",
       "id": "backend_main_rationale_838"
     },
@@ -2501,25 +2564,16 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L869",
-      "community": 3,
+      "community": 8,
       "norm_label": "bulk merge client-side localstorage wishlists into the persistent database.",
       "id": "backend_main_rationale_869"
-    },
-    {
-      "label": "Add a targeted game deal to the user's persistent backend watchlist.",
-      "file_type": "rationale",
-      "source_file": "backend/main.py",
-      "source_location": "L889",
-      "community": 10,
-      "norm_label": "add a targeted game deal to the user's persistent backend watchlist.",
-      "id": "backend_main_rationale_889"
     },
     {
       "label": "Search for each tracked game on CheapShark, fetch metadata from Steam,     and p",
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L138",
-      "community": 4,
+      "community": 6,
       "norm_label": "search for each tracked game on cheapshark, fetch metadata from steam,     and p",
       "id": "backend_main_rationale_138"
     },
@@ -2528,7 +2582,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L151",
-      "community": 4,
+      "community": 6,
       "norm_label": "seed one game by title. returns true if inserted, else false.",
       "id": "backend_main_rationale_151"
     },
@@ -2537,7 +2591,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L237",
-      "community": 4,
+      "community": 6,
       "norm_label": "expand db catalog until at least target_count games exist.",
       "id": "backend_main_rationale_237"
     },
@@ -2546,7 +2600,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L272",
-      "community": 5,
+      "community": 1,
       "norm_label": "fetch fresh prices from cheapshark for a single game.     only calls the api if",
       "id": "backend_main_rationale_272"
     },
@@ -2555,7 +2609,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L346",
-      "community": 7,
+      "community": 9,
       "norm_label": "get the most recent price for each platform from the database.",
       "id": "backend_main_rationale_346"
     },
@@ -2564,7 +2618,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L359",
-      "community": 7,
+      "community": 9,
       "norm_label": "fetch price history for a specific platform from the db.",
       "id": "backend_main_rationale_359"
     },
@@ -2573,7 +2627,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L372",
-      "community": 7,
+      "community": 1,
       "norm_label": "extract a base title prefix by splitting at common delimiters of editions and dl",
       "id": "backend_main_rationale_372"
     },
@@ -2582,7 +2636,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L402",
-      "community": 2,
+      "community": 3,
       "norm_label": "build the api response for a single game with real price data.          when lig",
       "id": "backend_main_rationale_402"
     },
@@ -2591,7 +2645,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L511",
-      "community": 5,
+      "community": 1,
       "norm_label": "background task to fetch fresh prices without blocking the api response.",
       "id": "backend_main_rationale_511"
     },
@@ -2600,7 +2654,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L534",
-      "community": 5,
+      "community": 1,
       "norm_label": "aggregates live data from postgresql + external apis for all games.          sup",
       "id": "backend_main_rationale_534"
     },
@@ -2609,7 +2663,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L606",
-      "community": 8,
+      "community": 1,
       "norm_label": "returns details for a single game by id with real price data.",
       "id": "backend_main_rationale_606"
     },
@@ -2618,7 +2672,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L653",
-      "community": 9,
+      "community": 5,
       "norm_label": "force refresh all game prices from external apis.",
       "id": "backend_main_rationale_653"
     },
@@ -2627,7 +2681,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L662",
-      "community": 8,
+      "community": 5,
       "norm_label": "manually add more games to the catalog.",
       "id": "backend_main_rationale_662"
     },
@@ -2636,7 +2690,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L680",
-      "community": 8,
+      "community": 5,
       "norm_label": "returns the total number of games in the database.",
       "id": "backend_main_rationale_680"
     },
@@ -2645,7 +2699,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L695",
-      "community": 2,
+      "community": 3,
       "norm_label": "fastapi dependency to authenticate and fetch the current mock user.",
       "id": "backend_main_rationale_695"
     },
@@ -2654,7 +2708,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L736",
-      "community": 13,
+      "community": 12,
       "norm_label": "dynamically serve social provider client ids securely from backend environment.",
       "id": "backend_main_rationale_736"
     },
@@ -2663,7 +2717,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L746",
-      "community": 3,
+      "community": 4,
       "norm_label": "frictionless social sign-in simulator or live discord oauth2 token exchange.",
       "id": "backend_main_rationale_746"
     },
@@ -2672,7 +2726,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L804",
-      "community": 3,
+      "community": 4,
       "norm_label": "fetch profile metadata of the currently logged-in user.",
       "id": "backend_main_rationale_804"
     },
@@ -2681,7 +2735,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L813",
-      "community": 3,
+      "community": 8,
       "norm_label": "fetch persistent user watchlist items synced from the backend database.",
       "id": "backend_main_rationale_813"
     },
@@ -2690,7 +2744,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L844",
-      "community": 3,
+      "community": 8,
       "norm_label": "bulk merge client-side localstorage wishlists into the persistent database.",
       "id": "backend_main_rationale_844"
     },
@@ -2699,7 +2753,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L864",
-      "community": 10,
+      "community": 4,
       "norm_label": "add a targeted game deal to the user's persistent backend watchlist.",
       "id": "backend_main_rationale_864"
     },
@@ -2708,7 +2762,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L880",
-      "community": 10,
+      "community": 4,
       "norm_label": "remove a tracked game deal from the user's backend watchlist database.",
       "id": "backend_main_rationale_880"
     },
@@ -2717,7 +2771,7 @@
       "file_type": "rationale",
       "source_file": "backend/cheapshark.py",
       "source_location": "L38",
-      "community": 1,
+      "community": 2,
       "norm_label": "single cheapshark get with process-wide pacing and bounded retries on 429.     a",
       "id": "backend_cheapshark_rationale_38"
     },
@@ -2726,7 +2780,7 @@
       "file_type": "rationale",
       "source_file": "backend/cheapshark.py",
       "source_location": "L88",
-      "community": 1,
+      "community": 2,
       "norm_label": "fetch the store id \u2192 store name mapping from cheapshark.     cached in memory af",
       "id": "backend_cheapshark_rationale_88"
     },
@@ -2735,7 +2789,7 @@
       "file_type": "rationale",
       "source_file": "backend/cheapshark.py",
       "source_location": "L107",
-      "community": 1,
+      "community": 2,
       "norm_label": "get store name from cached mapping.",
       "id": "backend_cheapshark_rationale_107"
     },
@@ -2744,7 +2798,7 @@
       "file_type": "rationale",
       "source_file": "backend/cheapshark.py",
       "source_location": "L112",
-      "community": 1,
+      "community": 2,
       "norm_label": "get the store icon url from cheapshark cdn.",
       "id": "backend_cheapshark_rationale_112"
     },
@@ -2753,7 +2807,7 @@
       "file_type": "rationale",
       "source_file": "backend/cheapshark.py",
       "source_location": "L119",
-      "community": 1,
+      "community": 2,
       "norm_label": "check if a store is currently active on cheapshark.",
       "id": "backend_cheapshark_rationale_119"
     },
@@ -2762,7 +2816,7 @@
       "file_type": "rationale",
       "source_file": "backend/cheapshark.py",
       "source_location": "L124",
-      "community": 1,
+      "community": 2,
       "norm_label": "search for a game by title on cheapshark.     returns: {\"gameid\": \"202350\", \"ste",
       "id": "backend_cheapshark_rationale_124"
     },
@@ -2771,7 +2825,7 @@
       "file_type": "rationale",
       "source_file": "backend/cheapshark.py",
       "source_location": "L137",
-      "community": 1,
+      "community": 2,
       "norm_label": "get all active deals for a game by its cheapshark game id.     returns:     {",
       "id": "backend_cheapshark_rationale_137"
     },
@@ -2780,7 +2834,7 @@
       "file_type": "rationale",
       "source_file": "backend/cheapshark.py",
       "source_location": "L154",
-      "community": 1,
+      "community": 2,
       "norm_label": "get details for a specific deal (includes redirect url to store).",
       "id": "backend_cheapshark_rationale_154"
     },
@@ -2789,7 +2843,7 @@
       "file_type": "rationale",
       "source_file": "backend/cheapshark.py",
       "source_location": "L160",
-      "community": 1,
+      "community": 2,
       "norm_label": "get the redirect url that takes the user to the store page for a deal.",
       "id": "backend_cheapshark_rationale_160"
     },
@@ -2798,7 +2852,7 @@
       "file_type": "rationale",
       "source_file": "backend/cheapshark.py",
       "source_location": "L165",
-      "community": 1,
+      "community": 2,
       "norm_label": "convenience: search for a game by title and return its deals.     combines searc",
       "id": "backend_cheapshark_rationale_165"
     },
@@ -2807,7 +2861,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L133",
-      "community": 4,
+      "community": 6,
       "norm_label": "search for each tracked game on cheapshark, fetch metadata from steam,     and p",
       "id": "backend_main_rationale_133"
     },
@@ -2816,7 +2870,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L146",
-      "community": 4,
+      "community": 6,
       "norm_label": "seed one game by title. returns true if inserted, else false.",
       "id": "backend_main_rationale_146"
     },
@@ -2825,7 +2879,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L232",
-      "community": 4,
+      "community": 6,
       "norm_label": "expand db catalog until at least target_count games exist.",
       "id": "backend_main_rationale_232"
     },
@@ -2834,7 +2888,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L267",
-      "community": 5,
+      "community": 1,
       "norm_label": "fetch fresh prices from cheapshark for a single game.     only calls the api if",
       "id": "backend_main_rationale_267"
     },
@@ -2843,7 +2897,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L341",
-      "community": 7,
+      "community": 9,
       "norm_label": "get the most recent price for each platform from the database.",
       "id": "backend_main_rationale_341"
     },
@@ -2852,7 +2906,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L354",
-      "community": 7,
+      "community": 9,
       "norm_label": "fetch price history for a specific platform from the db.",
       "id": "backend_main_rationale_354"
     },
@@ -2861,7 +2915,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L367",
-      "community": 7,
+      "community": 1,
       "norm_label": "extract a base title prefix by splitting at common delimiters of editions and dl",
       "id": "backend_main_rationale_367"
     },
@@ -2870,7 +2924,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L397",
-      "community": 2,
+      "community": 3,
       "norm_label": "build the api response for a single game with real price data.          when lig",
       "id": "backend_main_rationale_397"
     },
@@ -2879,7 +2933,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L506",
-      "community": 5,
+      "community": 1,
       "norm_label": "background task to fetch fresh prices without blocking the api response.",
       "id": "backend_main_rationale_506"
     },
@@ -2888,7 +2942,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L529",
-      "community": 5,
+      "community": 1,
       "norm_label": "aggregates live data from postgresql + external apis for all games.          sup",
       "id": "backend_main_rationale_529"
     },
@@ -2897,7 +2951,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L601",
-      "community": 8,
+      "community": 1,
       "norm_label": "returns details for a single game by id with real price data.",
       "id": "backend_main_rationale_601"
     },
@@ -2906,7 +2960,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L648",
-      "community": 9,
+      "community": 5,
       "norm_label": "force refresh all game prices from external apis.",
       "id": "backend_main_rationale_648"
     },
@@ -2915,7 +2969,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L657",
-      "community": 9,
+      "community": 5,
       "norm_label": "manually add more games to the catalog.",
       "id": "backend_main_rationale_657"
     },
@@ -2924,7 +2978,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L675",
-      "community": 8,
+      "community": 5,
       "norm_label": "returns the total number of games in the database.",
       "id": "backend_main_rationale_675"
     },
@@ -2933,7 +2987,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L731",
-      "community": 13,
+      "community": 12,
       "norm_label": "dynamically serve social provider client ids securely from backend environment.",
       "id": "backend_main_rationale_731"
     },
@@ -2942,7 +2996,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L741",
-      "community": 3,
+      "community": 4,
       "norm_label": "frictionless social sign-in simulator or live discord oauth2 token exchange.",
       "id": "backend_main_rationale_741"
     },
@@ -2951,7 +3005,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L799",
-      "community": 3,
+      "community": 4,
       "norm_label": "fetch profile metadata of the currently logged-in user.",
       "id": "backend_main_rationale_799"
     },
@@ -2960,7 +3014,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L808",
-      "community": 3,
+      "community": 8,
       "norm_label": "fetch persistent user watchlist items synced from the backend database.",
       "id": "backend_main_rationale_808"
     },
@@ -2969,7 +3023,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L839",
-      "community": 3,
+      "community": 8,
       "norm_label": "bulk merge client-side localstorage wishlists into the persistent database.",
       "id": "backend_main_rationale_839"
     },
@@ -2978,7 +3032,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L859",
-      "community": 10,
+      "community": 4,
       "norm_label": "add a targeted game deal to the user's persistent backend watchlist.",
       "id": "backend_main_rationale_859"
     },
@@ -2987,7 +3041,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L875",
-      "community": 10,
+      "community": 4,
       "norm_label": "remove a tracked game deal from the user's backend watchlist database.",
       "id": "backend_main_rationale_875"
     },
@@ -2996,7 +3050,7 @@
       "file_type": "rationale",
       "source_file": "backend/backfill_metadata.py",
       "source_location": "L21",
-      "community": 15,
+      "community": 14,
       "norm_label": "search steam store api by title and return the best matching app id.",
       "id": "backend_backfill_metadata_rationale_21"
     },
@@ -3005,7 +3059,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L135",
-      "community": 4,
+      "community": 6,
       "norm_label": "search for each tracked game on cheapshark, fetch metadata from steam,     and p",
       "id": "backend_main_rationale_135"
     },
@@ -3014,7 +3068,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L148",
-      "community": 4,
+      "community": 6,
       "norm_label": "seed one game by title. returns true if inserted, else false.",
       "id": "backend_main_rationale_148"
     },
@@ -3023,7 +3077,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L234",
-      "community": 4,
+      "community": 6,
       "norm_label": "expand db catalog until at least target_count games exist.",
       "id": "backend_main_rationale_234"
     },
@@ -3032,7 +3086,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L269",
-      "community": 5,
+      "community": 1,
       "norm_label": "fetch fresh prices from cheapshark for a single game.     only calls the api if",
       "id": "backend_main_rationale_269"
     },
@@ -3041,7 +3095,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L343",
-      "community": 7,
+      "community": 9,
       "norm_label": "get the most recent price for each platform from the database.",
       "id": "backend_main_rationale_343"
     },
@@ -3050,7 +3104,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L356",
-      "community": 7,
+      "community": 9,
       "norm_label": "fetch price history for a specific platform from the db.",
       "id": "backend_main_rationale_356"
     },
@@ -3059,7 +3113,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L369",
-      "community": 7,
+      "community": 1,
       "norm_label": "extract a base title prefix by splitting at common delimiters of editions and dl",
       "id": "backend_main_rationale_369"
     },
@@ -3068,7 +3122,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L399",
-      "community": 2,
+      "community": 3,
       "norm_label": "build the api response for a single game with real price data.          when lig",
       "id": "backend_main_rationale_399"
     },
@@ -3077,7 +3131,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L508",
-      "community": 5,
+      "community": 1,
       "norm_label": "background task to fetch fresh prices without blocking the api response.",
       "id": "backend_main_rationale_508"
     },
@@ -3086,7 +3140,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L531",
-      "community": 5,
+      "community": 1,
       "norm_label": "aggregates live data from postgresql + external apis for all games.          sup",
       "id": "backend_main_rationale_531"
     },
@@ -3095,7 +3149,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L603",
-      "community": 8,
+      "community": 1,
       "norm_label": "returns details for a single game by id with real price data.",
       "id": "backend_main_rationale_603"
     },
@@ -3104,7 +3158,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L650",
-      "community": 9,
+      "community": 5,
       "norm_label": "force refresh all game prices from external apis.",
       "id": "backend_main_rationale_650"
     },
@@ -3113,7 +3167,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L659",
-      "community": 9,
+      "community": 5,
       "norm_label": "manually add more games to the catalog.",
       "id": "backend_main_rationale_659"
     },
@@ -3122,7 +3176,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L677",
-      "community": 8,
+      "community": 5,
       "norm_label": "returns the total number of games in the database.",
       "id": "backend_main_rationale_677"
     },
@@ -3131,7 +3185,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L692",
-      "community": 2,
+      "community": 3,
       "norm_label": "fastapi dependency to authenticate and fetch the current mock user.",
       "id": "backend_main_rationale_692"
     },
@@ -3140,7 +3194,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L733",
-      "community": 13,
+      "community": 12,
       "norm_label": "dynamically serve social provider client ids securely from backend environment.",
       "id": "backend_main_rationale_733"
     },
@@ -3149,7 +3203,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L743",
-      "community": 3,
+      "community": 4,
       "norm_label": "frictionless social sign-in simulator or live discord oauth2 token exchange.",
       "id": "backend_main_rationale_743"
     },
@@ -3158,7 +3212,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L801",
-      "community": 3,
+      "community": 4,
       "norm_label": "fetch profile metadata of the currently logged-in user.",
       "id": "backend_main_rationale_801"
     },
@@ -3167,7 +3221,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L810",
-      "community": 3,
+      "community": 8,
       "norm_label": "fetch persistent user watchlist items synced from the backend database.",
       "id": "backend_main_rationale_810"
     },
@@ -3176,7 +3230,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L841",
-      "community": 3,
+      "community": 8,
       "norm_label": "bulk merge client-side localstorage wishlists into the persistent database.",
       "id": "backend_main_rationale_841"
     },
@@ -3185,7 +3239,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L861",
-      "community": 10,
+      "community": 4,
       "norm_label": "add a targeted game deal to the user's persistent backend watchlist.",
       "id": "backend_main_rationale_861"
     },
@@ -3194,7 +3248,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L877",
-      "community": 10,
+      "community": 4,
       "norm_label": "remove a tracked game deal from the user's backend watchlist database.",
       "id": "backend_main_rationale_877"
     },
@@ -3203,7 +3257,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L130",
-      "community": 4,
+      "community": 6,
       "norm_label": "search for each tracked game on cheapshark, fetch metadata from steam,     and p",
       "id": "backend_main_rationale_130"
     },
@@ -3212,7 +3266,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L143",
-      "community": 4,
+      "community": 6,
       "norm_label": "seed one game by title. returns true if inserted, else false.",
       "id": "backend_main_rationale_143"
     },
@@ -3221,7 +3275,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L229",
-      "community": 4,
+      "community": 6,
       "norm_label": "expand db catalog until at least target_count games exist.",
       "id": "backend_main_rationale_229"
     },
@@ -3230,7 +3284,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L264",
-      "community": 5,
+      "community": 1,
       "norm_label": "fetch fresh prices from cheapshark for a single game.     only calls the api if",
       "id": "backend_main_rationale_264"
     },
@@ -3239,7 +3293,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L338",
-      "community": 7,
+      "community": 9,
       "norm_label": "get the most recent price for each platform from the database.",
       "id": "backend_main_rationale_338"
     },
@@ -3248,7 +3302,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L351",
-      "community": 7,
+      "community": 9,
       "norm_label": "fetch price history for a specific platform from the db.",
       "id": "backend_main_rationale_351"
     },
@@ -3257,7 +3311,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L364",
-      "community": 7,
+      "community": 1,
       "norm_label": "extract a base title prefix by splitting at common delimiters of editions and dl",
       "id": "backend_main_rationale_364"
     },
@@ -3266,7 +3320,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L394",
-      "community": 2,
+      "community": 3,
       "norm_label": "build the api response for a single game with real price data.          when lig",
       "id": "backend_main_rationale_394"
     },
@@ -3275,7 +3329,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L503",
-      "community": 5,
+      "community": 1,
       "norm_label": "background task to fetch fresh prices without blocking the api response.",
       "id": "backend_main_rationale_503"
     },
@@ -3284,7 +3338,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L526",
-      "community": 5,
+      "community": 1,
       "norm_label": "aggregates live data from postgresql + external apis for all games.          sup",
       "id": "backend_main_rationale_526"
     },
@@ -3293,7 +3347,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L598",
-      "community": 8,
+      "community": 1,
       "norm_label": "returns details for a single game by id with real price data.",
       "id": "backend_main_rationale_598"
     },
@@ -3302,7 +3356,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L645",
-      "community": 9,
+      "community": 5,
       "norm_label": "force refresh all game prices from external apis.",
       "id": "backend_main_rationale_645"
     },
@@ -3311,7 +3365,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L654",
-      "community": 9,
+      "community": 5,
       "norm_label": "manually add more games to the catalog.",
       "id": "backend_main_rationale_654"
     },
@@ -3320,7 +3374,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L672",
-      "community": 8,
+      "community": 5,
       "norm_label": "returns the total number of games in the database.",
       "id": "backend_main_rationale_672"
     },
@@ -3329,7 +3383,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L687",
-      "community": 2,
+      "community": 3,
       "norm_label": "fastapi dependency to authenticate and fetch the current mock user.",
       "id": "backend_main_rationale_687"
     },
@@ -3338,7 +3392,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L727",
-      "community": 3,
+      "community": 4,
       "norm_label": "frictionless social sign-in simulator for steam and discord accounts.",
       "id": "backend_main_rationale_727"
     },
@@ -3347,7 +3401,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L773",
-      "community": 3,
+      "community": 8,
       "norm_label": "fetch persistent user watchlist items synced from the backend database.",
       "id": "backend_main_rationale_773"
     },
@@ -3356,7 +3410,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L824",
-      "community": 10,
+      "community": 4,
       "norm_label": "add a targeted game deal to the user's persistent backend watchlist.",
       "id": "backend_main_rationale_824"
     },
@@ -3365,7 +3419,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L840",
-      "community": 10,
+      "community": 4,
       "norm_label": "remove a tracked game deal from the user's backend watchlist database.",
       "id": "backend_main_rationale_840"
     },
@@ -3374,7 +3428,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L129",
-      "community": 4,
+      "community": 6,
       "norm_label": "search for each tracked game on cheapshark, fetch metadata from steam,     and p",
       "id": "backend_main_rationale_129"
     },
@@ -3383,7 +3437,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L142",
-      "community": 4,
+      "community": 6,
       "norm_label": "seed one game by title. returns true if inserted, else false.",
       "id": "backend_main_rationale_142"
     },
@@ -3392,7 +3446,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L228",
-      "community": 4,
+      "community": 6,
       "norm_label": "expand db catalog until at least target_count games exist.",
       "id": "backend_main_rationale_228"
     },
@@ -3401,7 +3455,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L263",
-      "community": 5,
+      "community": 1,
       "norm_label": "fetch fresh prices from cheapshark for a single game.     only calls the api if",
       "id": "backend_main_rationale_263"
     },
@@ -3410,7 +3464,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L337",
-      "community": 7,
+      "community": 9,
       "norm_label": "get the most recent price for each platform from the database.",
       "id": "backend_main_rationale_337"
     },
@@ -3419,7 +3473,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L350",
-      "community": 7,
+      "community": 9,
       "norm_label": "fetch price history for a specific platform from the db.",
       "id": "backend_main_rationale_350"
     },
@@ -3428,7 +3482,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L363",
-      "community": 7,
+      "community": 1,
       "norm_label": "extract a base title prefix by splitting at common delimiters of editions and dl",
       "id": "backend_main_rationale_363"
     },
@@ -3437,7 +3491,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L393",
-      "community": 2,
+      "community": 3,
       "norm_label": "build the api response for a single game with real price data.          when lig",
       "id": "backend_main_rationale_393"
     },
@@ -3446,7 +3500,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L502",
-      "community": 5,
+      "community": 1,
       "norm_label": "background task to fetch fresh prices without blocking the api response.",
       "id": "backend_main_rationale_502"
     },
@@ -3455,7 +3509,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L525",
-      "community": 5,
+      "community": 1,
       "norm_label": "aggregates live data from postgresql + external apis for all games.          sup",
       "id": "backend_main_rationale_525"
     },
@@ -3464,7 +3518,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L597",
-      "community": 8,
+      "community": 5,
       "norm_label": "returns details for a single game by id with real price data.",
       "id": "backend_main_rationale_597"
     },
@@ -3473,7 +3527,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L644",
-      "community": 9,
+      "community": 5,
       "norm_label": "force refresh all game prices from external apis.",
       "id": "backend_main_rationale_644"
     },
@@ -3482,7 +3536,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L671",
-      "community": 8,
+      "community": 5,
       "norm_label": "returns the total number of games in the database.",
       "id": "backend_main_rationale_671"
     },
@@ -3491,7 +3545,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L120",
-      "community": 4,
+      "community": 6,
       "norm_label": "search for each tracked game on cheapshark, fetch metadata from steam,     and p",
       "id": "backend_main_rationale_120"
     },
@@ -3500,7 +3554,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L219",
-      "community": 4,
+      "community": 6,
       "norm_label": "expand db catalog until at least target_count games exist.",
       "id": "backend_main_rationale_219"
     },
@@ -3509,7 +3563,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L254",
-      "community": 5,
+      "community": 1,
       "norm_label": "fetch fresh prices from cheapshark for a single game.     only calls the api if",
       "id": "backend_main_rationale_254"
     },
@@ -3518,7 +3572,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L328",
-      "community": 7,
+      "community": 9,
       "norm_label": "get the most recent price for each platform from the database.",
       "id": "backend_main_rationale_328"
     },
@@ -3527,7 +3581,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L384",
-      "community": 2,
+      "community": 3,
       "norm_label": "build the api response for a single game with real price data.          when lig",
       "id": "backend_main_rationale_384"
     },
@@ -3536,7 +3590,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L493",
-      "community": 5,
+      "community": 1,
       "norm_label": "background task to fetch fresh prices without blocking the api response.",
       "id": "backend_main_rationale_493"
     },
@@ -3545,7 +3599,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L516",
-      "community": 5,
+      "community": 1,
       "norm_label": "aggregates live data from postgresql + external apis for all games.          sup",
       "id": "backend_main_rationale_516"
     },
@@ -3554,7 +3608,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L588",
-      "community": 8,
+      "community": 1,
       "norm_label": "returns details for a single game by id with real price data.",
       "id": "backend_main_rationale_588"
     },
@@ -3563,7 +3617,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L635",
-      "community": 9,
+      "community": 5,
       "norm_label": "force refresh all game prices from external apis.",
       "id": "backend_main_rationale_635"
     },
@@ -3572,7 +3626,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L562",
-      "community": 8,
+      "community": 1,
       "norm_label": "returns details for a single game by id with real price data.",
       "id": "backend_main_rationale_562"
     },
@@ -3581,7 +3635,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L609",
-      "community": 9,
+      "community": 5,
       "norm_label": "force refresh all game prices from external apis.",
       "id": "backend_main_rationale_609"
     },
@@ -3590,7 +3644,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L618",
-      "community": 9,
+      "community": 5,
       "norm_label": "manually add more games to the catalog.",
       "id": "backend_main_rationale_618"
     },
@@ -3599,7 +3653,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L636",
-      "community": 8,
+      "community": 5,
       "norm_label": "returns the total number of games in the database.",
       "id": "backend_main_rationale_636"
     },
@@ -3608,7 +3662,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L370",
-      "community": 2,
+      "community": 3,
       "norm_label": "build the api response for a single game with real price data.          when lig",
       "id": "backend_main_rationale_370"
     },
@@ -3617,7 +3671,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L479",
-      "community": 5,
+      "community": 1,
       "norm_label": "background task to fetch fresh prices without blocking the api response.",
       "id": "backend_main_rationale_479"
     },
@@ -3626,7 +3680,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L548",
-      "community": 8,
+      "community": 1,
       "norm_label": "returns details for a single game by id with real price data.",
       "id": "backend_main_rationale_548"
     },
@@ -3635,7 +3689,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L570",
-      "community": 9,
+      "community": 5,
       "norm_label": "force refresh all game prices from external apis.",
       "id": "backend_main_rationale_570"
     },
@@ -3644,7 +3698,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L579",
-      "community": 9,
+      "community": 5,
       "norm_label": "manually add more games to the catalog.",
       "id": "backend_main_rationale_579"
     },
@@ -3653,7 +3707,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L327",
-      "community": 7,
+      "community": 9,
       "norm_label": "get the most recent price for each platform from the database.",
       "id": "backend_main_rationale_327"
     },
@@ -3662,7 +3716,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L340",
-      "community": 7,
+      "community": 9,
       "norm_label": "fetch price history for a specific platform from the db.",
       "id": "backend_main_rationale_340"
     },
@@ -3671,7 +3725,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L461",
-      "community": 5,
+      "community": 1,
       "norm_label": "aggregates live data from postgresql + external apis for all games.",
       "id": "backend_main_rationale_461"
     },
@@ -3680,7 +3734,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L492",
-      "community": 8,
+      "community": 1,
       "norm_label": "returns details for a single game by id with real price data.",
       "id": "backend_main_rationale_492"
     },
@@ -3689,7 +3743,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L520",
-      "community": 9,
+      "community": 5,
       "norm_label": "manually add more games to the catalog.",
       "id": "backend_main_rationale_520"
     }
@@ -6362,6 +6416,16 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
+      "source_location": "L772",
+      "weight": 1.0,
+      "source": "backend_main_rationale_772",
+      "target": "backend_main_get_auth_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/main.py",
       "source_location": "L771",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6417,6 +6481,16 @@
       "confidence_score": 1.0,
       "source": "backend_main_rationale_733",
       "target": "backend_main_get_auth_config"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/main.py",
+      "source_location": "L782",
+      "weight": 1.0,
+      "source": "backend_main_rationale_782",
+      "target": "backend_main_auth_login",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -6487,6 +6561,16 @@
       "confidence_score": 1.0,
       "source": "backend_main_rationale_727",
       "target": "backend_main_auth_login"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/main.py",
+      "source_location": "L889",
+      "weight": 1.0,
+      "source": "backend_main_rationale_889",
+      "target": "backend_main_auth_me",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -6573,6 +6657,16 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
+      "source_location": "L898",
+      "weight": 1.0,
+      "source": "backend_main_rationale_898",
+      "target": "backend_main_get_db_watchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/main.py",
       "source_location": "L855",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6638,6 +6732,16 @@
       "confidence_score": 1.0,
       "source": "backend_main_rationale_773",
       "target": "backend_main_get_db_watchlist"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/main.py",
+      "source_location": "L929",
+      "weight": 1.0,
+      "source": "backend_main_rationale_929",
+      "target": "backend_main_sync_watchlist",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -6713,6 +6817,16 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/main.py",
+      "source_location": "L949",
+      "weight": 1.0,
+      "source": "backend_main_rationale_949",
+      "target": "backend_main_add_to_db_watchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/main.py",
       "source_location": "L906",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6778,6 +6892,16 @@
       "confidence_score": 1.0,
       "source": "backend_main_rationale_824",
       "target": "backend_main_add_to_db_watchlist"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/main.py",
+      "source_location": "L965",
+      "weight": 1.0,
+      "source": "backend_main_rationale_965",
+      "target": "backend_main_remove_from_db_watchlist",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -8964,5 +9088,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a0702053c2b433110b94512c00bb9d3ef78b881e"
+  "built_at_commit": "2a7ff94d34054b56e6bbd0dbd9cd60ca59ef0b05"
 }

@@ -134,14 +134,18 @@ export const WatchlistProvider = ({ children }) => {
     }
   };
 
-  // Live OAuth Exchange Function (Implicit Flow)
-  const handleOAuthExchange = async (provider, accessToken) => {
+  // Live OAuth Exchange Function (Implicit Flow & OpenID)
+  const handleOAuthExchange = async (provider, accessTokenOrParams) => {
     try {
       setLoading(true);
+      const payload = provider === 'steam'
+        ? { provider, openid_params: accessTokenOrParams }
+        : { provider, access_token: accessTokenOrParams };
+
       const res = await fetch(`${API_BASE_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ provider, access_token: accessToken })
+        body: JSON.stringify(payload)
       });
       
       if (!res.ok) throw new Error("OAuth exchange failed");

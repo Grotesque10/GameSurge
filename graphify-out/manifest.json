@@ -24,8 +24,8 @@
     "hash": "9636a3748b86608dfa648fee408bf644"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\main.py": {
-    "mtime": 1783445784.1067061,
-    "hash": "8b21e0c109c2db631801b6d232756062"
+    "mtime": 1783520912.9675472,
+    "hash": "ea3ae1928f5b31e828dec5c3b2d46c0b"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\schema.sql": {
     "mtime": 1780205651.280149,
@@ -104,8 +104,8 @@
     "hash": "e13723e2574429d9a6d849727e3ff695"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\AuthCallback.jsx": {
-    "mtime": 1780208854.5862567,
-    "hash": "e09bf033b428dffa1d063d9c08a95c2f"
+    "mtime": 1783521198.8419816,
+    "hash": "bf163aed787d0bd90512ed1fcc541e20"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\BuyingSentiment.jsx": {
     "mtime": 1780150509.1434827,
@@ -128,8 +128,8 @@
     "hash": "51698bf3d887c65ecb3f37f31bd1dc02"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\LoginModal.jsx": {
-    "mtime": 1783518424.9349778,
-    "hash": "ce814f5ebb80478b1d8c302faef52088"
+    "mtime": 1783521117.589376,
+    "hash": "e1a582f5ef73d1108e1f531a5ceefccf"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\PriceAdvisor.jsx": {
     "mtime": 1783438732.6466122,
@@ -160,20 +160,20 @@
     "hash": "dc2f9967a6bd33985f1b9c0740834ee1"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\contexts\\WatchlistContext.jsx": {
-    "mtime": 1780208844.3477137,
-    "hash": "9b884c7f64ca972e08df38bae0fd7b32"
+    "mtime": 1783521280.1601562,
+    "hash": "cccddda8693adbb25cb5a2f3a497ab16"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\docker-compose.ci.yml": {
-    "mtime": 1783518490.1524186,
-    "hash": "914062e4b37cff2a4544e597a224ab2a"
+    "mtime": 1783521059.1343243,
+    "hash": "b11fb6adb4921aff9b89e5a66b49e500"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\docker-compose.jenkins.yml": {
     "mtime": 1782985997.529305,
     "hash": "749fac603c4d6c0d30923723673aab02"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\docker-compose.yml": {
-    "mtime": 1783518424.9284947,
-    "hash": "43073b5946ade8835c566a54c889ce95"
+    "mtime": 1783520967.3910892,
+    "hash": "23f64c2ab8afc464197074fd020eb556"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\docker_run_guide.txt": {
     "mtime": 1782984579.5720804,

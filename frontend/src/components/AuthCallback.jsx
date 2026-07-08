@@ -9,21 +9,42 @@ const AuthCallback = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Parse the URL hash fragment (implicit flow redirects with hash parameters)
-    const hash = window.location.hash;
-    const params = new URLSearchParams(hash.substring(1)); // strip '#'
-    const accessToken = params.get('access_token');
-
-    if (!accessToken) {
-      setError('OAuth authentication parameters were not returned correctly from Discord.');
-      setStatus('');
-      return;
-    }
+    const queryParams = new URLSearchParams(window.location.search);
+    const provider = queryParams.get('provider');
 
     const processLogin = async () => {
       try {
-        setStatus('Synchronizing watchlists and securing connection...');
-        await handleOAuthExchange('discord', accessToken);
+        if (provider === 'steam') {
+          setStatus('Validating Steam credentials and securing connection...');
+          const openidParams = {};
+          queryParams.forEach((value, key) => {
+            if (key.startsWith('openid.')) {
+              openidParams[key] = value;
+            }
+          });
+          
+          if (!openidParams['openid.mode']) {
+            setError('Steam OpenID authentication signature was not returned correctly.');
+            setStatus('');
+            return;
+          }
+
+          await handleOAuthExchange('steam', openidParams);
+        } else {
+          // Parse the URL hash fragment (implicit flow redirects with hash parameters)
+          const hash = window.location.hash;
+          const hashParams = new URLSearchParams(hash.substring(1)); // strip '#'
+          const accessToken = hashParams.get('access_token');
+
+          if (!accessToken) {
+            setError('OAuth authentication parameters were not returned correctly from Discord.');
+            setStatus('');
+            return;
+          }
+
+          setStatus('Synchronizing watchlists and securing connection...');
+          await handleOAuthExchange('discord', accessToken);
+        }
         navigate('/'); // redirect home
       } catch (err) {
         console.error(err);

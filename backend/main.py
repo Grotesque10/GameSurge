@@ -753,6 +753,7 @@ async def get_current_user(authorization: Optional[str] = Header(None)) -> Dict:
 class LoginRequest(BaseModel):
     provider: str
     access_token: Optional[str] = None
+    openid_params: Optional[Dict[str, str]] = None
 
 class SyncItem(BaseModel):
     game_id: int
@@ -801,6 +802,48 @@ async def auth_login(req: LoginRequest):
         except Exception as e:
             logger.error(f"Discord API token exchange error: {e}")
             raise HTTPException(status_code=400, detail=f"Discord authentication error: {str(e)}")
+    elif provider == "steam" and req.openid_params:
+        try:
+            # 1. Validate OpenID params with Steam
+            val_params = {**req.openid_params, "openid.mode": "check_authentication"}
+            async with httpx.AsyncClient() as client:
+                val_res = await client.post("https://steamcommunity.com/openid/login", data=val_params, timeout=15.0)
+                if val_res.status_code != 200 or "is_valid:true" not in val_res.text:
+                    raise HTTPException(status_code=400, detail="Invalid Steam OpenID authentication signature.")
+            
+            # 2. Extract steam64 ID from claimed_id
+            claimed_id = req.openid_params.get("openid.claimed_id", "")
+            steam_id = claimed_id.split("/id/")[-1].strip()
+            if not steam_id.isdigit():
+                raise HTTPException(status_code=400, detail="Invalid Steam claimed ID format.")
+
+            # 3. Retrieve user profile info from Steam Web API using STEAM_API_KEY
+            steam_key = os.getenv("STEAM_API_KEY")
+            username = f"steam_{steam_id}"
+            display_name = "Steam User"
+            avatar_url = "https://avatars.githubusercontent.com/u/15448?v=4"
+
+            if steam_key:
+                try:
+                    async with httpx.AsyncClient() as client:
+                        api_res = await client.get(
+                            "https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/",
+                            params={"key": steam_key, "steamids": steam_id},
+                            timeout=10.0
+                        )
+                        if api_res.status_code == 200:
+                            players = api_res.json().get("response", {}).get("players", [])
+                            if players:
+                                display_name = players[0].get("personaname", display_name)
+                                avatar_url = players[0].get("avatarfull", avatar_url)
+                except Exception as api_err:
+                    logger.warning(f"Steam Web API request failed: {api_err}")
+            else:
+                logger.info("STEAM_API_KEY not set. Using default Steam profile placeholder.")
+                
+        except Exception as e:
+            logger.error(f"Steam OpenID exchange error: {e}")
+            raise HTTPException(status_code=400, detail=f"Steam authentication error: {str(e)}")
     elif provider == "steam":
         username = "GamerPro_Steam"
         display_name = "SteamGamerPro"

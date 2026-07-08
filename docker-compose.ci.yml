@@ -29,6 +29,7 @@ services:
       - DISCORD_CLIENT_ID=${DISCORD_CLIENT_ID}
       - DISCORD_REDIRECT_URI=${DISCORD_REDIRECT_URI:-http://frontend:80/auth/callback}
       - REDIS_URL=redis://redis:6379/0
+      - STEAM_API_KEY=${STEAM_API_KEY}
     depends_on:
       db:
         condition: service_healthy
