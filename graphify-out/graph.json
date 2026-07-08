@@ -2104,7 +2104,7 @@
       "label": "Technical Stack",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L20",
+      "source_location": "L22",
       "id": "antilearn_readme_technical_stack",
       "community": 6,
       "norm_label": "technical stack"
@@ -2113,7 +2113,7 @@
       "label": "Getting Started",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L29",
+      "source_location": "L31",
       "id": "antilearn_readme_getting_started",
       "community": 6,
       "norm_label": "getting started"
@@ -2122,7 +2122,7 @@
       "label": "Prerequisites",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L31",
+      "source_location": "L33",
       "id": "antilearn_readme_prerequisites",
       "community": 6,
       "norm_label": "prerequisites"
@@ -2131,7 +2131,7 @@
       "label": "1. Database Setup",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L39",
+      "source_location": "L41",
       "id": "antilearn_readme_1_database_setup",
       "community": 6,
       "norm_label": "1. database setup"
@@ -2140,7 +2140,7 @@
       "label": "code:sql (CREATE DATABASE GameSurge;)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L43",
+      "source_location": "L45",
       "id": "antilearn_readme_codeblock_1",
       "community": 6,
       "norm_label": "code:sql (create database gamesurge;)"
@@ -2149,7 +2149,7 @@
       "label": "2. Backend Setup",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L50",
+      "source_location": "L52",
       "id": "antilearn_readme_2_backend_setup",
       "community": 6,
       "norm_label": "2. backend setup"
@@ -2158,7 +2158,7 @@
       "label": "code:bash (cd backend)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L53",
+      "source_location": "L55",
       "id": "antilearn_readme_codeblock_2",
       "community": 6,
       "norm_label": "code:bash (cd backend)"
@@ -2167,7 +2167,7 @@
       "label": "code:bash (cp .env.example .env)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L57",
+      "source_location": "L59",
       "id": "antilearn_readme_codeblock_3",
       "community": 6,
       "norm_label": "code:bash (cp .env.example .env)"
@@ -2176,7 +2176,7 @@
       "label": "code:bash (pip install -r requirements.txt)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L64",
+      "source_location": "L66",
       "id": "antilearn_readme_codeblock_4",
       "community": 6,
       "norm_label": "code:bash (pip install -r requirements.txt)"
@@ -2185,7 +2185,7 @@
       "label": "code:bash (python -m uvicorn main:app --host 127.0.0.1 --port 8080 --re)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L70",
+      "source_location": "L72",
       "id": "antilearn_readme_codeblock_5",
       "community": 6,
       "norm_label": "code:bash (python -m uvicorn main:app --host 127.0.0.1 --port 8080 --re)"
@@ -2194,7 +2194,7 @@
       "label": "3. Frontend Setup",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L77",
+      "source_location": "L79",
       "id": "antilearn_readme_3_frontend_setup",
       "community": 6,
       "norm_label": "3. frontend setup"
@@ -2203,7 +2203,7 @@
       "label": "code:bash (cd ../frontend)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L80",
+      "source_location": "L82",
       "id": "antilearn_readme_codeblock_6",
       "community": 6,
       "norm_label": "code:bash (cd ../frontend)"
@@ -2212,7 +2212,7 @@
       "label": "code:bash (npm install)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L84",
+      "source_location": "L86",
       "id": "antilearn_readme_codeblock_7",
       "community": 6,
       "norm_label": "code:bash (npm install)"
@@ -2221,7 +2221,7 @@
       "label": "code:bash (npm run dev)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L88",
+      "source_location": "L90",
       "id": "antilearn_readme_codeblock_8",
       "community": 6,
       "norm_label": "code:bash (npm run dev)"
@@ -2230,7 +2230,7 @@
       "label": "4. End-to-End Testing (Playwright)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L95",
+      "source_location": "L97",
       "id": "antilearn_readme_4_end_to_end_testing_playwright",
       "community": 6,
       "norm_label": "4. end-to-end testing (playwright)"
@@ -2239,7 +2239,7 @@
       "label": "code:bash (cd e2e)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L99",
+      "source_location": "L101",
       "id": "antilearn_readme_codeblock_9",
       "community": 6,
       "norm_label": "code:bash (cd e2e)"
@@ -2248,7 +2248,7 @@
       "label": "code:bash (npm install)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L103",
+      "source_location": "L105",
       "id": "antilearn_readme_codeblock_10",
       "community": 6,
       "norm_label": "code:bash (npm install)"
@@ -2257,7 +2257,7 @@
       "label": "code:bash (# Run tests in headless mode)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L108",
+      "source_location": "L110",
       "id": "antilearn_readme_codeblock_11",
       "community": 6,
       "norm_label": "code:bash (# run tests in headless mode)"
@@ -2266,7 +2266,7 @@
       "label": "Running with Docker (Recommended)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L118",
+      "source_location": "L120",
       "id": "antilearn_readme_running_with_docker_recommended",
       "community": 6,
       "norm_label": "running with docker (recommended)"
@@ -2275,7 +2275,7 @@
       "label": "code:bash (docker compose up -d)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L124",
+      "source_location": "L126",
       "id": "antilearn_readme_codeblock_12",
       "community": 6,
       "norm_label": "code:bash (docker compose up -d)"
@@ -2284,7 +2284,7 @@
       "label": "code:bash (docker compose down)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L129",
+      "source_location": "L131",
       "id": "antilearn_readme_codeblock_13",
       "community": 6,
       "norm_label": "code:bash (docker compose down)"
@@ -2293,7 +2293,7 @@
       "label": "Jenkins CI/CD Pipeline",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L135",
+      "source_location": "L137",
       "id": "antilearn_readme_jenkins_ci_cd_pipeline",
       "community": 6,
       "norm_label": "jenkins ci/cd pipeline"
@@ -2302,7 +2302,7 @@
       "label": "Discord OAuth2 Configuration",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L151",
+      "source_location": "L153",
       "id": "antilearn_readme_discord_oauth2_configuration",
       "community": 6,
       "norm_label": "discord oauth2 configuration"
@@ -8964,5 +8964,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "3824edb7c8c5976048b4b32e04197636dc17f742"
+  "built_at_commit": "2604ca85b34aae4cfd8d9d20864775d34e98e17d"
 }

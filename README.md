@@ -10,10 +10,12 @@ The application utilizes a **"Lazy / Hybrid" Watchlist Architecture** where user
 
 1. **Lazy watchlisting**: Add pricing targets instantly without signing up.
 2. **Discord OAuth2 Syncing**: Synchronize local guest watchlists silently with database tables upon login via a secure **Implicit Grant Flow**.
-3. **Price Analytics Engine**: Displays 14-day Weighted Moving Averages (WMA) and historical price grids.
-4. **Market Pulse Alerts**: Automatically flags games currently experiencing active **Price Surges** or **Price Drops (Recoveries)**.
-5. **Multi-Currency Support**: Instant currency conversions.
-6. **Command Palette**: Search the entire catalog globally using keyboard shortcuts (`Ctrl+K` or `Cmd+K`).
+3. **Cryptographic Session Security**: Session tokens are cryptographically signed using **HMAC-SHA256** to prevent session spoofing and broken authentication.
+4. **Price Analytics Engine**: Displays 14-day Weighted Moving Averages (WMA) and historical price grids.
+5. **Market Pulse Alerts**: Automatically flags games currently experiencing active **Price Surges** or **Price Drops (Recoveries)**.
+6. **Smart Store Redirection**: The watchlist fallback system guarantees valid store redirection links for purchases, automatically defaulting to the first available platform deal if direct store name matching fails.
+7. **Dynamic Multi-Currency Engine**: Conversions are fully dynamic and targets are normalized to USD in the backend to ensure zero double-conversion rounding issues.
+8. **Command Palette**: Search the entire catalog globally using keyboard shortcuts (`Ctrl+K` or `Cmd+K`).
 
 ---
 
