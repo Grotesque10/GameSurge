@@ -26,7 +26,7 @@ services:
       - MIN_GAMES=500
       - CACHE_TTL_MINUTES=30
       - CORS_ALLOWED_ORIGINS=*
-      - DISCORD_CLIENT_ID=1510527836589523164
+      - DISCORD_CLIENT_ID=**
       - DISCORD_REDIRECT_URI=http://frontend:80/auth/callback
       - REDIS_URL=redis://redis:6379/0
     depends_on:
