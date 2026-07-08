@@ -6418,9 +6418,9 @@
       "source_file": "backend/main.py",
       "source_location": "L772",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_main_rationale_772",
-      "target": "backend_main_get_auth_config",
-      "confidence_score": 1.0
+      "target": "backend_main_get_auth_config"
     },
     {
       "relation": "rationale_for",
@@ -6488,9 +6488,9 @@
       "source_file": "backend/main.py",
       "source_location": "L782",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_main_rationale_782",
-      "target": "backend_main_auth_login",
-      "confidence_score": 1.0
+      "target": "backend_main_auth_login"
     },
     {
       "relation": "rationale_for",
@@ -6568,9 +6568,9 @@
       "source_file": "backend/main.py",
       "source_location": "L889",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_main_rationale_889",
-      "target": "backend_main_auth_me",
-      "confidence_score": 1.0
+      "target": "backend_main_auth_me"
     },
     {
       "relation": "rationale_for",
@@ -6659,9 +6659,9 @@
       "source_file": "backend/main.py",
       "source_location": "L898",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_main_rationale_898",
-      "target": "backend_main_get_db_watchlist",
-      "confidence_score": 1.0
+      "target": "backend_main_get_db_watchlist"
     },
     {
       "relation": "rationale_for",
@@ -6739,9 +6739,9 @@
       "source_file": "backend/main.py",
       "source_location": "L929",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_main_rationale_929",
-      "target": "backend_main_sync_watchlist",
-      "confidence_score": 1.0
+      "target": "backend_main_sync_watchlist"
     },
     {
       "relation": "rationale_for",
@@ -6819,9 +6819,9 @@
       "source_file": "backend/main.py",
       "source_location": "L949",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_main_rationale_949",
-      "target": "backend_main_add_to_db_watchlist",
-      "confidence_score": 1.0
+      "target": "backend_main_add_to_db_watchlist"
     },
     {
       "relation": "rationale_for",
@@ -6899,9 +6899,9 @@
       "source_file": "backend/main.py",
       "source_location": "L965",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_main_rationale_965",
-      "target": "backend_main_remove_from_db_watchlist",
-      "confidence_score": 1.0
+      "target": "backend_main_remove_from_db_watchlist"
     },
     {
       "relation": "rationale_for",
@@ -9088,5 +9088,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "2a7ff94d34054b56e6bbd0dbd9cd60ca59ef0b05"
+  "built_at_commit": "7c7e9f377e944ec597b321d5a0f73f67ffc9d83e"
 }

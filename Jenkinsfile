@@ -73,7 +73,7 @@ pipeline {
             steps {
                 script {
                     // Log in to Docker Hub
-                    sh "echo ${DOCKERHUB_CREDENTIALS_PSW} | docker login -u ${DOCKERHUB_CREDENTIALS_USR} --password-stdin"
+                    sh 'echo "$DOCKERHUB_CREDENTIALS_PSW" | docker login -u "$DOCKERHUB_CREDENTIALS_USR" --password-stdin'
                     
                     // Push the newly built images with retry to handle transient Docker Hub 502 errors
                     retry(3) {
