@@ -103,8 +103,17 @@ export const CurrencyProvider = ({ children }) => {
     return `${symbol}${converted.toFixed(2)}`;
   };
 
+  const convertToUsd = (amount, fromCurrency) => {
+    if (amount === null || amount === undefined || isNaN(amount)) return 0;
+    const currencyKey = fromCurrency || currency;
+    if (!rates || currencyKey === 'USD' || !rates[currencyKey]) {
+      return parseFloat(amount);
+    }
+    return parseFloat(amount) / rates[currencyKey];
+  };
+
   return (
-    <CurrencyContext.Provider value={{ currency, setCurrency, formatPrice, formatPriceInCurrency, supportedCurrencies: Object.keys(SUPPORTED_CURRENCIES) }}>
+    <CurrencyContext.Provider value={{ currency, setCurrency, formatPrice, formatPriceInCurrency, convertToUsd, rates, supportedCurrencies: Object.keys(SUPPORTED_CURRENCIES) }}>
       {children}
     </CurrencyContext.Provider>
   );

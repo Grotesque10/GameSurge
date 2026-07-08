@@ -12,28 +12,28 @@
     "hash": "2675079fb41de7fb5b3650523e8b861d"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\backfill_metadata.py": {
-    "mtime": 1781852944.51635,
-    "hash": "d6b660480c2b3c8468f993f30855030c"
+    "mtime": 1782984579.5309796,
+    "hash": "ea41812d703c6cbb6e788b599d653ebf"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\cheapshark.py": {
-    "mtime": 1780144584.9894834,
-    "hash": "9c297241b410c19975b1066d505cb111"
+    "mtime": 1783340329.9085736,
+    "hash": "3757d7630fd476c8366be9b427bedb1b"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\check_db.py": {
     "mtime": 1780211803.4581563,
     "hash": "9636a3748b86608dfa648fee408bf644"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\main.py": {
-    "mtime": 1780211005.3126016,
-    "hash": "e784895fd6c6c54557eb556b69694232"
+    "mtime": 1783445784.1067061,
+    "hash": "8b21e0c109c2db631801b6d232756062"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\schema.sql": {
     "mtime": 1780205651.280149,
     "hash": "37345d5b6932ba62a2369bafe5a05cd3"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\seed_missing.py": {
-    "mtime": 1781852961.9558916,
-    "hash": "a4a5e41a62407e89a9b97ec42a9e5f06"
+    "mtime": 1783345445.369192,
+    "hash": "2581c8725c0ac821e1cd0b7b77f52800"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\steam_api.py": {
     "mtime": 1778484683.8056302,
@@ -43,17 +43,57 @@
     "mtime": 1780149280.4219513,
     "hash": "bbeb5a0115803d485b1130d62599ba80"
   },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright.config.ts": {
+    "mtime": 1783008346.298085,
+    "hash": "091a866c12b6b7c1f6c690e87b54d18b"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\tests\\api-mocking.spec.ts": {
+    "mtime": 1782984580.9359848,
+    "hash": "98601de784356c0a227572c9c0423658"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\tests\\auth.spec.ts": {
+    "mtime": 1782984580.9414744,
+    "hash": "dd736bc9a9a27b69470a06bfc0cc86e6"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\tests\\home.spec.ts": {
+    "mtime": 1782984580.9475021,
+    "hash": "58b29b521c2bab89af6f373d81176271"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\tests\\navigation.spec.ts": {
+    "mtime": 1782984580.952502,
+    "hash": "985223aed1ee86dc49fe7420d2624d0b"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\tests\\search.spec.ts": {
+    "mtime": 1782984580.9594996,
+    "hash": "62e333c5d33c117cdfb54ca7865b2114"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\tests\\storefront-features.spec.ts": {
+    "mtime": 1782984580.9680262,
+    "hash": "9da15785f78002a3d86f4ad0388d598c"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\tests\\visual.spec.ts": {
+    "mtime": 1782984580.981292,
+    "hash": "c7507371e37bbaa772d9993883d488a5"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\tests\\watchlist-advanced.spec.ts": {
+    "mtime": 1782984580.9858222,
+    "hash": "381c209ebce3f0ebb724d56aa55e11bf"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\tests\\watchlist.spec.ts": {
+    "mtime": 1782984580.9910471,
+    "hash": "4cc466797d0394590a6ca9cf43da18a3"
+  },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\eslint.config.js": {
     "mtime": 1777391778.9479082,
     "hash": "3aa4b57d7f08181d86bde52a4dcb7f22"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\vite.config.js": {
-    "mtime": 1781853975.5857034,
-    "hash": "5317d6971824b4485e7884c334f64abd"
+    "mtime": 1782984581.0709689,
+    "hash": "b8535282e85daf2a7643d635ec6dc007"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\App.jsx": {
-    "mtime": 1780208869.1294703,
-    "hash": "114e26eaf01950f8051d97445a83e628"
+    "mtime": 1782984581.0639603,
+    "hash": "cbd624da7767177e3792eec03eb40eaa"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\config.js": {
     "mtime": 1779353534.058863,
@@ -84,12 +124,16 @@
     "hash": "7960391dd6e897ce4637cf739d3f79c4"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\GameDetails.jsx": {
-    "mtime": 1780207679.3293796,
-    "hash": "f51cb0f4e4c22fbc621070217ad093af"
+    "mtime": 1783445144.974889,
+    "hash": "51698bf3d887c65ecb3f37f31bd1dc02"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\LoginModal.jsx": {
     "mtime": 1780208884.4611835,
     "hash": "b96502d67bba1a81b7a7009472ba14c0"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\PriceAdvisor.jsx": {
+    "mtime": 1783438732.6466122,
+    "hash": "9071389e31a84067170d49d32debbb23"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\PriceChart.jsx": {
     "mtime": 1779357002.309647,
@@ -100,48 +144,300 @@
     "hash": "417f3cff8732ad85cee06b1479e33d8c"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\Storefront.jsx": {
-    "mtime": 1780206244.7774854,
-    "hash": "091c02668a7ff7cf8809334c0fa82644"
+    "mtime": 1783436516.8996885,
+    "hash": "1ce8ee932eb9a49117996cfbbe37af71"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\SurgeLeaderboard.jsx": {
     "mtime": 1779357027.5459635,
     "hash": "d17ad4673237b3547d91b6b96948576e"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\components\\Watchlist.jsx": {
-    "mtime": 1780207527.9038064,
-    "hash": "9c17a17aaf3b56d233e559c5ec8a575d"
+    "mtime": 1783448038.3307455,
+    "hash": "c71c8af5650ccb682ceeac531c7e9987"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\contexts\\CurrencyContext.jsx": {
-    "mtime": 1779356666.6328936,
-    "hash": "b51f110cd21c644aaa35adea63835516"
+    "mtime": 1783445111.9989638,
+    "hash": "dc2f9967a6bd33985f1b9c0740834ee1"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\src\\contexts\\WatchlistContext.jsx": {
     "mtime": 1780208844.3477137,
     "hash": "9b884c7f64ca972e08df38bae0fd7b32"
   },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\docker-compose.ci.yml": {
+    "mtime": 1783339999.815749,
+    "hash": "44f6a6f9b3feb75d29b6572e60db6947"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\docker-compose.jenkins.yml": {
+    "mtime": 1782985997.529305,
+    "hash": "749fac603c4d6c0d30923723673aab02"
+  },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\docker-compose.yml": {
-    "mtime": 1781856126.8895059,
-    "hash": "384caf6f281e9fa6be285c26bdc2f122"
+    "mtime": 1783339957.2649193,
+    "hash": "7dd5f95356523cff6e308ce71de8a1b4"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\docker_run_guide.txt": {
-    "mtime": 1781862510.8171768,
-    "hash": "71b2f0748fde44ef961d5080329d87fb"
+    "mtime": 1782984579.5720804,
+    "hash": "ba84f0b84db919b9c811ec7f6fcc4ef1"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\docker_update_guide.txt": {
+    "mtime": 1782984579.5805657,
+    "hash": "04b0ba3a2b248bf2494156edd3db20a9"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\README.md": {
-    "mtime": 1780209375.579184,
-    "hash": "04022cc426cf2fc8cb6cdcbee8c498c3"
+    "mtime": 1783089055.8095765,
+    "hash": "c7847ef58d9110c0adeebaa87bb3115c"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\backend\\requirements.txt": {
-    "mtime": 1781852984.172478,
-    "hash": "8ed5d01e862e64567bcff9327f9a17a4"
+    "mtime": 1783340089.4719217,
+    "hash": "6bc8f6dadebda5bdef0ce66f133d347a"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\index.html": {
+    "mtime": 1782984580.1885695,
+    "hash": "04840e481467827c325513dc8d9e9972"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\index.html": {
-    "mtime": 1777391818.3799965,
-    "hash": "89150e536c4a99f73625f46f41f0f437"
+    "mtime": 1782984581.0226772,
+    "hash": "0300b0c23e8d2178ea44338ef2949ec8"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\README.md": {
     "mtime": 1779354661.4024744,
     "hash": "94905c239598d52f496c78ab26e77607"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\0205444204db3a8232febb8281bb382932f50e14.png": {
+    "mtime": 1782984579.6079013,
+    "hash": "632c2e6aa51744f15b439643c8003e1f"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\04bec2fbef19670b6144e802c7725efb2a8a5f9f.png": {
+    "mtime": 1782984579.6398976,
+    "hash": "5297af7c36b8a952fcf82b9d873e4403"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\14269a172885503578f83c724084c3be0a36f168.png": {
+    "mtime": 1782984579.6603713,
+    "hash": "cb3493ee42bab4ba54d0afee0e83b7cb"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\23eb9d750f5ce600ad5cd46bf6df9a50024a6e78.png": {
+    "mtime": 1782984579.6767218,
+    "hash": "2cdc870dc692ced50dccca438255f30b"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\26395a9cb63153976244c99bc8826cc12a54c99d.png": {
+    "mtime": 1782984579.6849964,
+    "hash": "c7cd9a035655fc736373c2950e80d732"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\27367c935e0a7f196259de25ecc6720b7daa94f2.png": {
+    "mtime": 1782984579.6896484,
+    "hash": "d005f9c09bbfa2a442b0fbb66dac3be7"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\2edd31800f4013831bc16ccdd65e323859273f15.png": {
+    "mtime": 1782984579.7148857,
+    "hash": "81887cf79cfd3b98a94571f7b1a0f1a4"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\308732091088b344e74393048da9d069bcec8f61.png": {
+    "mtime": 1782984579.7460263,
+    "hash": "d9347518c104a6de51feb3550350d623"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\3247805b13bfa134d46b686479f7b8b273d84dbc.png": {
+    "mtime": 1782984579.8473327,
+    "hash": "b011ea302c736467f38a5a5d1d48b66c"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\445536977ecee7fa31214fae4ffa2ca72e1c681d.png": {
+    "mtime": 1782984579.859318,
+    "hash": "243db607501993921894716d1730e5b7"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\47ba1a44b53c126942a9e4a33c22ab7997a52df7.png": {
+    "mtime": 1782984579.881465,
+    "hash": "a771f7dc2fe17bbf8be4e618c0d41566"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\50427834e5bdd9baa71ff59b2345bcac429df08e.png": {
+    "mtime": 1782984579.906343,
+    "hash": "24b98dfabf5b30a2897ec9458c61a4f2"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\52062bb75c1f92530bf6905b9dc5718b330014bc.png": {
+    "mtime": 1782984579.9142551,
+    "hash": "8a216ad08b15fb4e598371960c0ab555"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\7b2adb672f5e17ab71847ba512fc3ad0690a2a28.png": {
+    "mtime": 1782984579.9458714,
+    "hash": "da4edeaa1d6c792d1612081e4a7d754f"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\87a0b1f0a774bdda2ad0932d7d792914ea3f462b.png": {
+    "mtime": 1782984579.954171,
+    "hash": "adea850548f9083891d86a0a465250fd"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\88a045a6fe16ace9013b55c3a5fda9114cfed512.png": {
+    "mtime": 1782984579.9861188,
+    "hash": "ebb21096018ecaf106f58176e41ca252"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\92e677b7a8355113171aa7727bd15d34b05ca131.png": {
+    "mtime": 1782984579.9905026,
+    "hash": "a7b5160374eafd56964c666d16bfa8ca"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\c3df9daba2ed7ec06fb6507680d2cb733bb86367.png": {
+    "mtime": 1782984580.0095656,
+    "hash": "e0de9baba41475a0aa69e91e848aae5c"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\c785bef3afff1f1676104de099ecbf2ae131fb5f.png": {
+    "mtime": 1782984580.0146928,
+    "hash": "890e7746edd0c99b737787c3fce9d90c"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\d0f03da9433f63b57ef300e58b72efd90755e619.png": {
+    "mtime": 1782984580.0219312,
+    "hash": "42b5e951fd0e4b29a004f5d8dcb8e870"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\d328873e43d4c1a1d3884ac8b4703cbb81a88b35.png": {
+    "mtime": 1782984580.05294,
+    "hash": "663a1610aa00b9505efe3220337e385b"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\ddb83db72eae1240624390d867f04455b834c446.png": {
+    "mtime": 1782984580.063978,
+    "hash": "18c9b26953ecdc960e54ec486fcf3053"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\ddd067f21b73368188c1ac1db38522dd145b03e8.png": {
+    "mtime": 1782984580.075855,
+    "hash": "71f52f8882d4f19b7809fd12f14f9582"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\f1e39cae1127fb55d3e5973013444cfd9a411f76.png": {
+    "mtime": 1782984580.1088588,
+    "hash": "8ad2ab03f54c9123d6baadd6a1612d36"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\f3dbc6c6f7e472e655d0ba9ede8969028039d3c3.png": {
+    "mtime": 1782984580.1288176,
+    "hash": "fa0817e345c489b17aec674a900eef85"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\f98c3b30312d55a0fd0b2bea125b4a2a3be213a4.png": {
+    "mtime": 1782984580.1527312,
+    "hash": "5bd69472437b7e93b749388e989f4188"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\fdbb21cf9b6d8acbe8d667ec9fc9ae6e79fa8595.png": {
+    "mtime": 1782984580.163646,
+    "hash": "4958e82c752fdb6edc488332fd8f5839"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\playwright-report\\data\\fe74e8937782b59a4efe516ed236ee5fa60ccd64.png": {
+    "mtime": 1782984580.173725,
+    "hash": "fc9e81a5f7b9e3f1f3316fdcf36dfc32"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\api-mocking-API-Mocking-Ed-3f0e2-s-500-Internal-Server-Error-firefox\\test-finished-1.png": {
+    "mtime": 1782984580.2093074,
+    "hash": "d005f9c09bbfa2a442b0fbb66dac3be7"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\api-mocking-API-Mocking-Ed-80e68-andles-empty-database-state-firefox\\test-finished-1.png": {
+    "mtime": 1782984580.219672,
+    "hash": "adea850548f9083891d86a0a465250fd"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\auth-Authentication-Flow-o-d3bd6-hen-login-button-is-clicked-firefox\\test-finished-1.png": {
+    "mtime": 1782984580.228459,
+    "hash": "a7b5160374eafd56964c666d16bfa8ca"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\auth-Authentication-Flow-o-d3bd6-hen-login-button-is-clicked-webkit\\test-finished-1.png": {
+    "mtime": 1782984580.2363868,
+    "hash": "632c2e6aa51744f15b439643c8003e1f"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\home-has-title-firefox\\test-finished-1.png": {
+    "mtime": 1782984580.2598336,
+    "hash": "e0de9baba41475a0aa69e91e848aae5c"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\home-loads-the-main-page-firefox\\test-finished-1.png": {
+    "mtime": 1782984580.2835462,
+    "hash": "da4edeaa1d6c792d1612081e4a7d754f"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\home-loads-the-main-page-webkit\\test-finished-1.png": {
+    "mtime": 1782984580.3152916,
+    "hash": "5297af7c36b8a952fcf82b9d873e4403"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\navigation-Navigation-and--ed3b9-enders-analytics-components-firefox\\test-finished-1.png": {
+    "mtime": 1782984580.3234098,
+    "hash": "243db607501993921894716d1730e5b7"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\navigation-Navigation-and--f65e6--watchlist-and-back-to-home-firefox\\test-finished-1.png": {
+    "mtime": 1782984580.349307,
+    "hash": "fa0817e345c489b17aec674a900eef85"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\navigation-Navigation-and--f65e6--watchlist-and-back-to-home-webkit\\test-finished-1.png": {
+    "mtime": 1782984580.3781507,
+    "hash": "81887cf79cfd3b98a94571f7b1a0f1a4"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\screenshots\\hero-banner.png": {
+    "mtime": 1782984580.4099886,
+    "hash": "1e0965447bc00853a28da945fe155316"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\screenshots\\navigation-bar.png": {
+    "mtime": 1782984580.4167573,
+    "hash": "bd170be0d2c776836344ae9fe5429b49"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\screenshots\\storefront-full-page.png": {
+    "mtime": 1782984580.4480643,
+    "hash": "34d94d135ce8d78a18ff89b6190f6355"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\search-Command-Palette-Sea-3bf65--Ctrl-K-and-performs-search-chromium\\test-finished-1.png": {
+    "mtime": 1782984580.46339,
+    "hash": "18c9b26953ecdc960e54ec486fcf3053"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\search-Command-Palette-Sea-3bf65--Ctrl-K-and-performs-search-firefox\\test-finished-1.png": {
+    "mtime": 1782984580.4708445,
+    "hash": "890e7746edd0c99b737787c3fce9d90c"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\search-Command-Palette-Sea-3bf65--Ctrl-K-and-performs-search-webkit\\test-finished-1.png": {
+    "mtime": 1782984580.49832,
+    "hash": "5bd69472437b7e93b749388e989f4188"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\storefront-features-Storef-569e1-ner-manual-navigation-works-firefox\\test-finished-1.png": {
+    "mtime": 1782984580.5347822,
+    "hash": "cb3493ee42bab4ba54d0afee0e83b7cb"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\storefront-features-Storef-569e1-ner-manual-navigation-works-webkit\\test-finished-1.png": {
+    "mtime": 1782984580.574447,
+    "hash": "d9347518c104a6de51feb3550350d623"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\storefront-features-Storef-c9e0a-er-updates-formatted-prices-firefox\\test-finished-1.png": {
+    "mtime": 1782984580.5982738,
+    "hash": "24b98dfabf5b30a2897ec9458c61a4f2"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\storefront-features-Storef-c9e0a-er-updates-formatted-prices-webkit\\test-finished-1.png": {
+    "mtime": 1782984580.6303778,
+    "hash": "ebb21096018ecaf106f58176e41ca252"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\storefront-features-Storef-fb7c1-on-fetches-additional-games-firefox\\test-finished-1.png": {
+    "mtime": 1782984580.6554563,
+    "hash": "4958e82c752fdb6edc488332fd8f5839"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\storefront-features-Storef-fb7c1-on-fetches-additional-games-webkit\\test-finished-1.png": {
+    "mtime": 1782984580.737485,
+    "hash": "b011ea302c736467f38a5a5d1d48b66c"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\visual-Visual-Screenshots--d1962-age-and-element-screenshots-chromium\\test-finished-1.png": {
+    "mtime": 1782984580.751078,
+    "hash": "42b5e951fd0e4b29a004f5d8dcb8e870"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\visual-Visual-Screenshots--d1962-age-and-element-screenshots-firefox\\test-finished-1.png": {
+    "mtime": 1782984580.7754867,
+    "hash": "a771f7dc2fe17bbf8be4e618c0d41566"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\visual-Visual-Screenshots--d1962-age-and-element-screenshots-webkit\\test-finished-1.png": {
+    "mtime": 1782984580.8158407,
+    "hash": "663a1610aa00b9505efe3220337e385b"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\watchlist-advanced-Advance-c0851-s-a-game-from-the-watchlist-chromium\\test-finished-1.png": {
+    "mtime": 1782984580.886421,
+    "hash": "c7cd9a035655fc736373c2950e80d732"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\watchlist-advanced-Advance-c0851-s-a-game-from-the-watchlist-firefox\\test-finished-1.png": {
+    "mtime": 1782984580.9008977,
+    "hash": "71f52f8882d4f19b7809fd12f14f9582"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\watchlist-advanced-Advance-c0851-s-a-game-from-the-watchlist-webkit\\test-finished-1.png": {
+    "mtime": 1782984580.9283621,
+    "hash": "8ad2ab03f54c9123d6baadd6a1612d36"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\watchlist-Lazy-Watchlistin-e365a-listed-items-across-reloads-chromium\\test-finished-1.png": {
+    "mtime": 1782984580.8295536,
+    "hash": "8a216ad08b15fb4e598371960c0ab555"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\watchlist-Lazy-Watchlistin-e365a-listed-items-across-reloads-firefox\\test-finished-1.png": {
+    "mtime": 1782984580.846128,
+    "hash": "fc9e81a5f7b9e3f1f3316fdcf36dfc32"
+  },
+  "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\e2e\\test-results\\watchlist-Lazy-Watchlistin-e365a-listed-items-across-reloads-webkit\\test-finished-1.png": {
+    "mtime": 1782984580.865168,
+    "hash": "2cdc870dc692ced50dccca438255f30b"
   },
   "C:\\Users\\verno\\OneDrive\\Documents\\antilearn\\frontend\\public\\favicon.svg": {
     "mtime": 1777391779.429677,

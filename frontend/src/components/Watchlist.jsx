@@ -104,19 +104,21 @@ const Watchlist = () => {
               const liveGame = liveData[item.game_id];
               const bestDeal = liveGame?.best_deal;
               const isTargetMet = bestDeal && bestDeal.price <= item.target_price;
+              const bestPlatform = (liveGame?.platforms || []).find(p => p.store === bestDeal?.store) || liveGame?.platforms?.[0];
+              const buyUrl = bestPlatform?.deal_url || '#';
               
               return (
                 <div key={item.game_id} className="bg-[#151515] rounded-xl border border-[#222] overflow-hidden flex flex-col sm:flex-row group transition-all hover:border-[#333]">
                   {/* Image */}
                   <Link to={`/game/${item.game_id}`} className="w-full sm:w-36 aspect-[16/9] sm:aspect-[2/3] flex-shrink-0 relative overflow-hidden">
                     <img
-                      src={item.image_url}
-                      alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='150' viewBox='0 0 100 150'><rect width='100%25' height='100%25' fill='%231a1a1a' rx='6'/><path d='M50 50 L50 100 M25 75 L75 75' stroke='%23333' stroke-width='4' stroke-linecap='round'/></svg>";
-                      }}
+                       src={item.image_url}
+                       alt={item.title}
+                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                       onError={(e) => {
+                         e.target.onerror = null;
+                         e.target.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='150' viewBox='0 0 100 150'><rect width='100%25' height='100%25' fill='%231a1a1a' rx='6'/><path d='M50 50 L50 100 M25 75 L75 75' stroke='%23333' stroke-width='4' stroke-linecap='round'/></svg>";
+                       }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent sm:bg-gradient-to-r" />
                   </Link>
@@ -139,47 +141,54 @@ const Watchlist = () => {
                       </button>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-6 mt-4">
-                      {/* Target */}
-                      <div>
-                        <p className="text-[#666] text-[10px] uppercase tracking-wider font-semibold mb-1 flex items-center gap-1">
-                          <Target className="w-3 h-3" /> Your Target
-                        </p>
-                        <p className="text-[#aaa] font-mono text-lg">{formatPrice(item.target_price)}</p>
-                      </div>
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mt-4">
+                      {/* Pricing Info Group */}
+                      <div className="flex flex-row items-center gap-8 flex-wrap sm:flex-nowrap flex-shrink-0">
+                        {/* Target */}
+                        <div className="flex-shrink-0 min-w-[100px]">
+                          <p className="text-[#666] text-[10px] uppercase tracking-wider font-semibold mb-1 flex items-center gap-1">
+                            <Target className="w-3 h-3" /> Your Target
+                          </p>
+                          <p className="text-[#aaa] font-mono text-lg">{formatPrice(item.target_price)}</p>
+                        </div>
 
-                      {/* Live Price */}
-                      <div>
-                        <p className="text-[#666] text-[10px] uppercase tracking-wider font-semibold mb-1 flex items-center gap-1">
-                          <Activity className="w-3 h-3" /> Live Price
-                        </p>
-                        {loading ? (
-                          <div className="h-7 w-20 bg-[#222] rounded animate-pulse" />
-                        ) : bestDeal ? (
-                          <div className="flex items-end gap-3">
-                            <p className={`font-mono text-2xl leading-none font-bold ${isTargetMet ? 'text-[#00d26a]' : 'text-white'}`}>
-                              {formatPrice(bestDeal.price)}
-                            </p>
-                            <span className="text-[#888] text-xs pb-0.5">on {bestDeal.store}</span>
-                          </div>
-                        ) : (
-                          <p className="text-[#888] text-sm">Unavailable</p>
-                        )}
+                        {/* Live Price */}
+                        <div className="flex-shrink-0 min-w-[140px]">
+                          <p className="text-[#666] text-[10px] uppercase tracking-wider font-semibold mb-1 flex items-center gap-1">
+                            <Activity className="w-3 h-3" /> Live Price
+                          </p>
+                          {loading ? (
+                            <div className="h-7 w-20 bg-[#222] rounded animate-pulse" />
+                          ) : bestDeal ? (
+                            <div className="flex items-end gap-2.5 flex-wrap">
+                              <p className={`font-mono text-2xl leading-none font-bold ${isTargetMet ? 'text-[#00d26a]' : 'text-white'}`}>
+                                {formatPrice(bestDeal.price)}
+                              </p>
+                              <span className="text-[#888] text-xs pb-0.5 whitespace-nowrap">on {bestDeal.store}</span>
+                            </div>
+                          ) : (
+                            <p className="text-[#888] text-sm">Unavailable</p>
+                          )}
+                        </div>
                       </div>
 
                       {/* Action */}
-                      <div className="mt-2 sm:mt-0 sm:ml-auto w-full sm:w-auto">
+                      <div className="mt-2 sm:mt-0 w-full sm:w-auto flex-shrink-0 flex sm:justify-end">
                         {isTargetMet ? (
                           <a 
-                            href={bestDeal.url} 
+                            href={buyUrl} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="bg-[#00d26a] hover:bg-[#00b35a] text-black font-bold px-6 py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2 w-full sm:w-auto"
+                            className="bg-[#00d26a] hover:bg-[#00b35a] text-black font-bold px-6 py-2.5 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 w-full sm:w-auto flex-shrink-0 shadow-lg shadow-[#00d26a]/15 hover:scale-[1.02] active:scale-[0.98]"
+                            style={{ minWidth: '130px', textDecoration: 'none' }}
                           >
-                            Buy Now <ExternalLink className="w-4 h-4" />
+                            Buy Now <ExternalLink className="w-4 h-4 flex-shrink-0" />
                           </a>
                         ) : (
-                          <div className="bg-[#222] text-[#888] font-semibold px-6 py-2.5 rounded-lg flex items-center justify-center cursor-not-allowed w-full sm:w-auto">
+                          <div 
+                            className="bg-[#222] text-[#888] font-semibold px-6 py-2.5 rounded-lg flex items-center justify-center cursor-not-allowed w-full sm:w-auto flex-shrink-0"
+                            style={{ minWidth: '130px' }}
+                          >
                             Waiting...
                           </div>
                         )}

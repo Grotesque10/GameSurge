@@ -71,7 +71,7 @@ const GameDetails = () => {
   const { isWatched, addToWatchlist, removeFromWatchlist, user, handleLogout } = useWatchlist();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
-  const { formatPrice, formatPriceInCurrency, currency } = useCurrency();
+  const { formatPrice, formatPriceInCurrency, currency, setCurrency, supportedCurrencies, convertToUsd } = useCurrency();
   const currencySymbol = (currency && Object.prototype.hasOwnProperty.call(SUPPORTED_CURRENCIES, currency))
     ? SUPPORTED_CURRENCIES[currency]?.symbol
     : '$';
@@ -183,6 +183,19 @@ const GameDetails = () => {
               Back to Store
             </Link>
             <div className="flex items-center gap-3">
+              {/* Currency Selector */}
+              <select
+                value={currency}
+                onChange={(e) => setCurrency(e.target.value)}
+                className="bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/10 rounded-lg px-3 py-1.5 transition-all text-xs font-medium text-[#aaa] hover:text-white outline-none cursor-pointer"
+              >
+                {supportedCurrencies?.map(c => (
+                  <option key={c} value={c} className="bg-[#121212] text-white">
+                    {c}
+                  </option>
+                ))}
+              </select>
+
               {/* Watchlist Button */}
               {isWatched(game?.game_id) ? (
                 <button
@@ -229,15 +242,15 @@ const GameDetails = () => {
                     <ChevronDown className="w-3.5 h-3.5 text-[#888] hidden sm:block" />
                   </button>
                   {showUserDropdown && (
-                    <div 
+                    <div
                       className="absolute right-0 mt-3.5 w-60 bg-[#151515]/95 border border-white/10 rounded-xl shadow-2xl z-50 backdrop-blur-xl animate-in fade-in slide-in-from-top-1.5 duration-200"
                       style={{ padding: '8px 0', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)' }}
                     >
                       {/* Upward pointer arrow */}
                       <div className="absolute -top-1 right-3.5 w-2 h-2 bg-[#151515] border-t border-l border-white/10 rotate-45" />
-                      
+
                       <div className="relative z-10">
-                        <div 
+                        <div
                           className="text-left"
                           style={{ padding: '12px 20px', borderBottom: '1px solid rgba(255, 255, 255, 0.05)', marginBottom: '6px' }}
                         >
@@ -246,8 +259,8 @@ const GameDetails = () => {
                             <span className="w-1.5 h-1.5 rounded-full bg-[#00d26a] animate-pulse" title="Cloud Sync Active" />
                           </div>
                           <p className="text-[#888] text-[9px] uppercase tracking-wider mt-1 flex items-center gap-1.5">
-                            <span 
-                              className="w-1.5 h-1.5 rounded-full" 
+                            <span
+                              className="w-1.5 h-1.5 rounded-full"
                               style={{ backgroundColor: user.auth_provider === 'steam' ? '#66c0f4' : '#5865F2' }}
                             />
                             {user.auth_provider} cloud
@@ -261,7 +274,7 @@ const GameDetails = () => {
                           className="w-full flex items-center gap-2.5 text-left text-xs text-[#ff4e4e] hover:bg-[#ff4e4e]/10 rounded-lg transition-all duration-200 font-semibold cursor-pointer group"
                           style={{ padding: '10px 20px' }}
                         >
-                          <LogOut className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" /> 
+                          <LogOut className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                           <span>Log Out</span>
                         </button>
                       </div>
@@ -349,22 +362,28 @@ const GameDetails = () => {
               {/* Rating + Price Row */}
               <div className="flex items-center gap-4 mt-5 flex-wrap justify-center sm:justify-start">
                 {/* Rating Badge */}
-                <div className="flex items-center gap-2 bg-[#1a1a1a]/80 backdrop-blur-sm border border-[#333] rounded-xl px-5 py-2.5">
-                  <Star className="w-5 h-5 text-[#f5a623] fill-[#f5a623]" />
-                  <span className="text-white font-bold text-xl">{game.rating}</span>
-                  <span className="text-[#666] text-xs">/100</span>
+                <div
+                  className="flex items-center gap-1.5 bg-[#1a1a1a]/80 backdrop-blur-sm border border-[#333] rounded-xl"
+                  style={{ padding: '6px 12px', whiteSpace: 'nowrap' }}
+                >
+                  <Star className="w-4 h-4 text-[#f5a623] fill-[#f5a623]" />
+                  <span className="text-white font-bold text-sm sm:text-base leading-none">{game.rating}</span>
+                  <span className="text-[#666] text-[10px]">/100</span>
                 </div>
 
                 {/* Best Price Badge */}
-                <div className={`flex items-center gap-3 backdrop-blur-sm border rounded-xl px-5 py-2.5 ${hasSurge ? 'bg-[#ff4444]/10 border-[#ff4444]/30' : 'bg-[#00d26a]/10 border-[#00d26a]/30'}`}>
-                  {hasSurge ? <AlertTriangle className="w-5 h-5 text-[#ff4444]" /> : <Shield className="w-5 h-5 text-[#00d26a]" />}
-                  <div>
-                    <p className={`text-[10px] font-bold uppercase tracking-wider ${hasSurge ? 'text-[#ff4444]' : 'text-[#00d26a]'}`}>
+                <div
+                  className={`flex items-center gap-2 backdrop-blur-sm border rounded-xl ${hasSurge ? 'bg-[#ff4444]/10 border-[#ff4444]/30' : 'bg-[#00d26a]/10 border-[#00d26a]/30'}`}
+                  style={{ padding: '6px 12px', whiteSpace: 'nowrap' }}
+                >
+                  {hasSurge ? <AlertTriangle className="w-4 h-4 text-[#ff4444]" /> : <Shield className="w-4 h-4 text-[#00d26a]" />}
+                  <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                    <p className={`text-[9px] font-bold uppercase tracking-wider leading-tight ${hasSurge ? 'text-[#ff4444]' : 'text-[#00d26a]'}`}>
                       {hasSurge ? 'Surge Active' : 'Good Value'}
                     </p>
-                    <div className="flex items-baseline gap-2 mt-1">
-                      <span className="text-white font-bold text-lg leading-none">{formatPrice(bestDeal?.price)}</span>
-                      <span className="text-[#888] text-[11px]">on {bestDeal?.store}</span>
+                    <div className="flex items-baseline gap-1 mt-0.5">
+                      <span className="text-white font-bold text-sm leading-none">{formatPrice(bestDeal?.price)}</span>
+                      <span className="text-[#888] text-[10px]">on {bestDeal?.store}</span>
                     </div>
                   </div>
                 </div>
@@ -375,7 +394,15 @@ const GameDetails = () => {
       </div>
 
       {/* ─── Main Content ─── */}
-      <div className="container-wide pb-20" style={{ paddingTop: '64px' }}>
+      <div
+        className="container-wide"
+        style={{
+          paddingTop: '64px',
+          paddingBottom: '120px',
+          height: 'auto',
+          boxSizing: 'border-box'
+        }}
+      >
 
         {/* ─── Gauges & Advisor Row (Feature 4) ─── */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -388,7 +415,14 @@ const GameDetails = () => {
         </div>
 
         {/* ─── About ─── */}
-        <section className="bg-[#151515] rounded-2xl p-8 sm:p-10 border border-[#222]" style={{ marginTop: '64px' }}>
+        <section
+          className="bg-[#151515] rounded-2xl border border-[#222]"
+          style={{
+            marginTop: '64px',
+            padding: '24px',
+            boxSizing: 'border-box'
+          }}
+        >
           <h3 className="text-white font-bold text-base sm:text-lg mb-3">About This Game</h3>
           <p className="text-[#999] text-sm leading-relaxed">
             {game.summary && game.summary.trim() !== "" ? game.summary : "No description is currently available for this title. Real-time pricing intelligence remains fully active across all supported platforms and digital stores."}
@@ -397,7 +431,14 @@ const GameDetails = () => {
 
         {/* ─── Editions & Related Packages ─── */}
         {game.related_variations && game.related_variations.length > 0 && (
-          <section className="bg-[#151515] rounded-2xl p-8 sm:p-10 border border-[#222]" style={{ marginTop: '40px' }}>
+          <section
+            className="bg-[#151515] rounded-2xl border border-[#222]"
+            style={{
+              marginTop: '40px',
+              padding: '24px',
+              boxSizing: 'border-box'
+            }}
+          >
             <h3 className="text-white font-bold text-base sm:text-lg mb-1 flex items-center gap-2">
               <Award className="w-5 h-5 text-[#0078f2]" />
               Editions & Related Packages
@@ -440,9 +481,20 @@ const GameDetails = () => {
         {/* ─── Price History Chart + Platform Comparison ─── */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" style={{ marginTop: '64px' }}>
 
-          {/* Line Chart (14-day history) — spans 2 cols */}
-          <section className="lg:col-span-2 bg-[#151515] rounded-2xl p-7 sm:p-9 border border-[#222]">
-            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-5">
+          <section
+            className="lg:col-span-2 bg-[#151515] rounded-2xl border border-[#222]"
+            style={{
+              padding: '24px',
+              boxSizing: 'border-box'
+            }}
+          >
+            <div
+              className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2"
+              style={{
+                marginBottom: '16px',
+                boxSizing: 'border-box'
+              }}
+            >
               <div>
                 <h3 className="text-white font-bold text-base sm:text-lg">14-Day Price History</h3>
                 <p className="text-[#666] text-xs mt-0.5">Cross-platform pricing comparison</p>
@@ -468,10 +520,15 @@ const GameDetails = () => {
             </div>
           </section>
 
-          {/* Bar Chart (current prices) — spans 1 col */}
-          <section className="bg-[#151515] rounded-2xl p-7 sm:p-9 border border-[#222]">
+          <section
+            className="bg-[#151515] rounded-2xl border border-[#222]"
+            style={{
+              padding: '24px',
+              boxSizing: 'border-box'
+            }}
+          >
             <h3 className="text-white font-bold text-base sm:text-lg mb-1">Current Prices</h3>
-            <p className="text-[#666] text-xs mb-5">Grouped comparison</p>
+            <p className="text-[#666] text-xs" style={{ marginBottom: '16px' }}>Grouped comparison</p>
             <div className="h-[200px] sm:h-[220px]">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={barChartData} margin={{ top: 5, right: 5, left: -15, bottom: 0 }}>
@@ -645,8 +702,8 @@ const GameDetails = () => {
             <Globe className="w-5 h-5 text-[#00d26a]" />
             Global Regional Pricing Estimates
           </h3>
-          <p className="text-[#888] text-xs mb-6">Real-time converted pricing estimates across major global currencies based on current exchange rates</p>
-          
+          <p className="text-[#888] text-xs" style={{ marginBottom: '16px' }}>Real-time converted pricing estimates across major global currencies based on current exchange rates</p>
+
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '16px' }}>
             {Object.entries(SUPPORTED_CURRENCIES).map(([code, config]) => {
               const isCurrent = currency === code;
@@ -678,9 +735,8 @@ const GameDetails = () => {
                       {formatPriceInCurrency(bestDeal?.price, code)}
                     </span>
                   </div>
-                  <div className={`text-[10px] font-bold uppercase tracking-wider block ${
-                    isCurrent ? 'text-[#0078f2] opacity-80' : 'text-[#888]/40'
-                  }`}>
+                  <div className={`text-[10px] font-bold uppercase tracking-wider block ${isCurrent ? 'text-[#0078f2] opacity-80' : 'text-[#888]/40'
+                    }`}>
                     {code}
                   </div>
                 </div>
@@ -691,28 +747,68 @@ const GameDetails = () => {
 
         {/* ─── System Requirements ─── */}
         {game.system_requirements && (
-          <section className="bg-[#151515] rounded-2xl p-8 sm:p-10 border border-[#222]" style={{ marginTop: '64px' }}>
-            <div className="flex items-center gap-3 mb-5">
-              <Monitor className="w-5 h-5 text-[#0078f2]" />
-              <h3 className="text-white font-bold text-base sm:text-lg">System Requirements</h3>
+          <section
+            className="bg-[#151515] rounded-2xl border border-[#222]"
+            style={{
+              marginTop: '64px',
+              padding: '24px 24px 32px 24px',
+              marginBottom: '80px',
+              boxSizing: 'border-box',
+              overflow: 'visible'
+            }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'flex-start',
+                gap: '20px',
+                marginBottom: '16px'
+              }}
+            >
+              <div className="flex items-center gap-3">
+                <Monitor className="w-5 h-5 text-[#0078f2]" />
+                <h3 className="text-white font-bold text-base sm:text-lg">System Requirements</h3>
+              </div>
               {/* Tab pills */}
-              <div className="flex gap-1 ml-auto bg-[#1a1a1a] rounded-lg p-0.5 border border-[#222]">
-                {['minimum', 'recommended'].map(tier => (
-                  <button
-                    key={tier}
-                    onClick={() => setActiveReqTab(tier)}
-                    className={`px-3 py-1.5 text-xs font-medium capitalize rounded-md transition-all ${activeReqTab === tier
-                      ? 'bg-[#0078f2] text-white shadow-sm'
-                      : 'text-[#888] hover:text-white'
-                      }`}
-                  >
-                    {tier}
-                  </button>
-                ))}
+              <div
+                className="bg-[#1a1a1a] rounded-xl border border-[#222]"
+                style={{
+                  display: 'flex',
+                  position: 'relative',
+                  alignItems: 'center',
+                  padding: '4px'
+                }}
+              >
+                {['minimum', 'recommended'].map(tier => {
+                  const isActive = activeReqTab === tier;
+                  return (
+                    <button
+                      key={tier}
+                      onClick={() => setActiveReqTab(tier)}
+                      className="text-xs font-bold capitalize transition-all focus:outline-none"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        padding: '6px 16px',
+                        borderRadius: '6px',
+                        backgroundColor: isActive ? '#0078f2' : 'transparent',
+                        color: isActive ? '#fff' : '#888',
+                        boxShadow: isActive ? '0 2px 8px rgba(0, 120, 242, 0.25)' : 'none',
+                        border: 'none',
+                        cursor: 'pointer'
+                      }}
+                    >
+                      {tier}
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" style={{ maxWidth: '900px', boxSizing: 'border-box' }}>
               {Object.entries(
                 (game.system_requirements && activeReqTab && Object.prototype.hasOwnProperty.call(game.system_requirements, activeReqTab))
                   ? game.system_requirements[activeReqTab]
@@ -721,12 +817,27 @@ const GameDetails = () => {
                 const icons = { os: Monitor, processor: Cpu, memory: MemoryStick, graphics: Monitor, storage: HardDrive };
                 const Icon = icons[key] || Monitor;
                 return (
-                  <div key={key} className="bg-[#1a1a1a] rounded-xl p-5 border border-[#222] flex flex-col items-center text-center">
+                  <div
+                    key={key}
+                    className="bg-[#1a1a1a] rounded-xl border border-[#222] text-center"
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      padding: '16px',
+                      boxSizing: 'border-box',
+                      height: 'auto'
+                    }}
+                  >
                     <div className="w-10 h-10 bg-[#222] rounded-lg flex items-center justify-center mb-2.5">
                       <Icon className="w-5 h-5 text-[#666]" />
                     </div>
-                    <p className="text-[#666] text-[10px] font-medium uppercase tracking-wider mb-1">{key}</p>
-                    <p className="text-[#ccc] text-xs leading-snug">{value}</p>
+                    <span className="text-[10px] font-extrabold uppercase tracking-wider block mb-2" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                      {key}
+                    </span>
+                    <span className="text-white text-xs font-medium leading-relaxed block">
+                      {value}
+                    </span>
                   </div>
                 );
               })}
@@ -752,19 +863,24 @@ const GameDetails = () => {
               </button>
             </div>
             <p className="text-[#888] text-base mb-8 pr-2">Get notified when <strong className="text-[#ccc]">{game.title}</strong> hits your target price.</p>
-            <label className="block text-xs font-medium text-[#aaa] uppercase tracking-wider mb-2">Target Price ($)</label>
+            <label className="block text-xs font-bold text-[#aaa] uppercase tracking-wider mb-2">Target Price ({currencySymbol})</label>
             <div className="relative mb-6">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                <span className="text-xl text-[#888] font-bold">{currencySymbol}</span>
+                <span className="text-2xl text-[#0078f2] font-bold font-mono">{currencySymbol}</span>
               </div>
               <input
-                type="number"
+                type="text"
+                inputMode="decimal"
                 value={targetPrice}
-                onChange={(e) => setTargetPrice(e.target.value)}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  if (val === '' || /^\d*\.?\d{0,2}$/.test(val)) {
+                    setTargetPrice(val);
+                  }
+                }}
                 placeholder="0.00"
-                step="0.01"
-                style={{ paddingLeft: '2.5rem' }}
-                className="w-full bg-[#1a1a1a] border border-[#333] rounded-xl py-3 pr-4 text-2xl text-white font-mono focus:outline-none focus:border-[#0078f2] transition-colors"
+                className="w-full bg-[#1c1c1c] border border-[#2d2d2d] rounded-xl py-3.5 pr-4 text-2xl text-white font-mono focus:outline-none focus:border-[#0078f2] focus:ring-4 focus:ring-[#0078f2]/10 transition-all duration-200"
+                style={{ paddingLeft: '2.75rem', boxSizing: 'border-box' }}
               />
             </div>
 
@@ -772,7 +888,8 @@ const GameDetails = () => {
               onClick={() => {
                 const val = parseFloat(targetPrice);
                 if (!isNaN(val) && val > 0) {
-                  addToWatchlist(game, val);
+                  const valUsd = convertToUsd(val);
+                  addToWatchlist(game, valUsd);
                   setShowWatchModal(false);
                 }
               }}
