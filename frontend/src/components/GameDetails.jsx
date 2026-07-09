@@ -163,7 +163,7 @@ const GameDetails = () => {
     <div className="min-h-screen bg-[#0d0d0d]">
 
       {/* ─── Hero Section ─── */}
-      <div className="relative overflow-hidden" style={{ minHeight: '420px' }}>
+      <div className="relative overflow-hidden mobile-hero-section" style={{ minHeight: '420px' }}>
         {/* Background Image */}
         <div className="absolute inset-0 h-[420px] sm:h-[480px] overflow-hidden">
           {game.header_url && game.header_url.trim() !== "" ? (
@@ -329,7 +329,7 @@ const GameDetails = () => {
             </div>
 
             {/* Title + Info */}
-            <div className="flex-1 min-w-0 text-center sm:text-left pt-0 sm:pt-4">
+            <div className="flex-1 min-w-0 text-center sm:text-left pt-0 sm:pt-4 mobile-hero-info">
               {/* Tags row */}
               <div className="flex items-center gap-1.5 flex-wrap justify-center sm:justify-start mb-3">
                 {game.tags?.map(tag => (
@@ -369,7 +369,7 @@ const GameDetails = () => {
               )}
 
               {/* Rating + Price Row */}
-              <div className="flex items-center gap-4 mt-5 flex-wrap justify-center sm:justify-start">
+              <div className="flex items-center gap-4 mt-5 flex-wrap justify-center sm:justify-start mobile-hero-badges">
                 {/* Rating Badge */}
                 <div
                   className="flex items-center gap-1.5 bg-[#1a1a1a]/80 backdrop-blur-sm border border-[#333] rounded-xl"
