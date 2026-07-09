@@ -177,7 +177,7 @@ const GameDetails = () => {
 
         {/* Nav */}
         <nav className="relative z-20 w-full">
-          <div className="container-wide h-14 flex items-center justify-between">
+          <div className="container-wide min-h-14 py-3 flex flex-wrap items-center justify-between gap-3">
             <Link to="/" className="flex items-center gap-2 text-[#aaa] hover:text-white transition-colors text-sm font-medium group" style={{ textDecoration: 'none' }}>
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
               Back to Store
@@ -641,7 +641,7 @@ const GameDetails = () => {
           <h3 className="text-white font-bold text-base sm:text-lg mb-1">Deal Comparison</h3>
           <p className="text-[#666] text-xs mb-5">Total cost of ownership across platforms</p>
           <div className="overflow-x-auto">
-            <table className="w-full text-left" style={{ borderCollapse: 'separate', borderSpacing: '0 6px' }}>
+            <table className="min-w-[550px] w-full text-left" style={{ borderCollapse: 'separate', borderSpacing: '0 6px' }}>
               <thead>
                 <tr>
                   <th className="text-[#666] text-[10px] uppercase tracking-wider font-semibold pb-3 pl-4 pr-3">Store</th>
