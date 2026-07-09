@@ -106,3 +106,30 @@ body {
 .animate-ticker:hover {
   animation-play-state: paused;
 }
+
+/* ─── Mobile View Override Styles (Option 1) ─── */
+@media (max-width: 640px) {
+  /* Fix notch/status bar overlap on mobile */
+  .mobile-nav-container {
+    margin-top: 16px !important;
+    height: auto !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+  }
+
+  /* Prevent button collision in details header */
+  .mobile-actions-container {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  /* Hide redundant arrow keys on swipeable lists */
+  .mobile-hide-arrows {
+    display: none !important;
+  }
+
+  /* Prevent floating bottom bar from covering content */
+  .mobile-bottom-spacing {
+    padding-bottom: 200px !important;
+  }
+}

@@ -52,7 +52,7 @@ const GameCarousel = ({ title, icon: Icon, iconColor, games, subtitle, hideTopBo
           </div>
           {subtitle && <p className="text-[#666] text-xs mt-1">{subtitle}</p>}
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 mobile-hide-arrows">
           <button onClick={() => scroll('left')} disabled={!canScrollLeft}
             className="w-8 h-8 rounded-full bg-[#1e1e1e] flex items-center justify-center hover:bg-[#2a2a2a] transition-colors disabled:opacity-30 disabled:cursor-not-allowed border border-[#2a2a2a]">
             <ChevronLeft className="w-4 h-4 text-white" />
@@ -297,6 +297,7 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
                   <span className="text-[#aaa] text-xs">
                     {surge ? 'Price Surge Active!' : `${Math.round(maxSavings)}% off`}
                   </span>
+                  <span className="text-[#555] text-[10px]">•</span>
                   <span className="text-[#00d26a] text-xs font-mono font-bold">{formatPrice(game.best_deal?.price)}</span>
                 </Link>
               );

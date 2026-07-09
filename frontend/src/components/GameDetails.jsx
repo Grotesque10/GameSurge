@@ -177,12 +177,12 @@ const GameDetails = () => {
 
         {/* Nav */}
         <nav className="relative z-20 w-full">
-          <div className="container-wide min-h-14 py-3 flex flex-wrap items-center justify-between gap-3">
+          <div className="container-wide h-14 flex items-center justify-between mobile-nav-container">
             <Link to="/" className="flex items-center gap-2 text-[#aaa] hover:text-white transition-colors text-sm font-medium group" style={{ textDecoration: 'none' }}>
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
               Back to Store
             </Link>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mobile-actions-container">
               {/* Currency Selector */}
               <select
                 value={currency}
@@ -395,7 +395,7 @@ const GameDetails = () => {
 
       {/* ─── Main Content ─── */}
       <div
-        className="container-wide"
+        className="container-wide mobile-bottom-spacing"
         style={{
           paddingTop: '64px',
           paddingBottom: '120px',
