@@ -109,18 +109,30 @@ body {
 
 /* ─── Mobile View Override Styles (Option 1) ─── */
 @media (max-width: 640px) {
-  /* Fix notch/status bar overlap on mobile */
+  /* Fix notch/status bar overlap and layout wrapping on mobile */
   .mobile-nav-container {
-    margin-top: 16px !important;
+    margin-top: 20px !important;
     height: auto !important;
+    flex-direction: row !important;
     flex-wrap: wrap !important;
-    gap: 12px !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 16px !important;
   }
 
-  /* Prevent button collision in details header */
+  /* Make actions container occupy full width on Row 2 and center buttons */
   .mobile-actions-container {
+    width: 100% !important;
+    justify-content: center !important;
     flex-wrap: wrap !important;
     gap: 8px !important;
+  }
+
+  /* Stack System Requirements title and tab switcher on mobile */
+  .mobile-req-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
   }
 
   /* Hide redundant arrow keys on swipeable lists */

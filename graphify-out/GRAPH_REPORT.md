@@ -1,7 +1,7 @@
 # Graph Report - antilearn  (2026-07-09)
 
 ## Corpus Check
-- 43 files · ~1,616,467 words
+- 43 files · ~1,616,495 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `35b1ba79`
+- Built from commit: `17e23a8e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

@@ -182,6 +182,15 @@ const GameDetails = () => {
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
               Back to Store
             </Link>
+            
+            {/* Mobile-only Logo */}
+            <div className="flex items-center gap-2 sm:hidden">
+              <div className="bg-gradient-to-br from-[#0078f2] to-[#00d26a] p-1.5 rounded-md">
+                <TrendingUp className="w-3.5 h-3.5 text-white" />
+              </div>
+              <span className="text-sm font-bold text-white">GameSurge</span>
+            </div>
+
             <div className="flex items-center gap-3 mobile-actions-container">
               {/* Currency Selector */}
               <select
@@ -291,7 +300,7 @@ const GameDetails = () => {
                 </button>
               )}
 
-              <div className="flex items-center gap-2">
+              <div className="hidden sm:flex items-center gap-2">
                 <div className="bg-gradient-to-br from-[#0078f2] to-[#00d26a] p-1.5 rounded-md">
                   <TrendingUp className="w-3.5 h-3.5 text-white" />
                 </div>
@@ -758,6 +767,7 @@ const GameDetails = () => {
             }}
           >
             <div
+              className="mobile-req-header"
               style={{
                 display: 'flex',
                 flexDirection: 'row',
