@@ -92,13 +92,13 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[12vh]" onClick={onClose}>
+    <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[4vh] sm:pt-[12vh]" onClick={onClose}>
       {/* Backdrop */}
       <div className="absolute inset-0 bg-[#09090b]/80 backdrop-blur-md transition-opacity duration-300" />
 
       {/* Palette */}
       <div
-        className="relative w-full max-w-2xl mx-4 rounded-2xl border border-white/10 bg-[#16161a]/95 shadow-[0_0_80px_-10px_rgba(0,120,242,0.15)] overflow-hidden backdrop-blur-2xl transition-all duration-300"
+        className="relative w-full max-w-2xl mx-4 rounded-2xl border border-white/10 bg-[#16161a]/95 shadow-[0_0_80px_-10px_rgba(0,120,242,0.15)] overflow-hidden backdrop-blur-2xl transition-all duration-300 flex flex-col max-h-[80vh] sm:max-h-[85vh]"
         style={{ animation: 'fadeInScale 0.2s cubic-bezier(0.16, 1, 0.3, 1)' }}
         onClick={e => e.stopPropagation()}
       >
@@ -106,7 +106,7 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#0078f2]/50 to-transparent" />
 
         {/* Search Input Container */}
-        <div className="flex items-center gap-4 px-6 py-4.5 bg-white/[0.02]">
+        <div className="flex items-center gap-4 px-6 py-4.5 bg-white/[0.02] flex-shrink-0">
           <Search className={`w-5 h-5 flex-shrink-0 transition-colors duration-200 ${query ? 'text-[#0078f2]' : 'text-neutral-500'}`} />
           <input
             ref={inputRef}
@@ -127,10 +127,10 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
           </button>
         </div>
 
-        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent flex-shrink-0" />
 
         {/* Results */}
-        <div className="max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
+        <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
           {results.length === 0 ? (
             <div className="px-6 py-16 text-center">
               <Search className="w-10 h-10 text-neutral-700 mx-auto mb-4" />
@@ -208,8 +208,8 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
         </div>
 
         {/* Footer info panel */}
-        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-        <div className="px-6 py-3 flex items-center justify-between bg-white/[0.01]">
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent flex-shrink-0" />
+        <div className="px-6 py-3 flex items-center justify-between bg-white/[0.01] flex-shrink-0">
           <div className="flex items-center gap-4 text-neutral-600 text-[10px] font-semibold">
             <span className="flex items-center gap-1.5">
               <kbd className="bg-white/5 border border-white/10 text-neutral-400 px-1.5 py-0.5 rounded text-[8px] font-mono shadow-sm">↑</kbd>
