@@ -208,9 +208,8 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
         </div>
 
         {/* Footer info panel */}
-        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent flex-shrink-0" />
-        <div className="px-6 py-3 flex items-center justify-between bg-white/[0.01] flex-shrink-0">
-          <div className="flex items-center gap-4 text-neutral-600 text-[10px] font-semibold">
+        <div className="px-6 py-3 flex items-center justify-between bg-[#16161a]/95 border-t border-white/10 flex-shrink-0">
+          <div className="flex items-center gap-4 text-neutral-500 text-[10px] font-semibold">
             <span className="flex items-center gap-1.5">
               <kbd className="bg-white/5 border border-white/10 text-neutral-400 px-1.5 py-0.5 rounded text-[8px] font-mono shadow-sm">↑</kbd>
               <kbd className="bg-white/5 border border-white/10 text-neutral-400 px-1.5 py-0.5 rounded text-[8px] font-mono shadow-sm">↓</kbd>
