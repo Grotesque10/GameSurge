@@ -58,7 +58,7 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
   }, [isOpen, onClose]);
 
   const results = useMemo(() => {
-    if (!query.trim()) return data.slice(0, 10);
+    if (!query.trim()) return data.slice(0, 3);
     const q = query.toLowerCase();
     return data.filter(g =>
       g.title.toLowerCase().includes(q) ||
@@ -106,8 +106,8 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#0078f2]/50 to-transparent" />
 
         {/* Search Input Container - Padded & spacious */}
-        <div className="flex items-center gap-4.5 px-6.5 py-5.5 bg-white/[0.02] flex-shrink-0">
-          <Search className={`w-5.5 h-5.5 flex-shrink-0 transition-colors duration-200 ${query ? 'text-[#0078f2]' : 'text-neutral-500'}`} />
+        <div className="flex items-center gap-5 px-8 py-7 bg-white/[0.02] flex-shrink-0">
+          <Search className={`w-6 h-6 flex-shrink-0 transition-colors duration-200 ${query ? 'text-[#0078f2]' : 'text-neutral-500'}`} />
           <input
             ref={inputRef}
             type="text"
@@ -115,7 +115,7 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
             onChange={(e) => { setQuery(e.target.value); setActiveIndex(0); }}
             onKeyDown={handleInputKeyDown}
             placeholder="Search games, tags, developers..."
-            className="flex-1 bg-transparent text-white text-lg outline-none placeholder:text-neutral-600 font-medium tracking-tight"
+            className="flex-1 bg-transparent text-white text-xl outline-none placeholder:text-neutral-600 font-medium tracking-tight"
           />
           {query && (
             <button onClick={() => setQuery('')} className="text-neutral-500 hover:text-white transition-colors p-1 hover:bg-white/5 rounded-md">
