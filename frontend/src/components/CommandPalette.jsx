@@ -98,16 +98,16 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
 
       {/* Palette */}
       <div
-        className="relative w-full max-w-2xl mx-4 rounded-2xl border border-white/10 bg-[#16161a]/95 shadow-[0_0_80px_-10px_rgba(0,120,242,0.15)] overflow-hidden backdrop-blur-2xl transition-all duration-300 flex flex-col max-h-[80vh] sm:max-h-[85vh]"
+        className="relative w-full max-w-3xl mx-4 rounded-2xl border border-white/10 bg-[#16161a]/95 shadow-[0_0_80px_-10px_rgba(0,120,242,0.15)] overflow-hidden backdrop-blur-2xl transition-all duration-300 flex flex-col max-h-[80vh] sm:max-h-[85vh]"
         style={{ animation: 'fadeInScale 0.2s cubic-bezier(0.16, 1, 0.3, 1)' }}
         onClick={e => e.stopPropagation()}
       >
         {/* Glow Accent Header */}
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#0078f2]/50 to-transparent" />
 
-        {/* Search Input Container */}
-        <div className="flex items-center gap-4 px-6 py-4.5 bg-white/[0.02] flex-shrink-0">
-          <Search className={`w-5 h-5 flex-shrink-0 transition-colors duration-200 ${query ? 'text-[#0078f2]' : 'text-neutral-500'}`} />
+        {/* Search Input Container - Padded & spacious */}
+        <div className="flex items-center gap-4.5 px-6.5 py-5.5 bg-white/[0.02] flex-shrink-0">
+          <Search className={`w-5.5 h-5.5 flex-shrink-0 transition-colors duration-200 ${query ? 'text-[#0078f2]' : 'text-neutral-500'}`} />
           <input
             ref={inputRef}
             type="text"
@@ -115,7 +115,7 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
             onChange={(e) => { setQuery(e.target.value); setActiveIndex(0); }}
             onKeyDown={handleInputKeyDown}
             placeholder="Search games, tags, developers..."
-            className="flex-1 bg-transparent text-white text-base outline-none placeholder:text-neutral-600 font-medium tracking-tight"
+            className="flex-1 bg-transparent text-white text-lg outline-none placeholder:text-neutral-600 font-medium tracking-tight"
           />
           {query && (
             <button onClick={() => setQuery('')} className="text-neutral-500 hover:text-white transition-colors p-1 hover:bg-white/5 rounded-md">
@@ -132,15 +132,15 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
         {/* Results */}
         <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
           {results.length === 0 ? (
-            <div className="px-6 py-16 text-center">
-              <Search className="w-10 h-10 text-neutral-700 mx-auto mb-4" />
-              <p className="text-neutral-400 text-sm font-semibold">No games found for &ldquo;{query}&rdquo;</p>
-              <p className="text-neutral-600 text-xs mt-1">Try checking for spelling errors or search genres like "RPG" or "Action".</p>
+            <div className="px-6 py-20 text-center">
+              <Search className="w-12 h-12 text-neutral-700 mx-auto mb-4" />
+              <p className="text-neutral-400 text-base font-semibold">No games found for &ldquo;{query}&rdquo;</p>
+              <p className="text-neutral-600 text-sm mt-1">Try checking for spelling errors or search genres like "RPG" or "Action".</p>
             </div>
           ) : (
-            <div className="p-2 flex flex-col gap-1">
+            <div className="p-3 flex flex-col gap-1.5">
               {!query && (
-                <p className="text-neutral-500 text-[10px] uppercase tracking-widest font-extrabold px-3 pt-2 pb-1">
+                <p className="text-neutral-500 text-[10px] uppercase tracking-widest font-extrabold px-4.5 pt-2 pb-1">
                   Top Picks
                 </p>
               )}
@@ -154,48 +154,48 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
                     key={game.game_id}
                     onClick={() => handleSelect(game)}
                     onMouseEnter={() => setActiveIndex(index)}
-                    className={`w-full rounded-xl flex items-center gap-4 px-4 py-3 transition-all duration-200 text-left group relative overflow-hidden ${
+                    className={`w-full rounded-xl flex items-center gap-5 px-5 py-3.5 transition-all duration-200 text-left group relative overflow-hidden ${
                       isActive 
-                        ? 'bg-gradient-to-r from-[#0078f2]/10 to-[#00d26a]/5 border-l-2 border-[#0078f2] pl-3.5 translate-x-0.5' 
+                        ? 'bg-gradient-to-r from-[#0078f2]/10 to-[#00d26a]/5 border-l-2 border-[#0078f2] pl-4.5 translate-x-0.5' 
                         : 'hover:bg-white/[0.03] border-l-2 border-transparent hover:translate-x-0.5'
                     }`}
                   >
-                    {/* Cover art with soft neon glow on active */}
-                    <div className={`relative w-11 h-16 rounded-lg overflow-hidden flex-shrink-0 shadow-lg transition-transform duration-300 ${isActive ? 'scale-105 ring-1 ring-white/20' : 'opacity-90'}`}>
+                    {/* Cover art - slightly larger and wider */}
+                    <div className={`relative w-[50px] h-[72px] rounded-lg overflow-hidden flex-shrink-0 shadow-lg transition-transform duration-300 ${isActive ? 'scale-105 ring-1 ring-white/20' : 'opacity-90'}`}>
                       <img
                         src={game.image_url}
                         alt=""
                         className="w-full h-full object-cover"
                         onError={(e) => {
                           e.target.onerror = null;
-                          e.target.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='64' viewBox='0 0 44 64'><rect width='100%25' height='100%25' fill='%231a1a1a' rx='4'/><path d='M22 20 L22 44 M12 32 L32 32' stroke='%23333' stroke-width='4' stroke-linecap='round'/></svg>";
+                          e.target.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='72' viewBox='0 0 50 72'><rect width='100%25' height='100%25' fill='%231a1a1a' rx='4'/><path d='M25 24 L25 48 M15 36 L35 36' stroke='%23333' stroke-width='4' stroke-linecap='round'/></svg>";
                         }}
                       />
                     </div>
 
                     {/* Title & tags */}
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-1">
-                        <h4 className={`text-sm font-bold truncate transition-colors duration-200 ${isActive ? 'text-white' : 'text-neutral-300 group-hover:text-white'}`}>
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <h4 className={`text-base font-bold truncate transition-colors duration-200 ${isActive ? 'text-white' : 'text-neutral-300 group-hover:text-white'}`}>
                           {game.title}
                         </h4>
-                        {hasSurge && <Zap className="w-3 h-3 text-[#ff4444] fill-[#ff4444] flex-shrink-0 animate-pulse" />}
+                        {hasSurge && <Zap className="w-3.5 h-3.5 text-[#ff4444] fill-[#ff4444] flex-shrink-0 animate-pulse" />}
                       </div>
-                      <p className="text-neutral-500 text-xs truncate mb-2">{game.tags?.slice(0, 3).join(' · ')}</p>
+                      <p className="text-neutral-500 text-xs truncate mb-2.5">{game.tags?.slice(0, 3).join(' · ')}</p>
                       <SentimentBadge sentiment={game.buying_sentiment} />
                     </div>
 
                     {/* Sparkline – hidden on small screens */}
-                    <div className="flex-shrink-0 hidden sm:block mx-2">
+                    <div className="flex-shrink-0 hidden sm:block mx-3">
                       <MiniSparkline data={sparkData} color={hasSurge ? '#ff4444' : '#0078f2'} />
                     </div>
 
                     {/* Price block */}
-                    <div className="text-right flex-shrink-0 min-w-[90px] mr-1">
-                      <p className={`text-sm font-extrabold font-mono tabular-nums leading-none ${game.buying_sentiment === 'buy' ? 'text-[#00d26a]' : 'text-white'}`}>
+                    <div className="text-right flex-shrink-0 min-w-[95px] mr-1">
+                      <p className={`text-base font-extrabold font-mono tabular-nums leading-none ${game.buying_sentiment === 'buy' ? 'text-[#00d26a]' : 'text-white'}`}>
                         {formatPrice(bestPrice)}
                       </p>
-                      <p className="text-neutral-500 text-[10px] font-semibold truncate mt-1">{game.best_deal?.store}</p>
+                      <p className="text-neutral-500 text-[10px] font-semibold truncate mt-1.5">{game.best_deal?.store}</p>
                     </div>
 
                     {/* Arrow icon */}
