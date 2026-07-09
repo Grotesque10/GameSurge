@@ -144,4 +144,34 @@ body {
   .mobile-bottom-spacing {
     padding-bottom: 200px !important;
   }
+
+  /* ─── Hero Section Mobile Layout ─── */
+
+  /* Strengthen the vertical gradient on mobile so the background image
+     fades out cleanly behind the centered poster */
+  .mobile-hero-gradient-vertical {
+    background: linear-gradient(
+      to bottom,
+      rgba(13, 13, 13, 0.6) 0%,
+      rgba(13, 13, 13, 0.85) 40%,
+      rgba(13, 13, 13, 1) 75%
+    ) !important;
+  }
+
+  /* Hide the left-to-right gradient on mobile (only useful for desktop
+     side-by-side layout) */
+  .mobile-hero-gradient-horizontal {
+    display: none !important;
+  }
+
+  /* Center-align the hero content column on mobile */
+  .mobile-hero-content {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Slightly reduce poster size on small screens */
+  .mobile-hero-poster {
+    width: 150px !important;
+  }
 }

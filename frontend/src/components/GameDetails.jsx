@@ -171,8 +171,8 @@ const GameDetails = () => {
           ) : (
             <div className="w-full h-full bg-gradient-to-br from-[#0078f2]/20 via-[#00d26a]/10 to-[#0d0d0d]" />
           )}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d0d]/40 via-[#0d0d0d]/70 to-[#0d0d0d]" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d]/90 via-[#0d0d0d]/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d0d]/40 via-[#0d0d0d]/70 to-[#0d0d0d] mobile-hero-gradient-vertical" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d]/90 via-[#0d0d0d]/50 to-transparent mobile-hero-gradient-horizontal" />
         </div>
 
         {/* Nav */}
@@ -312,10 +312,10 @@ const GameDetails = () => {
 
         {/* Hero Content */}
         <div className="relative z-10 container-wide pt-6 sm:pt-10 pb-8">
-          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start">
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start mobile-hero-content">
 
             {/* Poster */}
-            <div className="flex-shrink-0 w-[180px] sm:w-[200px] lg:w-[220px] mx-auto sm:mx-0">
+            <div className="flex-shrink-0 w-[180px] sm:w-[200px] lg:w-[220px] mx-auto sm:mx-0 mobile-hero-poster">
               <div className="rounded-xl overflow-hidden shadow-2xl shadow-black/70 border border-white/10 ring-1 ring-white/5">
                 {game.image_url && game.image_url.trim() !== "" && !imageError ? (
                   <img src={game.image_url} alt={game.title} className="w-full aspect-[2/3] object-cover" onError={() => setImageError(true)} />
