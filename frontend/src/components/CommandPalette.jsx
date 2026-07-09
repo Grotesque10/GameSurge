@@ -21,14 +21,14 @@ const MiniSparkline = ({ data = [], color = '#0078f2' }) => {
 const SentimentBadge = ({ sentiment }) => {
   if (!sentiment) return null;
   const map = {
-    buy:   { label: 'Buy',   cls: 'bg-emerald-500/20 text-emerald-400' },
-    wait:  { label: 'Wait',  cls: 'bg-amber-500/20 text-amber-400' },
-    avoid: { label: 'Avoid', cls: 'bg-red-500/20 text-red-400' },
+    buy:   { label: 'Buy',   cls: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' },
+    wait:  { label: 'Wait',  cls: 'bg-amber-500/10 text-amber-400 border-amber-500/20' },
+    avoid: { label: 'Avoid', cls: 'bg-red-500/10 text-red-400 border-red-500/20' },
   };
   const s = map[sentiment];
   if (!s) return null;
   return (
-    <span className={`text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded ${s.cls}`}>
+    <span className={`text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full border ${s.cls}`}>
       {s.label}
     </span>
   );
@@ -43,7 +43,6 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
 
   useEffect(() => {
     if (isOpen) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
       setQuery('');
       setActiveIndex(0);
       setTimeout(() => inputRef.current?.focus(), 50);
@@ -93,19 +92,22 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[10vh]" onClick={onClose}>
+    <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[12vh]" onClick={onClose}>
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/75 backdrop-blur-md" />
+      <div className="absolute inset-0 bg-[#09090b]/80 backdrop-blur-md transition-opacity duration-300" />
 
       {/* Palette */}
       <div
-        className="relative w-full max-w-2xl mx-4 rounded-2xl border border-white/10 shadow-2xl shadow-black overflow-hidden"
-        style={{ background: 'rgba(20, 20, 22, 0.98)', animation: 'fadeInScale 0.15s ease-out' }}
+        className="relative w-full max-w-2xl mx-4 rounded-2xl border border-white/10 bg-[#16161a]/95 shadow-[0_0_80px_-10px_rgba(0,120,242,0.15)] overflow-hidden backdrop-blur-2xl transition-all duration-300"
+        style={{ animation: 'fadeInScale 0.2s cubic-bezier(0.16, 1, 0.3, 1)' }}
         onClick={e => e.stopPropagation()}
       >
-        {/* Search Input */}
-        <div className="flex items-center gap-4 px-6 py-5">
-          <Search className="w-5 h-5 text-[#555] flex-shrink-0" />
+        {/* Glow Accent Header */}
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#0078f2]/50 to-transparent" />
+
+        {/* Search Input Container */}
+        <div className="flex items-center gap-4 px-6 py-4.5 bg-white/[0.02]">
+          <Search className={`w-5 h-5 flex-shrink-0 transition-colors duration-200 ${query ? 'text-[#0078f2]' : 'text-neutral-500'}`} />
           <input
             ref={inputRef}
             type="text"
@@ -113,32 +115,32 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
             onChange={(e) => { setQuery(e.target.value); setActiveIndex(0); }}
             onKeyDown={handleInputKeyDown}
             placeholder="Search games, tags, developers..."
-            className="flex-1 bg-transparent text-white text-base outline-none placeholder:text-[#444] font-medium"
+            className="flex-1 bg-transparent text-white text-base outline-none placeholder:text-neutral-600 font-medium tracking-tight"
           />
           {query && (
-            <button onClick={() => setQuery('')} className="text-[#444] hover:text-[#888] transition-colors">
+            <button onClick={() => setQuery('')} className="text-neutral-500 hover:text-white transition-colors p-1 hover:bg-white/5 rounded-md">
               <X className="w-4 h-4" />
             </button>
           )}
-          <button onClick={onClose} className="flex items-center gap-1 text-[#444] hover:text-[#888] transition-colors ml-1">
-            <kbd className="bg-[#1e1e1e] border border-[#333] text-[#555] text-[10px] font-mono px-1.5 py-0.5 rounded">ESC</kbd>
+          <button onClick={onClose} className="flex items-center gap-1.5 text-neutral-500 hover:text-neutral-300 transition-colors ml-1">
+            <kbd className="bg-white/5 border border-white/10 text-neutral-400 text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">ESC</kbd>
           </button>
         </div>
 
-        <div className="h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
         {/* Results */}
-        <div className="max-h-[420px] overflow-y-auto">
+        <div className="max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
           {results.length === 0 ? (
-            <div className="px-6 py-12 text-center">
-              <Search className="w-8 h-8 text-[#333] mx-auto mb-3" />
-              <p className="text-[#555] text-sm">No games found for &ldquo;{query}&rdquo;</p>
-              <p className="text-[#333] text-xs mt-1">Try searching by genre or developer</p>
+            <div className="px-6 py-16 text-center">
+              <Search className="w-10 h-10 text-neutral-700 mx-auto mb-4" />
+              <p className="text-neutral-400 text-sm font-semibold">No games found for &ldquo;{query}&rdquo;</p>
+              <p className="text-neutral-600 text-xs mt-1">Try checking for spelling errors or search genres like "RPG" or "Action".</p>
             </div>
           ) : (
-            <div className="p-2">
+            <div className="p-2 flex flex-col gap-1">
               {!query && (
-                <p className="text-[#444] text-[10px] uppercase tracking-widest font-semibold px-4 pt-2 pb-1.5">
+                <p className="text-neutral-500 text-[10px] uppercase tracking-widest font-extrabold px-3 pt-2 pb-1">
                   Top Picks
                 </p>
               )}
@@ -152,53 +154,52 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
                     key={game.game_id}
                     onClick={() => handleSelect(game)}
                     onMouseEnter={() => setActiveIndex(index)}
-                    className={`w-full rounded-xl flex items-center gap-5 px-4 py-3.5 transition-all text-left group relative overflow-hidden ${
-                      isActive ? 'bg-white/6' : 'hover:bg-white/4'
+                    className={`w-full rounded-xl flex items-center gap-4 px-4 py-3 transition-all duration-200 text-left group relative overflow-hidden ${
+                      isActive 
+                        ? 'bg-gradient-to-r from-[#0078f2]/10 to-[#00d26a]/5 border-l-2 border-[#0078f2] pl-3.5 translate-x-0.5' 
+                        : 'hover:bg-white/[0.03] border-l-2 border-transparent hover:translate-x-0.5'
                     }`}
                   >
-                    {/* Accent line on active */}
-                    {isActive && (
-                      <div className="absolute left-0 top-3 bottom-3 w-0.5 rounded-full bg-[#0078f2]" />
-                    )}
-
-                    {/* Cover art */}
-                    <img
-                      src={game.image_url}
-                      alt=""
-                      className="w-11 h-16 object-cover rounded-lg flex-shrink-0 shadow-lg"
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='64' viewBox='0 0 44 64'><rect width='100%25' height='100%25' fill='%231a1a1a' rx='4'/><path d='M22 20 L22 44 M12 32 L32 32' stroke='%23333' stroke-width='4' stroke-linecap='round'/></svg>";
-                      }}
-                    />
+                    {/* Cover art with soft neon glow on active */}
+                    <div className={`relative w-11 h-16 rounded-lg overflow-hidden flex-shrink-0 shadow-lg transition-transform duration-300 ${isActive ? 'scale-105 ring-1 ring-white/20' : 'opacity-90'}`}>
+                      <img
+                        src={game.image_url}
+                        alt=""
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='64' viewBox='0 0 44 64'><rect width='100%25' height='100%25' fill='%231a1a1a' rx='4'/><path d='M22 20 L22 44 M12 32 L32 32' stroke='%23333' stroke-width='4' stroke-linecap='round'/></svg>";
+                        }}
+                      />
+                    </div>
 
                     {/* Title & tags */}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
-                        <h4 className={`text-sm font-semibold truncate transition-colors ${isActive ? 'text-white' : 'text-[#ddd] group-hover:text-white'}`}>
+                        <h4 className={`text-sm font-bold truncate transition-colors duration-200 ${isActive ? 'text-white' : 'text-neutral-300 group-hover:text-white'}`}>
                           {game.title}
                         </h4>
-                        {hasSurge && <Zap className="w-3 h-3 text-[#ff4444] fill-[#ff4444] flex-shrink-0" />}
+                        {hasSurge && <Zap className="w-3 h-3 text-[#ff4444] fill-[#ff4444] flex-shrink-0 animate-pulse" />}
                       </div>
-                      <p className="text-[#555] text-xs truncate mb-1.5">{game.tags?.slice(0, 3).join(' · ')}</p>
+                      <p className="text-neutral-500 text-xs truncate mb-2">{game.tags?.slice(0, 3).join(' · ')}</p>
                       <SentimentBadge sentiment={game.buying_sentiment} />
                     </div>
 
                     {/* Sparkline – hidden on small screens */}
-                    <div className="flex-shrink-0 hidden sm:block">
+                    <div className="flex-shrink-0 hidden sm:block mx-2">
                       <MiniSparkline data={sparkData} color={hasSurge ? '#ff4444' : '#0078f2'} />
                     </div>
 
                     {/* Price block */}
-                    <div className="text-right flex-shrink-0 min-w-[80px]">
-                      <p className="text-white text-base font-bold font-mono tabular-nums leading-tight">
+                    <div className="text-right flex-shrink-0 min-w-[90px] mr-1">
+                      <p className={`text-sm font-extrabold font-mono tabular-nums leading-none ${game.buying_sentiment === 'buy' ? 'text-[#00d26a]' : 'text-white'}`}>
                         {formatPrice(bestPrice)}
                       </p>
-                      <p className="text-[#555] text-[10px] truncate mt-0.5">{game.best_deal?.store}</p>
+                      <p className="text-neutral-500 text-[10px] font-semibold truncate mt-1">{game.best_deal?.store}</p>
                     </div>
 
-                    {/* Arrow on active */}
-                    <ArrowRight className={`w-3.5 h-3.5 flex-shrink-0 transition-all ${isActive ? 'text-[#0078f2] opacity-100' : 'opacity-0'}`} />
+                    {/* Arrow icon */}
+                    <ArrowRight className={`w-4 h-4 flex-shrink-0 transition-all duration-300 ${isActive ? 'text-[#0078f2] translate-x-0.5 opacity-100' : 'opacity-0 -translate-x-1'}`} />
                   </button>
                 );
               })}
@@ -206,27 +207,27 @@ const CommandPalette = ({ data = [], isOpen, onClose }) => {
           )}
         </div>
 
-        {/* Footer */}
-        <div className="h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
-        <div className="px-6 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-3 text-[#444] text-[10px]">
-            <span className="flex items-center gap-1">
-              <kbd className="bg-[#1a1a1a] border border-[#2a2a2a] px-1 py-0.5 rounded text-[9px] font-mono">↑</kbd>
-              <kbd className="bg-[#1a1a1a] border border-[#2a2a2a] px-1 py-0.5 rounded text-[9px] font-mono">↓</kbd>
+        {/* Footer info panel */}
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="px-6 py-3 flex items-center justify-between bg-white/[0.01]">
+          <div className="flex items-center gap-4 text-neutral-600 text-[10px] font-semibold">
+            <span className="flex items-center gap-1.5">
+              <kbd className="bg-white/5 border border-white/10 text-neutral-400 px-1.5 py-0.5 rounded text-[8px] font-mono shadow-sm">↑</kbd>
+              <kbd className="bg-white/5 border border-white/10 text-neutral-400 px-1.5 py-0.5 rounded text-[8px] font-mono shadow-sm">↓</kbd>
               navigate
             </span>
-            <span className="flex items-center gap-1">
-              <kbd className="bg-[#1a1a1a] border border-[#2a2a2a] px-1.5 py-0.5 rounded text-[9px] font-mono">↵</kbd>
+            <span className="flex items-center gap-1.5">
+              <kbd className="bg-white/5 border border-white/10 text-neutral-400 px-2 py-0.5 rounded text-[8px] font-mono shadow-sm">↵</kbd>
               open
             </span>
           </div>
-          <p className="text-[#333] text-[10px]">{results.length} result{results.length !== 1 ? 's' : ''}</p>
+          <p className="text-neutral-500 text-[10px] font-bold uppercase tracking-wider">{results.length} result{results.length !== 1 ? 's' : ''}</p>
         </div>
       </div>
 
       <style>{`
         @keyframes fadeInScale {
-          from { opacity: 0; transform: scale(0.97) translateY(-10px); }
+          from { opacity: 0; transform: scale(0.97) translateY(-8px); }
           to   { opacity: 1; transform: scale(1) translateY(0); }
         }
       `}</style>
