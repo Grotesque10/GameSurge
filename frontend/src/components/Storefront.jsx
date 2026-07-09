@@ -178,7 +178,7 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
 
       {/* ─── Navigation Bar ─── */}
       <nav className="sticky top-0 z-50 border-b border-[#1e1e1e]" style={{ backgroundColor: 'rgba(18,18,18,0.95)', backdropFilter: 'blur(12px)' }}>
-        <div className="container-main h-14 flex items-center justify-between">
+        <div className="container-main h-14 flex items-center justify-between mobile-storefront-nav">
           <div className="flex items-center gap-2.5">
             <div className="bg-gradient-to-br from-[#0078f2] to-[#00d26a] p-1.5 rounded-lg">
               <TrendingUp className="w-4 h-4 text-white" />
@@ -282,7 +282,7 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
 
       {/* ─── Live Hot Deals Ticker ─── */}
       {!error && data.length > 0 && (
-        <div className="w-full bg-[#0078f2]/10 border-b border-[#0078f2]/20 overflow-hidden relative h-10 flex items-center">
+        <div className="w-full bg-[#0078f2]/10 border-b border-[#0078f2]/20 overflow-hidden relative h-10 flex items-center mobile-ticker-container">
           <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[#121212] to-transparent z-10" />
           <div className="flex whitespace-nowrap animate-ticker w-max">
             {/* Double the array for seamless looping */}
@@ -327,7 +327,7 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
             className="relative overflow-hidden rounded-xl cursor-pointer group mt-8 sm:mt-10"
             onClick={() => navigate(`/game/${featuredGame.game_id}`)}
           >
-            <div className="relative w-full overflow-hidden rounded-xl" style={{ aspectRatio: '16/7' }}>
+            <div className="relative w-full overflow-hidden rounded-xl mobile-storefront-hero" style={{ aspectRatio: '16/7' }}>
               {/* Image with key for fade transition */}
               <img
                 key={featuredGame.game_id}
@@ -364,7 +364,7 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
               </div>
 
               {/* Pagination Dots */}
-              <div className="absolute bottom-5 right-6 sm:right-10 flex gap-2">
+              <div className="absolute bottom-5 right-6 sm:right-10 flex gap-2 mobile-hero-dots">
                 {featuredGames.map((_, idx) => (
                   <button
                     key={idx}
@@ -477,7 +477,7 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
 
         {/* ═══ Section: Browse All (Paginated) ═══ */}
         <section style={{ marginTop: '40px', paddingTop: '20px', borderTop: '1px solid #1e1e1e' }}>
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4" style={{ marginBottom: '16px' }}>
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mobile-filters-row" style={{ marginBottom: '16px' }}>
             <div className="flex items-center gap-2">
               <Search className="w-5 h-5 text-[#0078f2]" />
               <h2 className="text-base sm:text-lg md:text-xl font-bold text-white">Browse All</h2>
@@ -489,7 +489,7 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
             </div>
 
             {/* Filter and Sort Controls */}
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-4 mobile-filters-wrap">
               {/* Genre Filter */}
               <div className="flex items-center gap-2">
                 <span className="text-[#666] text-[10px] font-bold uppercase tracking-wider">Genre:</span>
