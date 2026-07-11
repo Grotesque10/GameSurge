@@ -25,6 +25,12 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 DISCORD_CLIENT_ID = os.getenv("DISCORD_CLIENT_ID")
 DISCORD_REDIRECT_URI = os.getenv("DISCORD_REDIRECT_URI")
 
+JWT_SECRET = os.getenv("JWT_SECRET")
+if not JWT_SECRET:
+    import secrets
+    JWT_SECRET = secrets.token_hex(32)
+    logger.warning("JWT_SECRET environment variable is not set. A secure random key has been generated for this session.")
+
 # Cache TTL: how often a game *may* be re-fetched from CheapShark (lower = fresher, but more API pressure).
 CACHE_TTL_MINUTES = int(os.getenv("CACHE_TTL_MINUTES", "20"))
 MIN_GAMES = int(os.getenv("MIN_GAMES", "60"))
@@ -723,7 +729,7 @@ async def get_current_user(authorization: Optional[str] = Header(None)) -> Dict:
         user_id = int(user_id_str)
         
         expected_sig = hmac.new(
-            os.getenv("JWT_SECRET", "gamesurge-secure-fallback-secret-2026").encode(),
+            JWT_SECRET.encode(),
             user_id_str.encode(),
             hashlib.sha256
         ).hexdigest()
@@ -872,7 +878,7 @@ async def auth_login(req: LoginRequest):
         # Generate secure HMAC token
         token_str = str(user_dict['id'])
         signature = hmac.new(
-            os.getenv("JWT_SECRET", "gamesurge-secure-fallback-secret-2026").encode(),
+            JWT_SECRET.encode(),
             token_str.encode(),
             hashlib.sha256
         ).hexdigest()

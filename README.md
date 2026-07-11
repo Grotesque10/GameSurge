@@ -164,4 +164,12 @@ To enable the live cloud synchronization feature:
 
 *Your live Discord authentication is now operational!*
 
+---
+
+## ⚠️ Security Notice & Git History Warning
+If you are deploying this application to production, please ensure that:
+1. All local environment files (`.env`, `backend/.env`, `frontend/.env`) are kept out of your git history (already specified in `.gitignore`).
+2. **Rotate Previously Hardcoded Secrets**: If any PostgreSQL database password, JWT secret, or API token was previously hardcoded in the codebase during development, it remains in your Git commit history. **You must immediately rotate those credentials in production.**
+3. Avoid hardcoding fallbacks: Make sure `DATABASE_URL` is set in your server environment, as fallbacks have been removed.
+
 <!-- Trigger Webhook Test 2 -->
