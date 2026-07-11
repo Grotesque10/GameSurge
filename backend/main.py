@@ -5,11 +5,14 @@ import logging
 import hmac
 import hashlib
 import asyncpg
+import time
+import uuid
+from collections import defaultdict
 from typing import List, Dict, Optional
 from datetime import datetime, timedelta, timezone
 from dotenv import load_dotenv
-from fastapi import FastAPI, BackgroundTasks, Query, Depends, Header, HTTPException
-from pydantic import BaseModel
+from fastapi import FastAPI, BackgroundTasks, Query, Depends, Header, HTTPException, Request
+from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 import httpx
 
@@ -22,14 +25,21 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 DATABASE_URL = os.getenv("DATABASE_URL")
+if not DATABASE_URL:
+    raise ValueError("CRITICAL CONFIGURATION ERROR: DATABASE_URL environment variable is not set.")
+
 DISCORD_CLIENT_ID = os.getenv("DISCORD_CLIENT_ID")
 DISCORD_REDIRECT_URI = os.getenv("DISCORD_REDIRECT_URI")
 
+ENV = os.getenv("ENV", "production").lower()
 JWT_SECRET = os.getenv("JWT_SECRET")
 if not JWT_SECRET:
-    import secrets
-    JWT_SECRET = secrets.token_hex(32)
-    logger.warning("JWT_SECRET environment variable is not set. A secure random key has been generated for this session.")
+    if ENV == "production":
+        raise ValueError("CRITICAL CONFIGURATION ERROR: JWT_SECRET environment variable is not set in production.")
+    else:
+        import secrets
+        JWT_SECRET = secrets.token_hex(32)
+        logger.warning("JWT_SECRET environment variable is not set. A secure random key has been generated for this development session.")
 
 # Cache TTL: how often a game *may* be re-fetched from CheapShark (lower = fresher, but more API pressure).
 CACHE_TTL_MINUTES = int(os.getenv("CACHE_TTL_MINUTES", "20"))
@@ -54,7 +64,15 @@ TRACKED_GAMES = [
 
 app = FastAPI(title="Project GameSurge API")
 
-CORS_ALLOWED_ORIGINS = [origin.strip() for origin in os.getenv("CORS_ALLOWED_ORIGINS", "*").split(",")]
+cors_env = os.getenv("CORS_ALLOWED_ORIGINS")
+if cors_env:
+    CORS_ALLOWED_ORIGINS = [origin.strip() for origin in cors_env.split(",")]
+else:
+    CORS_ALLOWED_ORIGINS = [
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://game-surge.vercel.app"
+    ]
 
 app.add_middleware(
     CORSMiddleware,
@@ -64,6 +82,46 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+# ─── Security Headers Middleware ──────────────────────────────────────────────
+@app.middleware("http")
+async def add_security_headers(request: Request, call_next):
+    response = await call_next(request)
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+    response.headers["Content-Security-Policy"] = "default-src 'none'; frame-ancestors 'none'"
+    return response
+
+
+# ─── Global Error Handler with Correlation IDs ────────────────────────────────
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    correlation_id = str(uuid.uuid4())
+    logger.error(f"Unhandled exception [Correlation ID: {correlation_id}]: {exc}", exc_info=True)
+    return JSONResponse(
+        status_code=500,
+        content={
+            "detail": "An internal server error occurred.",
+            "correlation_id": correlation_id
+        }
+    )
+
+
+# ─── Rate Limiter for Authentication ──────────────────────────────────────────
+login_attempts = defaultdict(list)
+
+def rate_limit_login(request: Request):
+    ip = request.client.host
+    now = time.time()
+    login_attempts[ip] = [t for t in login_attempts[ip] if now - t < 60]
+    if len(login_attempts[ip]) >= 5:
+        raise HTTPException(
+            status_code=429,
+            detail="Too many login attempts. Please try again in a minute."
+        )
+    login_attempts[ip].append(now)
+
 # ─── Connection Pool ─────────────────────────────────────────────────────────
 pool: asyncpg.Pool = None
 
@@ -71,7 +129,10 @@ pool: asyncpg.Pool = None
 @app.on_event("startup")
 async def startup():
     global pool
-    pool = await asyncpg.create_pool(DATABASE_URL, min_size=2, max_size=10)
+    # Enforce SSL/TLS for remote databases (e.g. Neon) while keeping it optional for local connections
+    is_local_host = any(h in DATABASE_URL for h in ["localhost", "127.0.0.1", "@db:"])
+    db_ssl = None if is_local_host else "require"
+    pool = await asyncpg.create_pool(DATABASE_URL, min_size=2, max_size=10, ssl=db_ssl)
     async with pool.acquire() as conn:
         # Create tables (with new columns)
         schema_path = os.path.join(os.path.dirname(__file__), "schema.sql")
@@ -665,23 +726,6 @@ async def force_refresh():
     return {"status": "success", "message": "Cache cleared. Next request will fetch fresh data."}
 
 
-@app.post("/seed-more")
-async def seed_more(limit: int = 25):
-    """Manually add more games to the catalog."""
-    if limit <= 0:
-        return {"status": "error", "message": "limit must be greater than 0"}
-
-    async with pool.acquire() as conn:
-        before = await conn.fetchval("SELECT COUNT(*) FROM games")
-        await ensure_minimum_games(conn, before + limit)
-        after = await conn.fetchval("SELECT COUNT(*) FROM games")
-
-    return {
-        "status": "success",
-        "added": max(after - before, 0),
-        "total_games": after,
-    }
-
 
 @app.get("/games/count")
 async def games_count():
@@ -784,8 +828,9 @@ async def get_auth_config():
 
 
 @app.post("/auth/login")
-async def auth_login(req: LoginRequest):
+async def auth_login(req: LoginRequest, request: Request):
     """Frictionless social sign-in simulator or live Discord OAuth2 token exchange."""
+    rate_limit_login(request)
     provider = req.provider.strip().lower()
     
     if provider == "discord" and req.access_token:
