@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import GameCard from './GameCard';
 import { SkeletonCard, SkeletonHero, SkeletonSurgeRow } from './SkeletonCard';
-import { ChevronLeft, ChevronRight, Activity, Flame, TrendingDown, Star, Percent, Tag, Search, TrendingUp, Swords, Sparkles, Cloud, LogOut, ChevronDown } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Activity, Flame, TrendingDown, Star, Percent, Tag, Search, TrendingUp, Swords, Sparkles, Cloud, LogOut, ChevronDown, Trash2 } from 'lucide-react';
 import { useCurrency } from '../contexts/CurrencyContext';
 import { useWatchlist } from '../contexts/WatchlistContext';
 import LoginModal from './LoginModal';
@@ -77,7 +77,7 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
   const navigate = useNavigate();
   const { currency, setCurrency, supportedCurrencies, formatPrice } = useCurrency();
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
-  const { user, handleLogout } = useWatchlist();
+  const { user, handleLogout, handleDeleteAccount } = useWatchlist();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
 
@@ -252,6 +252,19 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
                       >
                         <LogOut className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                         <span>Log Out</span>
+                      </button>
+                      <button
+                        onClick={async () => {
+                          if (window.confirm("Are you sure you want to permanently delete your account and watchlist data? This action cannot be undone.")) {
+                            await handleDeleteAccount();
+                            setShowUserDropdown(false);
+                          }
+                        }}
+                        className="w-full flex items-center gap-2.5 text-left text-xs text-[#ff4444] hover:bg-[#ff4444]/10 transition-all duration-200 font-semibold cursor-pointer group"
+                        style={{ padding: '10px 20px', borderTop: '1px solid rgba(255, 255, 255, 0.05)' }}
+                      >
+                        <Trash2 className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                        <span>Delete Account</span>
                       </button>
                     </div>
                   </div>

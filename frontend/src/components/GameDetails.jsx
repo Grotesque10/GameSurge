@@ -8,7 +8,7 @@ import {
   ArrowLeft, Star, Monitor, Cpu, HardDrive, MemoryStick,
   TrendingUp, AlertTriangle, Shield, Clock, Tag,
   Copy, Check, Gamepad2, ShoppingBag, Award, ExternalLink, BellPlus, BellRing, X,
-  Cloud, LogOut, ChevronDown, Globe
+  Cloud, LogOut, ChevronDown, Globe, Trash2
 } from 'lucide-react';
 import BuyingSentiment from './BuyingSentiment';
 import PriceAdvisor from './PriceAdvisor';
@@ -68,7 +68,7 @@ const GameDetails = () => {
   const [error, setError] = useState(null);
   const [activeReqTab, setActiveReqTab] = useState('minimum');
   const [copied, setCopied] = useState(false);
-  const { isWatched, addToWatchlist, removeFromWatchlist, user, handleLogout } = useWatchlist();
+  const { isWatched, addToWatchlist, removeFromWatchlist, user, handleLogout, handleDeleteAccount } = useWatchlist();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const { formatPrice, formatPriceInCurrency, currency, setCurrency, supportedCurrencies, convertToUsd } = useCurrency();
@@ -275,17 +275,30 @@ const GameDetails = () => {
                             {user.auth_provider} cloud
                           </p>
                         </div>
-                        <button
-                          onClick={() => {
-                            handleLogout();
-                            setShowUserDropdown(false);
-                          }}
-                          className="w-full flex items-center gap-2.5 text-left text-xs text-[#ff4e4e] hover:bg-[#ff4e4e]/10 rounded-lg transition-all duration-200 font-semibold cursor-pointer group"
-                          style={{ padding: '10px 20px' }}
-                        >
-                          <LogOut className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                          <span>Log Out</span>
-                        </button>
+                          <button
+                            onClick={() => {
+                              handleLogout();
+                              setShowUserDropdown(false);
+                            }}
+                            className="w-full flex items-center gap-2.5 text-left text-xs text-[#ff4e4e] hover:bg-[#ff4e4e]/10 rounded-lg transition-all duration-200 font-semibold cursor-pointer group"
+                            style={{ padding: '10px 20px' }}
+                          >
+                            <LogOut className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                            <span>Log Out</span>
+                          </button>
+                          <button
+                            onClick={async () => {
+                              if (window.confirm("Are you sure you want to permanently delete your account and watchlist data? This action cannot be undone.")) {
+                                await handleDeleteAccount();
+                                setShowUserDropdown(false);
+                              }
+                            }}
+                            className="w-full flex items-center gap-2.5 text-left text-xs text-[#ff4444] hover:bg-[#ff4444]/10 rounded-lg transition-all duration-200 font-semibold cursor-pointer group"
+                            style={{ padding: '10px 20px', borderTop: '1px solid rgba(255, 255, 255, 0.05)', marginTop: '4px' }}
+                          >
+                            <Trash2 className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                            <span>Delete Account</span>
+                          </button>
                       </div>
                     </div>
                   )}

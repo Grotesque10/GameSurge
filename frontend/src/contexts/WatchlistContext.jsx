@@ -209,6 +209,32 @@ export const WatchlistProvider = ({ children }) => {
     setWatchlist(saved ? JSON.parse(saved) : []);
   };
 
+  // Delete Account Function
+  const handleDeleteAccount = async () => {
+    if (!token) return;
+    try {
+      setLoading(true);
+      const res = await fetch(`${API_BASE_URL}/auth/account`, {
+        method: 'DELETE',
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      if (res.ok) {
+        localStorage.removeItem('gamesurge_token');
+        setToken(null);
+        setUser(null);
+        localStorage.removeItem('antigravity_watchlist');
+        setWatchlist([]);
+      } else {
+        throw new Error("Failed to delete account on the server.");
+      }
+    } catch (err) {
+      console.error("Account deletion failed:", err);
+      alert("Error: Could not complete account deletion. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   // Add Item to Watchlist
   const addToWatchlist = async (game, targetPrice) => {
     const newItem = {
@@ -300,6 +326,7 @@ export const WatchlistProvider = ({ children }) => {
       handleLogin,
       handleOAuthExchange,
       handleLogout,
+      handleDeleteAccount,
       addToWatchlist,
       removeFromWatchlist,
       isWatched,

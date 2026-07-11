@@ -805,9 +805,9 @@ async def auth_login(req: LoginRequest):
                     avatar_url = f"https://cdn.discordapp.com/avatars/{discord_user['id']}/{avatar_hash}.png"
                 else:
                     avatar_url = "https://avatars.githubusercontent.com/u/583231?v=4"
-        except Exception as e:
-            logger.error(f"Discord API token exchange error: {e}")
-            raise HTTPException(status_code=400, detail=f"Discord authentication error: {str(e)}")
+        except Exception:
+            logger.error("Discord API token exchange error: Profile retrieval failed.")
+            raise HTTPException(status_code=400, detail="Discord authentication failed.")
     elif provider == "steam" and req.openid_params:
         try:
             # 1. Validate OpenID params with Steam
@@ -847,9 +847,9 @@ async def auth_login(req: LoginRequest):
             else:
                 logger.info("STEAM_API_KEY not set. Using default Steam profile placeholder.")
                 
-        except Exception as e:
-            logger.error(f"Steam OpenID exchange error: {e}")
-            raise HTTPException(status_code=400, detail=f"Steam authentication error: {str(e)}")
+        except Exception:
+            logger.error("Steam OpenID exchange error: Signature verification failed.")
+            raise HTTPException(status_code=400, detail="Steam OpenID authentication failed.")
     elif provider == "steam":
         username = "GamerPro_Steam"
         display_name = "SteamGamerPro"
@@ -896,6 +896,17 @@ async def auth_me(current_user: Dict = Depends(get_current_user)):
     return {
         "status": "success",
         "user": current_user
+    }
+
+
+@app.delete("/auth/account")
+async def delete_account(current_user: Dict = Depends(get_current_user)):
+    """Permanently delete user profile and all associated watchlist targets."""
+    async with pool.acquire() as conn:
+        await conn.execute("DELETE FROM users WHERE id = $1", current_user["id"])
+    return {
+        "status": "success",
+        "message": "Account and all associated user data have been permanently deleted."
     }
 
 
