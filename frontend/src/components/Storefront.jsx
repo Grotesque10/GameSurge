@@ -304,14 +304,24 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
               const surge = game.platforms?.some(p => p.surge_detected);
               const maxSavings = game.platforms?.reduce((max, p) => Math.max(max, p.savings || 0), 0) || 0;
               return (
-                <Link key={`${game.game_id}-${i}`} to={`/game/${game.game_id}`} className="inline-flex items-center gap-2 px-6 border-r border-[#333] hover:bg-white/5 transition-colors h-10" style={{ textDecoration: 'none' }}>
-                  {surge ? <Flame className="w-3.5 h-3.5 text-[#ff4444]" /> : <Percent className="w-3.5 h-3.5 text-[#00d26a]" />}
-                  <span className="text-white text-xs font-bold">{game.title}</span>
-                  <span className="text-[#aaa] text-xs">
-                    {surge ? 'Price Surge Active!' : `${Math.round(maxSavings)}% off`}
-                  </span>
+                <Link 
+                  key={`${game.game_id}-${i}`} 
+                  to={`/game/${game.game_id}`} 
+                  className="inline-flex items-center gap-3 px-6 border-r border-[#222] hover:bg-white/5 transition-colors h-10" 
+                  style={{ textDecoration: 'none' }}
+                >
+                  {surge ? (
+                    <span className="flex items-center gap-1 px-1.5 py-0.5 rounded bg-red-500/20 border border-red-500/30 text-red-400 text-[10px] font-extrabold uppercase tracking-wide">
+                      <Flame className="w-3 h-3 text-[#ff4444]" /> Surge
+                    </span>
+                  ) : (
+                    <span className="flex items-center gap-1 px-1.5 py-0.5 rounded bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-[10px] font-extrabold uppercase tracking-wide">
+                      {Math.round(maxSavings)}% Off
+                    </span>
+                  )}
+                  <span className="text-white text-xs font-semibold hover:text-[#0078f2] transition-colors">{game.title}</span>
                   <span className="text-[#555] text-[10px]">•</span>
-                  <span className="text-[#00d26a] text-xs font-mono font-bold">{formatPrice(game.best_deal?.price)}</span>
+                  <span className="text-emerald-400 text-xs font-mono font-bold">{formatPrice(game.best_deal?.price)}</span>
                 </Link>
               );
             })}
