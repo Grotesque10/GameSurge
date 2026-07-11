@@ -70,12 +70,12 @@ const AuthCallback = () => {
   }, [handleOAuthExchange, navigate]);
 
   return (
-    <div className="min-h-screen bg-[#07070a] flex items-center justify-center p-6 relative overflow-hidden select-none">
+    <div className="min-h-screen bg-[#07070a] flex items-center justify-center p-4 relative overflow-hidden select-none">
       {/* Background ambient gradient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-[#0078f2]/15 via-[#00d26a]/10 to-transparent rounded-full blur-[120px] pointer-events-none" />
 
       <div 
-        className="w-full max-w-lg bg-[#0e0e12]/80 border border-white/5 rounded-3xl p-12 text-center shadow-2xl relative backdrop-blur-2xl animate-in fade-in zoom-in-95 duration-300"
+        className="w-full max-w-md bg-[#0e0e12]/80 border border-white/5 rounded-3xl px-6 py-12 md:px-12 md:py-16 text-center shadow-2xl relative backdrop-blur-2xl animate-in fade-in zoom-in-95 duration-300"
         style={{ backdropFilter: 'blur(30px)', WebkitBackdropFilter: 'blur(30px)' }}
       >
         {error ? (
@@ -93,7 +93,7 @@ const AuthCallback = () => {
             </button>
           </div>
         ) : (
-          <div className="py-6 flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center">
             {/* Elegant spacious loading container */}
             <div className="relative w-32 h-32 flex items-center justify-center mb-8">
               {/* Outer spinning gradient ring */}
@@ -126,7 +126,7 @@ const AuthCallback = () => {
             </div>
 
             {/* Step Indicators */}
-            <div className="flex items-center gap-2 mt-8">
+            <div className="flex items-center gap-2 mt-8 md:mt-10">
               <span className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${currentStep >= 1 ? 'bg-[#0078f2] scale-125' : 'bg-white/10'}`} />
               <div className="w-6 h-[1px] bg-white/10" />
               <span className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${currentStep >= 2 ? 'bg-[#00d26a] scale-125' : 'bg-white/10'}`} />
