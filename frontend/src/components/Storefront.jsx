@@ -142,8 +142,8 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
       <div className="min-h-screen" style={{ backgroundColor: '#121212' }}>
         <nav className="sticky top-0 z-50 border-b border-[#1e1e1e]" style={{ backgroundColor: 'rgba(18,18,18,0.95)' }}>
           <div className="container-main h-14 flex items-center justify-between">
-            <div className="flex items-center gap-2.5">
-              <img src={logo} alt="GameSurge" className="w-6 h-6 object-contain rounded" />
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '10px' }}>
+              <img src={logo} alt="GameSurge" style={{ height: '24px', width: 'auto', display: 'block' }} />
               <span className="text-lg font-bold text-white tracking-tight">GameSurge</span>
             </div>
           </div>
@@ -178,8 +178,8 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
       {/* ─── Navigation Bar ─── */}
       <nav className="sticky top-0 z-50 border-b border-[#1e1e1e]" style={{ backgroundColor: 'rgba(18,18,18,0.95)', backdropFilter: 'blur(12px)' }}>
         <div className="container-main h-14 flex items-center justify-between mobile-storefront-nav">
-          <div className="flex items-center gap-2.5">
-            <img src={logo} alt="GameSurge" className="w-6 h-6 object-contain rounded" />
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '10px' }}>
+            <img src={logo} alt="GameSurge" style={{ height: '24px', width: 'auto', display: 'block' }} />
             <span className="text-lg font-bold text-white tracking-tight">GameSurge</span>
           </div>
           <div className="flex items-center gap-4">
