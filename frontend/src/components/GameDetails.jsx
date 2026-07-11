@@ -17,6 +17,7 @@ import LoginModal from './LoginModal';
 import { useWatchlist } from '../contexts/WatchlistContext';
 import { useCurrency, SUPPORTED_CURRENCIES } from '../contexts/CurrencyContext';
 import { API_BASE_URL } from '../config';
+import logo from '../assets/logo.png';
 
 /* ─── Custom Chart Tooltip ─── */
 const ChartTooltip = ({ active, payload, label }) => {
@@ -185,9 +186,7 @@ const GameDetails = () => {
             
             {/* Mobile-only Logo */}
             <div className="flex items-center gap-2 sm:hidden">
-              <div className="bg-gradient-to-br from-[#0078f2] to-[#00d26a] p-1.5 rounded-md">
-                <TrendingUp className="w-3.5 h-3.5 text-white" />
-              </div>
+              <img src={logo} alt="GameSurge" className="w-5.5 h-5.5 object-contain rounded" />
               <span className="text-sm font-bold text-white">GameSurge</span>
             </div>
 
@@ -314,9 +313,7 @@ const GameDetails = () => {
               )}
 
               <div className="hidden sm:flex items-center gap-2">
-                <div className="bg-gradient-to-br from-[#0078f2] to-[#00d26a] p-1.5 rounded-md">
-                  <TrendingUp className="w-3.5 h-3.5 text-white" />
-                </div>
+                <img src={logo} alt="GameSurge" className="w-5.5 h-5.5 object-contain rounded" />
                 <span className="text-sm font-bold text-white">GameSurge</span>
               </div>
             </div>

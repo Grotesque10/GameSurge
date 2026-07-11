@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import GameCard from './GameCard';
 import { SkeletonCard, SkeletonHero, SkeletonSurgeRow } from './SkeletonCard';
 import { ChevronLeft, ChevronRight, Activity, Flame, TrendingDown, Star, Percent, Tag, Search, TrendingUp, Swords, Sparkles, Cloud, LogOut, ChevronDown, Trash2 } from 'lucide-react';
+import logo from '../assets/logo.png';
 import { useCurrency } from '../contexts/CurrencyContext';
 import { useWatchlist } from '../contexts/WatchlistContext';
 import LoginModal from './LoginModal';
@@ -142,9 +143,7 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
         <nav className="sticky top-0 z-50 border-b border-[#1e1e1e]" style={{ backgroundColor: 'rgba(18,18,18,0.95)' }}>
           <div className="container-main h-14 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="bg-gradient-to-br from-[#0078f2] to-[#00d26a] p-1.5 rounded-lg">
-                <TrendingUp className="w-4 h-4 text-white" />
-              </div>
+              <img src={logo} alt="GameSurge" className="w-6 h-6 object-contain rounded" />
               <span className="text-lg font-bold text-white tracking-tight">GameSurge</span>
             </div>
           </div>
@@ -180,9 +179,7 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
       <nav className="sticky top-0 z-50 border-b border-[#1e1e1e]" style={{ backgroundColor: 'rgba(18,18,18,0.95)', backdropFilter: 'blur(12px)' }}>
         <div className="container-main h-14 flex items-center justify-between mobile-storefront-nav">
           <div className="flex items-center gap-2.5">
-            <div className="bg-gradient-to-br from-[#0078f2] to-[#00d26a] p-1.5 rounded-lg">
-              <TrendingUp className="w-4 h-4 text-white" />
-            </div>
+            <img src={logo} alt="GameSurge" className="w-6 h-6 object-contain rounded" />
             <span className="text-lg font-bold text-white tracking-tight">GameSurge</span>
           </div>
           <div className="flex items-center gap-4">
