@@ -307,21 +307,49 @@ const Storefront = ({ data, loading, error, onRetry, onOpenSearch, onLoadMore, p
                 <Link 
                   key={`${game.game_id}-${i}`} 
                   to={`/game/${game.game_id}`} 
-                  className="inline-flex items-center gap-3 px-6 border-r border-[#222] hover:bg-white/5 transition-colors h-10" 
-                  style={{ textDecoration: 'none' }}
+                  className="inline-flex items-center transition-colors h-10 no-underline" 
+                  style={{ textDecoration: 'none', color: '#e2e8f0' }}
                 >
+                  {/* 1. Price */}
+                  <span 
+                    className="text-emerald-400 text-xs font-mono font-bold" 
+                    style={{ marginRight: '8px' }}
+                  >
+                    {formatPrice(game.best_deal?.price)}
+                  </span>
+
+                  {/* 2. Badge */}
                   {surge ? (
-                    <span className="flex items-center gap-1 px-1.5 py-0.5 rounded bg-red-500/20 border border-red-500/30 text-red-400 text-[10px] font-extrabold uppercase tracking-wide">
+                    <span 
+                      className="flex items-center gap-1 bg-red-500/20 border border-red-500/30 text-red-400 text-[10px] font-extrabold uppercase tracking-wide whitespace-nowrap"
+                      style={{ padding: '2px 8px', borderRadius: '4px' }}
+                    >
                       <Flame className="w-3 h-3 text-[#ff4444]" /> Surge
                     </span>
                   ) : (
-                    <span className="flex items-center gap-1 px-1.5 py-0.5 rounded bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-[10px] font-extrabold uppercase tracking-wide">
+                    <span 
+                      className="flex items-center gap-1 bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-[10px] font-extrabold uppercase tracking-wide whitespace-nowrap"
+                      style={{ padding: '2px 8px', borderRadius: '4px' }}
+                    >
                       {Math.round(maxSavings)}% Off
                     </span>
                   )}
-                  <span className="text-white text-xs font-semibold hover:text-[#0078f2] transition-colors">{game.title}</span>
-                  <span className="text-[#555] text-[10px]">•</span>
-                  <span className="text-emerald-400 text-xs font-mono font-bold">{formatPrice(game.best_deal?.price)}</span>
+
+                  {/* 3. Title */}
+                  <span 
+                    className="text-xs font-semibold hover:text-[#3b82f6] transition-colors whitespace-nowrap" 
+                    style={{ color: '#e2e8f0', marginLeft: '12px' }}
+                  >
+                    {game.title}
+                  </span>
+
+                  {/* 4. Bullet Separator */}
+                  <span 
+                    className="text-[#555] text-[10px] font-bold" 
+                    style={{ margin: '0 16px' }}
+                  >
+                    •
+                  </span>
                 </Link>
               );
             })}
