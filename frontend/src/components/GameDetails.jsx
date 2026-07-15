@@ -946,7 +946,7 @@ const GameDetails = () => {
               <p className="text-white font-bold text-lg font-mono leading-none">{formatPrice(bestDeal?.price)}</p>
             </div>
             <a
-              href={bestDeal?.url || '#'}
+              href={game.platforms?.[0]?.deal_url || '#'}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#0078f2] hover:bg-[#0066cc] text-white text-sm font-bold rounded-full transition-all duration-200 flex items-center gap-2 shadow-lg shadow-[#0078f2]/25 hover:scale-[1.02] active:scale-[0.98]"
