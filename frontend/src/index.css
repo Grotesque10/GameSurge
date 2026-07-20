@@ -244,3 +244,21 @@ body {
     justify-content: flex-start !important;
   }
 }
+
+/* Responsive Logo Visibility Helpers */
+.mobile-only-logo {
+  display: flex !important;
+}
+.desktop-only-logo {
+  display: none !important;
+}
+
+@media (min-width: 640px) {
+  .mobile-only-logo {
+    display: none !important;
+  }
+  .desktop-only-logo {
+    display: flex !important;
+  }
+}
+

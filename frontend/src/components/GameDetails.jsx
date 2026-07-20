@@ -185,7 +185,7 @@ const GameDetails = () => {
             </Link>
             
             {/* Mobile-only Logo */}
-            <div className="sm:hidden flex items-center justify-start gap-[10px]">
+            <div className="mobile-only-logo items-center justify-start gap-[10px]">
               <img src={logo} alt="GameSurge" style={{ height: '24px', width: 'auto', display: 'block' }} />
               <span className="text-sm font-bold text-white">GameSurge</span>
             </div>
@@ -312,7 +312,7 @@ const GameDetails = () => {
                 </button>
               )}
 
-              <div className="hidden sm:flex items-center justify-start gap-[10px]">
+              <div className="desktop-only-logo items-center justify-start gap-[10px]">
                 <img src={logo} alt="GameSurge" style={{ height: '24px', width: 'auto', display: 'block' }} />
                 <span className="text-sm font-bold text-white">GameSurge</span>
               </div>
